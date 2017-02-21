@@ -1,9 +1,9 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : 3570465520,
-	"modificationdate" : 3570467706,
-	"viewrect" : [ 33.0, 76.0, 300.0, 500.0 ],
+	"creationdate" : -724501776,
+	"modificationdate" : -724495424,
+	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -28,6 +28,14 @@
 ,
 			"tctrl-module.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"code" : 		{
+			"tctrl-module.js" : 			{
+				"kind" : "javascript",
 				"local" : 1
 			}
 

@@ -1,0 +1,417 @@
+{
+  "label": "chain1/warp",
+  "key": "chain1_warp",
+  "params": [
+    {
+      "type": "float",
+      "label": "Level",
+      "minNorm": 0.0,
+      "style": "Float",
+      "default": 1.0,
+      "path": "vjzual3/chain1/chain1_warp:Level",
+      "group": "Warp",
+      "key": "Level",
+      "maxNorm": 1.0
+    },
+    {
+      "type": "string",
+      "label": "Source",
+      "group": "Warp",
+      "style": "Str",
+      "key": "Source",
+      "path": "vjzual3/chain1/chain1_warp:Source"
+    },
+    {
+      "type": "menu",
+      "label": "Horizontal Source",
+      "group": "Warp",
+      "style": "Menu",
+      "default": "red",
+      "path": "vjzual3/chain1/chain1_warp:Horzsource",
+      "key": "Horzsource",
+      "options": [
+        {
+          "key": "red",
+          "label": "Red"
+        },
+        {
+          "key": "green",
+          "label": "Green"
+        },
+        {
+          "key": "blue",
+          "label": "Blue"
+        },
+        {
+          "key": "alpha",
+          "label": "Alpha"
+        },
+        {
+          "key": "none",
+          "label": "None"
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "label": "Vertical Source",
+      "group": "Warp",
+      "style": "Menu",
+      "default": "blue",
+      "path": "vjzual3/chain1/chain1_warp:Vertsource",
+      "key": "Vertsource",
+      "options": [
+        {
+          "key": "red",
+          "label": "Red"
+        },
+        {
+          "key": "green",
+          "label": "Green"
+        },
+        {
+          "key": "blue",
+          "label": "Blue"
+        },
+        {
+          "key": "alpha",
+          "label": "Alpha"
+        },
+        {
+          "key": "none",
+          "label": "None"
+        }
+      ]
+    },
+    {
+      "type": "fvec",
+      "label": "Displace Weight",
+      "group": "Warp",
+      "style": "XY",
+      "path": "vjzual3/chain1/chain1_warp:Displaceweight",
+      "parts": [
+        {
+          "default": 0.0,
+          "label": "X",
+          "minNorm": 0.0,
+          "key": "x",
+          "maxNorm": 1.0
+        },
+        {
+          "default": 0.0,
+          "label": "Y",
+          "minNorm": 0.0,
+          "key": "y",
+          "maxNorm": 1.0
+        }
+      ],
+      "key": "Displaceweight",
+      "length": 2
+    },
+    {
+      "type": "float",
+      "label": "Uniform Displace Weight",
+      "minNorm": 0.0,
+      "style": "Float",
+      "default": 0.0,
+      "path": "vjzual3/chain1/chain1_warp:Uniformdisplaceweight",
+      "group": "Warp",
+      "key": "Uniformdisplaceweight",
+      "maxNorm": 1.0
+    },
+    {
+      "type": "float",
+      "label": "Displace Weight Scale",
+      "minNorm": 0.0,
+      "style": "Float",
+      "default": 0.3,
+      "path": "vjzual3/chain1/chain1_warp:Displaceweightscale",
+      "group": "Warp",
+      "key": "Displaceweightscale",
+      "maxNorm": 0.4
+    },
+    {
+      "type": "menu",
+      "label": "Extend",
+      "group": "Warp",
+      "style": "Menu",
+      "default": "mirror",
+      "path": "vjzual3/chain1/chain1_warp:Extend",
+      "key": "Extend",
+      "options": [
+        {
+          "key": "hold",
+          "label": "Hold"
+        },
+        {
+          "key": "zero",
+          "label": "Zero"
+        },
+        {
+          "key": "repeat",
+          "label": "Repeat"
+        },
+        {
+          "key": "mirror",
+          "label": "Mirror"
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "label": "Displace Mode",
+      "group": "Warp",
+      "style": "Menu",
+      "default": "linked",
+      "path": "vjzual3/chain1/chain1_warp:Displacemode",
+      "key": "Displacemode",
+      "options": [
+        {
+          "key": "linked",
+          "label": "Linked"
+        },
+        {
+          "key": "separate",
+          "label": "Separate X/Y"
+        }
+      ]
+    },
+    {
+      "type": "bool",
+      "label": "Reverse",
+      "group": "Warp",
+      "style": "Toggle",
+      "default": false,
+      "key": "Reverse",
+      "path": "vjzual3/chain1/chain1_warp:Reverse"
+    },
+    {
+      "type": "bool",
+      "label": "Feedback Enabled",
+      "group": "Feedback",
+      "style": "Toggle",
+      "default": false,
+      "key": "Feedbackenabled",
+      "path": "vjzual3/chain1/chain1_warp:Feedbackenabled"
+    },
+    {
+      "type": "float",
+      "label": "Feedback Level",
+      "minNorm": 0.0,
+      "style": "Float",
+      "default": 0.0,
+      "path": "vjzual3/chain1/chain1_warp:Feedbacklevel",
+      "group": "Feedback",
+      "key": "Feedbacklevel",
+      "maxNorm": 1.0
+    },
+    {
+      "type": "float",
+      "label": "Level Exponent",
+      "minNorm": 0.0,
+      "style": "Float",
+      "default": 0.08,
+      "path": "vjzual3/chain1/chain1_warp:Feedbacklevelexp",
+      "group": "Feedback",
+      "key": "Feedbacklevelexp",
+      "maxNorm": 1.0
+    },
+    {
+      "type": "menu",
+      "label": "Composite Operator",
+      "group": "Feedback",
+      "style": "Menu",
+      "default": "maximum",
+      "path": "vjzual3/chain1/chain1_warp:Feedbackoperand",
+      "key": "Feedbackoperand",
+      "options": [
+        {
+          "key": "add",
+          "label": "Add"
+        },
+        {
+          "key": "atop",
+          "label": "Atop"
+        },
+        {
+          "key": "average",
+          "label": "Average"
+        },
+        {
+          "key": "brightest",
+          "label": "Brightest"
+        },
+        {
+          "key": "burncolor",
+          "label": "Burn Color"
+        },
+        {
+          "key": "burnlinear",
+          "label": "Burn Linear"
+        },
+        {
+          "key": "chromadifference",
+          "label": "Chroma Difference"
+        },
+        {
+          "key": "color",
+          "label": "Color"
+        },
+        {
+          "key": "darkercolor",
+          "label": "Darker Color"
+        },
+        {
+          "key": "difference",
+          "label": "Difference"
+        },
+        {
+          "key": "dimmest",
+          "label": "Dimmest"
+        },
+        {
+          "key": "divide",
+          "label": "Divide"
+        },
+        {
+          "key": "dodge",
+          "label": "Dodge"
+        },
+        {
+          "key": "exclude",
+          "label": "Exclude"
+        },
+        {
+          "key": "freeze",
+          "label": "Freeze"
+        },
+        {
+          "key": "glow",
+          "label": "Glow"
+        },
+        {
+          "key": "hardlight",
+          "label": "Hard Light"
+        },
+        {
+          "key": "hardmix",
+          "label": "Hard Mix"
+        },
+        {
+          "key": "heat",
+          "label": "Heat"
+        },
+        {
+          "key": "hue",
+          "label": "Hue"
+        },
+        {
+          "key": "inside",
+          "label": "Inside"
+        },
+        {
+          "key": "insideluminance",
+          "label": "Inside Luminance"
+        },
+        {
+          "key": "inverse",
+          "label": "Inverse"
+        },
+        {
+          "key": "lightercolor",
+          "label": "Lighter Color"
+        },
+        {
+          "key": "luminancedifference",
+          "label": "Luminance Difference"
+        },
+        {
+          "key": "maximum",
+          "label": "Maximum"
+        },
+        {
+          "key": "minimum",
+          "label": "Minimum"
+        },
+        {
+          "key": "multiply",
+          "label": "Multiply"
+        },
+        {
+          "key": "negate",
+          "label": "Negate"
+        },
+        {
+          "key": "outside",
+          "label": "Outside"
+        },
+        {
+          "key": "outsideluminance",
+          "label": "Outside Luminance"
+        },
+        {
+          "key": "over",
+          "label": "Over"
+        },
+        {
+          "key": "overlay",
+          "label": "Overlay"
+        },
+        {
+          "key": "pinlight",
+          "label": "Pinlight"
+        },
+        {
+          "key": "reflect",
+          "label": "Reflect"
+        },
+        {
+          "key": "screen",
+          "label": "Screen"
+        },
+        {
+          "key": "softlight",
+          "label": "Soft Light"
+        },
+        {
+          "key": "linearlight",
+          "label": "Linear Light"
+        },
+        {
+          "key": "stencilluminance",
+          "label": "Stencil Luminance"
+        },
+        {
+          "key": "subtract",
+          "label": "Subtract"
+        },
+        {
+          "key": "subtractive",
+          "label": "Subtractive"
+        },
+        {
+          "key": "under",
+          "label": "Under"
+        },
+        {
+          "key": "vividlight",
+          "label": "Vivid Light"
+        },
+        {
+          "key": "xor",
+          "label": "Xor"
+        },
+        {
+          "key": "yfilm",
+          "label": "Y Film"
+        },
+        {
+          "key": "zfilm",
+          "label": "Z Film"
+        }
+      ]
+    }
+  ],
+  "path": "vjzual3/chain1/chain1_warp",
+  "moduleType": "/_/components/warp_module"
+}

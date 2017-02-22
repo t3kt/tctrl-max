@@ -1,8 +1,8 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : -724501776,
-	"modificationdate" : -724495424,
+	"creationdate" : -724501897,
+	"modificationdate" : 3570550089,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -36,6 +36,19 @@
 		"code" : 		{
 			"tctrl-module.js" : 			{
 				"kind" : "javascript",
+				"local" : 1
+			}
+
+		}
+,
+		"data" : 		{
+			"vjzual3-schema.json" : 			{
+				"kind" : "json",
+				"local" : 1
+			}
+,
+			"example-module.json" : 			{
+				"kind" : "json",
 				"local" : 1
 			}
 

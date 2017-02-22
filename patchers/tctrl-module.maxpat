@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 2,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 282.0, 265.0, 509.0, 480.0 ],
+		"rect" : [ -740.0, 217.0, 509.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -130,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 289.0, 239.0, 215.0, 49.0 ],
+					"patching_rect" : [ 289.0, 239.0, 215.0, 50.0 ],
 					"style" : "",
 					"text" : "script newobject bpatcher tctrl-toggle.maxpat @args /mod1/bar1 @label Bar1"
 				}
@@ -308,7 +308,7 @@
 			}
 , 			{
 				"name" : "tctrl-module.js",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

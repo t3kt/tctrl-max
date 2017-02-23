@@ -1,10 +1,10 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : -724501897,
-	"modificationdate" : 3570550089,
+	"creationdate" : -724502018,
+	"modificationdate" : 3570636660,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
-	"autoorganize" : 1,
+	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 0,

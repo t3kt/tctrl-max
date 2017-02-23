@@ -76,6 +76,21 @@ var typeHandlers = {
        ['setminmax', paramSpec.minNorm, paramSpec.maxNorm]
      ];
     }
+  }),
+  'menu': new TypeHandler({
+    patchFile: 'tctrl-menu.maxpat',
+    width: 232,
+    height: 25,
+    getConfigMessages: function(paramSpec) {
+      var messages = [
+        ['setdefault', paramSpec['default']]
+      ];
+      var options = paramSpec.options || [];
+      for (var i = 0; i < options.length; i++) {
+        messages.push(['appendoption', options[i].key, (options[i].label || options[i].key)]);
+      }
+      return messages;
+    }
   })
 };
 

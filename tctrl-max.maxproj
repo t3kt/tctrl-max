@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724502018,
-	"modificationdate" : 3570650093,
+	"modificationdate" : 3570654957,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -34,6 +34,16 @@
 			"tctrl-menu.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
+			}
+,
+			"tctrl-fvec.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 
 		}

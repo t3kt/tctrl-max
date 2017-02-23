@@ -1,23 +1,19 @@
 var START_X = 10;
 var START_Y = 20;
-var TOGGLE_HEIGHT = 25;
-var TOGGLE_WIDTH = 135;
 var PADDING_Y = 2;
 var VAR_NAME_PREFIX = 'ctrl__';
-var modSpec;
-var currentPosition;
 
 outlets = 1;
 
 function loadModuleSpec(modSpecJson) {
-  modSpec = JSON.parse(modSpecJson);
-  currentPosition = [START_X, START_Y];
+  var modSpec = JSON.parse(modSpecJson);
+  var position = [START_X, START_Y];
 
   clearControls();
 
   var params = (modSpec && modSpec.params) || [];
   for (var i = 0; i < params.length; i++) {
-    _addParameterNEW(params[i], i);
+    _addParameter(params[i], i, position);
   }
 }
 
@@ -69,44 +65,30 @@ var typeHandlers = {
         ['setdefault', paramSpec['default']]
       ];
     }
+  }),
+  'float': new TypeHandler({
+    patchFile: 'tctrl-slider.maxpat',
+    width: 218,
+    height: 25,
+    getConfigMessages: function (paramSpec) {
+     return [
+       ['setdefault', paramSpec['default']],
+       ['setminmax', paramSpec.minNorm, paramSpec.maxNorm]
+     ];
+    }
   })
 };
 
-function _addParameterNEW(paramSpec, i) {
+function _addParameter(paramSpec, i, position) {
   var type = paramSpec.type;
   var handler = typeHandlers[type];
   if (!handler) {
     post('Unsupported parameter type ' + type + ' (' + paramSpec.key + ')\n');
     return;
   }
-  handler.build(this.patcher, paramSpec, i, currentPosition);
-}
-
-function _addParameter(paramSpec, i) {
-  var ctrl = createBpatcher(this.patcher,
-    'tctrl-toggle.maxpat',
-    currentPosition,
-    VAR_NAME_PREFIX + i,
-    paramSpec.key);
-  ctrl.rect = [
-    ctrl.rect[0],
-    ctrl.rect[1],
-    ctrl.rect[0] + TOGGLE_WIDTH,
-    ctrl.rect[1] + TOGGLE_HEIGHT
-  ];
-
-  // there has to be a better way to do this
-  var modScript = this.patcher.getnamed('modscript');
-  this.patcher.connect(modScript, 0, ctrl, 1);
-  sendConfigMessage(['setlabel', (paramSpec.label || paramSpec.key)]);
-  sendConfigMessage(['setpath', paramSpec.path || '<none>']);
-  // sendConfigMessage(['setdefault', (paramSpec['default'])]);
-  this.patcher.disconnect(modScript, 0, ctrl, 1);
-
-  // ctrl.message('setlabel', (paramSpec.label || paramSpec.key));
-  // ctrl.message('setpath', (paramSpec.path || '<none>'));
-
-  currentPosition[1] += TOGGLE_HEIGHT + PADDING_Y;
+  var oscOutlet = this.patcher.getnamed('oscmsgout');
+  var ctrl = handler.build(this.patcher, paramSpec, i, position);
+  this.patcher.hiddenconnect(ctrl, 0, oscOutlet, 0);
 }
 
 function createBpatcher(patcher, file, position,varname,args)

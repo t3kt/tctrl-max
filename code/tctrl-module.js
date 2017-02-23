@@ -19,19 +19,17 @@ function loadModuleSpec(modSpecJson) {
 
 function TypeHandler(opts) {
   this.patchFile = opts.patchFile;
-  this.width = opts.width;
-  this.height = opts.height;
-  if (opts.getConfigMessages) {
-    this.getConfigMessages = opts.getConfigMessages;
-  }
+  this.getConfigMessages = opts.getConfigMessages;
+  this.getSize = opts.getSize;
 }
 TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
+  var size = this.getSize(paramSpec);
   var ctrl = createBpatcher(patcher, this.patchFile, position, VAR_NAME_PREFIX + i, paramSpec.key);
   ctrl.rect = [
     ctrl.rect[0],
     ctrl.rect[1],
-    ctrl.rect[0] + this.width,
-    ctrl.rect[1] + this.height
+    ctrl.rect[0] + size[0],
+    ctrl.rect[1] + size[1]
   ];
   // there has to be a better way to do this
   var modScript = patcher.getnamed('modscript');
@@ -39,7 +37,7 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
   this.sendConfigMessages(paramSpec);
   patcher.disconnect(modScript, 0, ctrl, 1);
 
-  position[1] += this.height + PADDING_Y;
+  position[1] += size[1] + PADDING_Y;
   return ctrl;
 };
 TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
@@ -58,8 +56,7 @@ TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
 var typeHandlers = {
   'bool': new TypeHandler({
     patchFile: 'tctrl-toggle.maxpat',
-    width: 135,
-    height: 25,
+    getSize: function (paramSpec) { return [135, 25]; },
     getConfigMessages: function(paramSpec) {
       return [
         ['setdefault', paramSpec['default']]
@@ -68,8 +65,7 @@ var typeHandlers = {
   }),
   'float': new TypeHandler({
     patchFile: 'tctrl-slider.maxpat',
-    width: 218,
-    height: 25,
+    getSize: function (paramSpec) { return [218, 25]; },
     getConfigMessages: function (paramSpec) {
      return [
        ['setdefault', paramSpec['default']],
@@ -79,8 +75,7 @@ var typeHandlers = {
   }),
   'menu': new TypeHandler({
     patchFile: 'tctrl-menu.maxpat',
-    width: 232,
-    height: 25,
+    getSize: function (paramSpec) { return [234, 25]; },
     getConfigMessages: function(paramSpec) {
       var messages = [
         ['setdefault', paramSpec['default']]
@@ -88,6 +83,31 @@ var typeHandlers = {
       var options = paramSpec.options || [];
       for (var i = 0; i < options.length; i++) {
         messages.push(['appendoption', options[i].key, (options[i].label || options[i].key)]);
+      }
+      return messages;
+    }
+  }),
+  'fvec': new TypeHandler({
+    patchFile: 'tctrl-fvec.maxpat',
+    getSize: function (paramSpec) {
+      var count = (paramSpec.parts || []).length;
+      return [
+        116 + (count * 54),
+        25
+      ];
+    },
+    getConfigMessages: function(paramSpec) {
+      var parts = paramSpec.parts || [];
+      var messages = [
+        ['setwidth', this.getSize(paramSpec)[0] - 2],
+        ['setcount', parts.length]
+      ];
+      for (var i = 0; i < parts.length; i++) {
+        var part = parts[i];
+        messages.push(['setpartpath', i, part.path]);
+        messages.push(['setpartlabel', i, (part.label || part.key)]);
+        messages.push(['setpartdefault', i, part['default']]);
+        messages.push(['setpartminmax', i, part.minNorm, part.maxNorm]);
       }
       return messages;
     }

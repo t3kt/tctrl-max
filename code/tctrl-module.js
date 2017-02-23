@@ -1,5 +1,5 @@
 var START_X = 10;
-var START_Y = 20;
+var START_Y = 40;
 var PADDING_Y = 2;
 var VAR_NAME_PREFIX = 'ctrl__';
 
@@ -24,13 +24,7 @@ function TypeHandler(opts) {
 }
 TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
   var size = this.getSize(paramSpec);
-  var ctrl = createBpatcher(patcher, this.patchFile, position, VAR_NAME_PREFIX + i, paramSpec.key);
-  ctrl.rect = [
-    ctrl.rect[0],
-    ctrl.rect[1],
-    ctrl.rect[0] + size[0],
-    ctrl.rect[1] + size[1]
-  ];
+  var ctrl = createBpatcher(patcher, this.patchFile, position, size, VAR_NAME_PREFIX + i, paramSpec.key);
   // there has to be a better way to do this
   var modScript = patcher.getnamed('modscript');
   patcher.connect(modScript, 0, ctrl, 1);
@@ -126,14 +120,17 @@ function _addParameter(paramSpec, i, position) {
   this.patcher.hiddenconnect(ctrl, 0, oscOutlet, 0);
 }
 
-function createBpatcher(patcher, file, position,varname,args)
+function createBpatcher(patcher, file, position, size, varname, args)
 {
   return patcher.newdefault(position[0],position[1],
-    "bpatcher",
-    "@name", file,
-    "@border", "0",
-    "@varname", varname,
-    "@args", args);
+    'bpatcher',
+    '@name', file,
+    '@border', '0',
+    '@patching_rect', position[0], position[1], size[0], size[1],
+    '@presentation_rect', position[0], position[1], size[0], size[1],
+    '@presentation', '1',
+    '@varname', varname,
+    '@args', args);
 }
 
 function clearControls() {

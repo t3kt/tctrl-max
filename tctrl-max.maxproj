@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724502018,
-	"modificationdate" : 3570643927,
+	"modificationdate" : 3570650093,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -40,6 +40,11 @@
 ,
 		"code" : 		{
 			"tctrl-module.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"tctrl-flatten.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

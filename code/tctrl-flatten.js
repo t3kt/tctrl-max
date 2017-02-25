@@ -4,6 +4,11 @@ outlets = 1;
 function dictionary(appSchemaDictName) {
   var appSchemaDict = new Dict(appSchemaDictName);
   var appSchemaJson = appSchemaDict.stringify();
+  parse(appSchemaJson);
+}
+
+function parse(appSchemaJson) {
+  appSchemaJson = appSchemaJson.trim();
   var appSchema = JSON.parse(appSchemaJson);
   var output = {};
   _flattenModules(appSchema.children, output);

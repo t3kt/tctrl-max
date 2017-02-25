@@ -19,10 +19,14 @@ function loadModuleSpec(modSpecJson) {
 
 function TypeHandler(opts) {
   this.patchFile = opts.patchFile;
+  this.checkSupport = opts.checkSupport;
   this.getConfigMessages = opts.getConfigMessages;
   this.getSize = opts.getSize;
 }
 TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
+  if (this.checkSupport && !this.checkSupport(paramSpec)) {
+    return null;
+  }
   var size = this.getSize(paramSpec);
   var ctrl = createBpatcher(patcher, this.patchFile, position, size, VAR_NAME_PREFIX + i, paramSpec.key);
   // there has to be a better way to do this
@@ -81,6 +85,22 @@ var typeHandlers = {
       return messages;
     }
   }),
+  'string': new TypeHandler({
+    patchFile: 'tctrl-text.maxpat',
+    getSize: function(paramSpec) { return [300, 25]; },
+    getConfigMessages: function(paramSpec) {
+      return [
+        ['setdefault', paramSpec['default'] || '']
+      ];
+    },
+    checkSupport: function(paramSpec) {
+      if (paramSpec.options && paramSpec.options.length) {
+        post('String parameter with options not supported\n');
+        return false;
+      }
+      return true;
+    },
+  }),
   'fvec': new TypeHandler({
     patchFile: 'tctrl-fvec.maxpat',
     getSize: function (paramSpec) {
@@ -117,6 +137,10 @@ function _addParameter(paramSpec, i, position) {
   }
   var oscOutlet = this.patcher.getnamed('oscmsgout');
   var ctrl = handler.build(this.patcher, paramSpec, i, position);
+  if (!ctrl) {
+    post('Failed to create parameter of type ' + type + ' (' + paramSpec.key + ')\n');
+    return;
+  }
   this.patcher.hiddenconnect(ctrl, 0, oscOutlet, 0);
 }
 

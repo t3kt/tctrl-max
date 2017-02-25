@@ -40,7 +40,7 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
 };
 TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
   sendConfigMessage(['setlabel', (paramSpec.label || paramSpec.key)]);
-  sendConfigMessage(['setpath',  paramSpec.path ? ('/' + paramSpec.path) : '<none>']);
+  sendConfigMessage(['setpath',  paramSpec.path ||'<none>']);
   if (this.getConfigMessages) {
     var messages = this.getConfigMessages(paramSpec);
     if (messages) {

@@ -43,6 +43,27 @@
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
+					"id" : "obj-40",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "tctrl-schema-loader.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 939.0, 50.0, 232.0, 152.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 415.0, 191.0, 232.0, 152.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
@@ -271,7 +292,7 @@
 				"box" : 				{
 					"fontsize" : 16.0,
 					"id" : "obj-73",
-					"items" : [ "vjzual3z/chain1", ",", "vjzual3z/chain1/chain1_warp", ",", "vjzual3z/chain1/chain1_delay", ",", "vjzual3z/chain1/chain1_iterate", ",", "vjzual3z/chain1/chain1_coloradj", ",", "vjzual3z/chain1/chain1_edgefbk1", ",", "vjzual3z/chain1/chain1_transform", ",", "vjzual3z/chain2", ",", "vjzual3z/chain2/chain2_flip", ",", "vjzual3z/chain2/chain2_delay", ",", "vjzual3z/chain2/chain2_warp1", ",", "vjzual3z/chain2/chain2_edge_1", ",", "vjzual3z/chain2/chain2_redux1", ",", "vjzual3z/chain2/chain2_coloradj", ",", "vjzual3z/chain2/chain2_transform", ",", "vjzual3z/global", ",", "vjzual3z/global/global_external_out", ",", "vjzual3z/master", ",", "vjzual3z/master/master_flip", ",", "vjzual3z/master/master_delay", ",", "vjzual3z/master/master_edge_1", ",", "vjzual3z/master/master_edge_2", ",", "vjzual3z/master/master_warp_2", ",", "vjzual3z/master/master/blend_1", ",", "vjzual3z/master/master/blend_2", ",", "vjzual3z/master/master_trails_1", ",", "vjzual3z/master/master_kaleido_1", ",", "vjzual3z/master/master_recolor_1", ",", "vjzual3z/master/master_surface_1", ",", "vjzual3z/master/master_transform", ",", "vjzual3z/master/master_coloradj_4", ",", "vjzual3z/master/master_background_1", ",", "vjzual3z/master/master_background_2", ",", "vjzual3z/master/master_surface_thing", ",", "vjzual3z/master/master_time_machine_1", ",", "vjzual3z/sources", ",", "vjzual3z/sources/sources_video_1", ",", "vjzual3z/sources/sources_video_2", ",", "vjzual3z/sources/sources_video_3", ",", "vjzual3z/sources/sources_video_4", ",", "vjzual3z/sources/sources_video_5", ",", "vjzual3z/sources/sources_external_in_1", ",", "vjzual3z/sources/sources_external_in_2", ",", "vjzual3z/generators", ",", "vjzual3z/generators/noise_gen_1", ",", "vjzual3z/generators/noise_gen_2", ",", "vjzual3z/generators/shape_gen_1", ",", "vjzual3z/generators/voronoi_gen_1", ",", "vjzual3z/generators/voronoi_gen_2", ",", "vjzual3z/generators/multi_noise_gen_1" ],
+					"items" : [ "/vjzual3/_/app/chain1", ",", "/vjzual3/_/app/chain1/warp", ",", "/vjzual3/_/app/chain1/delay", ",", "/vjzual3/_/app/chain1/iterate", ",", "/vjzual3/_/app/chain1/coloradj", ",", "/vjzual3/_/app/chain1/edgefbk1", ",", "/vjzual3/_/app/chain1/transform", ",", "/vjzual3/_/app/chain2", ",", "/vjzual3/_/app/chain2/flip", ",", "/vjzual3/_/app/chain2/delay", ",", "/vjzual3/_/app/chain2/warp1", ",", "/vjzual3/_/app/chain2/edge_1", ",", "/vjzual3/_/app/chain2/redux1", ",", "/vjzual3/_/app/chain2/coloradj", ",", "/vjzual3/_/app/chain2/transform", ",", "/vjzual3/_/app/global", ",", "/vjzual3/_/app/global/external_out", ",", "/vjzual3/_/app/master", ",", "/vjzual3/_/app/master/flip", ",", "/vjzual3/_/app/master/delay", ",", "/vjzual3/_/app/master/edge_1", ",", "/vjzual3/_/app/master/edge_2", ",", "/vjzual3/_/app/master/warp_2", ",", "/vjzual3/_/app/master/blend_1", ",", "/vjzual3/_/app/master/blend_2", ",", "/vjzual3/_/app/master/trails_1", ",", "/vjzual3/_/app/master/kaleido_1", ",", "/vjzual3/_/app/master/recolor_1", ",", "/vjzual3/_/app/master/surface_1", ",", "/vjzual3/_/app/master/transform", ",", "/vjzual3/_/app/master/coloradj_4", ",", "/vjzual3/_/app/master/background_1", ",", "/vjzual3/_/app/master/background_2", ",", "/vjzual3/_/app/master/surface_thing", ",", "/vjzual3/_/app/master/time_machine_1", ",", "/vjzual3/_/app/sources", ",", "/vjzual3/_/app/sources/video_1", ",", "/vjzual3/_/app/sources/video_2", ",", "/vjzual3/_/app/sources/video_3", ",", "/vjzual3/_/app/sources/video_4", ",", "/vjzual3/_/app/sources/video_5", ",", "/vjzual3/_/app/sources/external_in_1", ",", "/vjzual3/_/app/sources/external_in_2", ",", "/vjzual3/_/app/generators", ",", "/vjzual3/_/app/generators/noise_gen_1", ",", "/vjzual3/_/app/generators/noise_gen_2", ",", "/vjzual3/_/app/generators/shape_gen_1", ",", "/vjzual3/_/app/generators/voronoi_gen_1", ",", "/vjzual3/_/app/generators/voronoi_gen_2", ",", "/vjzual3/_/app/generators/multi_noise_gen_1" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -473,18 +494,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-menu.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-fvec.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-module.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
@@ -494,6 +503,18 @@
 				"name" : "tctrl-osc-io.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-schema-loader.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-flatten.js",
+				"bootpath" : "~/creations/tctrl/tctrl-max/code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

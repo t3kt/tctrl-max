@@ -11,7 +11,7 @@
 ,
 		"rect" : [ 67.0, 95.0, 963.0, 856.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -44,6 +44,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 741.0, 549.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 124.0, 78.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -108,7 +110,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 605.0, 293.0, 33.0, 42.0 ]
+					"patching_rect" : [ 605.0, 293.0, 33.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 72.0, 60.0, 33.0, 42.0 ]
 				}
 
 			}
@@ -120,6 +124,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 424.25, 35.0, 190.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 20.25, 24.0, 190.0, 22.0 ],
 					"style" : "",
 					"text" : "http://localhost:7071/AppSchema/"
 				}
@@ -146,6 +152,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 71.0, 200.0, 37.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 24.0, 78.0, 37.0, 22.0 ],
 					"style" : "",
 					"text" : "clear"
 				}

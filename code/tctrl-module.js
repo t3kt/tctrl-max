@@ -22,8 +22,13 @@ function TypeHandler(opts) {
   this.checkSupport = opts.checkSupport;
   this.getConfigMessages = opts.getConfigMessages;
   this.getSize = opts.getSize;
+  this.delegateTo = opts.delegateTo;
 }
 TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
+  var delegate = this.delegateTo && this.delegateTo(paramSpec);
+  if (delegate) {
+    return delegate.build(patcher, paramSpec, i, position);
+  }
   if (this.checkSupport && !this.checkSupport(paramSpec)) {
     return null;
   }
@@ -98,16 +103,15 @@ var typeHandlers = {
     getConfigMessages: function(paramSpec) {
       return [
         ['setdefault', paramSpec['default'] || ''],
-        ['setvalue', paramSpec.value || ''],
+        ['setvalue', paramSpec.value || '']
       ];
     },
-    checkSupport: function(paramSpec) {
+    delegateTo: function(paramSpec) {
       if (paramSpec.options && paramSpec.options.length) {
-        post('String parameter with options not supported\n');
-        return false;
+        return typeHandlers['menu'];
       }
-      return true;
-    },
+      return null;
+    }
   }),
   'fvec': new TypeHandler({
     patchFile: 'tctrl-fvec.maxpat',

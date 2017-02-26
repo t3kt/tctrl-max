@@ -136,12 +136,14 @@ function _addParameter(paramSpec, i, position) {
     return;
   }
   var oscOutlet = this.patcher.getnamed('oscmsgout');
+  var oscInlet = this.patcher.getnamed('oscmsgin');
   var ctrl = handler.build(this.patcher, paramSpec, i, position);
   if (!ctrl) {
     post('Failed to create parameter of type ' + type + ' (' + paramSpec.key + ')\n');
     return;
   }
   this.patcher.hiddenconnect(ctrl, 0, oscOutlet, 0);
+  this.patcher.hiddenconnect(oscInlet, 0, ctrl, 0);
 }
 
 function createBpatcher(patcher, file, position, size, varname, args)

@@ -57,7 +57,8 @@ var typeHandlers = {
     getSize: function (paramSpec) { return [135, 25]; },
     getConfigMessages: function(paramSpec) {
       return [
-        ['setdefault', paramSpec['default']]
+        ['setdefault', paramSpec['default']],
+        ['setvalue', paramSpec.value]
       ];
     }
   }),
@@ -67,7 +68,8 @@ var typeHandlers = {
     getConfigMessages: function (paramSpec) {
      return [
        ['setdefault', paramSpec['default']],
-       ['setminmax', paramSpec.minNorm, paramSpec.maxNorm]
+       ['setminmax', paramSpec.minNorm, paramSpec.maxNorm],
+       ['setvalue', paramSpec.value]
      ];
     }
   }),
@@ -78,6 +80,11 @@ var typeHandlers = {
       var messages = [
         ['setdefault', paramSpec['default']]
       ];
+      if (paramSpec.hasOwnProperty('value')) {
+        messages.push(['setvalue', paramSpec.value]);
+      } else if (paramSpec.hasOwnProperty('valueIndex')) {
+        messages.push(['setvalueindex', paramSpec.valueIndex]);
+      }
       var options = paramSpec.options || [];
       for (var i = 0; i < options.length; i++) {
         messages.push(['appendoption', options[i].key, (options[i].label || options[i].key)]);
@@ -90,7 +97,8 @@ var typeHandlers = {
     getSize: function(paramSpec) { return [300, 25]; },
     getConfigMessages: function(paramSpec) {
       return [
-        ['setdefault', paramSpec['default'] || '']
+        ['setdefault', paramSpec['default'] || ''],
+        ['setvalue', paramSpec.value || ''],
       ];
     },
     checkSupport: function(paramSpec) {
@@ -122,6 +130,9 @@ var typeHandlers = {
         messages.push(['setpartlabel', i, (part.label || part.key)]);
         messages.push(['setpartdefault', i, part['default']]);
         messages.push(['setpartminmax', i, part.minNorm, part.maxNorm]);
+        if (part.hasOwnProperty('value')) {
+          messages.push(['setvalue', i, part.value]);
+        }
       }
       return messages;
     }

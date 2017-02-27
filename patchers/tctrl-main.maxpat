@@ -510,19 +510,31 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-slider.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-menu.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "tctrl-slider.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-button.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "tctrl-fvec.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-text.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

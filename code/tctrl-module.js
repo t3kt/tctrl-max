@@ -55,16 +55,8 @@ TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
 };
 
 var typeHandlers = {
-  'bool': new TypeHandler({
-    patchFile: 'tctrl-toggle.maxpat',
-    getSize: function (paramSpec) { return [135, 25]; },
-    getConfigMessages: function(paramSpec) {
-      return [
-        ['setdefault', paramSpec['default']],
-        ['setvalue', paramSpec.value]
-      ];
-    }
-  }),
+  'bool': _ButtonHandler(false),
+  'pulse': _ButtonHandler(true),
   'float': _NumberTypeHandler(true),
   'int': _NumberTypeHandler(false),
   'menu': new TypeHandler({
@@ -132,6 +124,28 @@ var typeHandlers = {
   })
 };
 
+function _ButtonHandler(isPulse) {
+  return new TypeHandler({
+    patchFile: 'tctrl-button.maxpat',
+    getSize: function(paramSpec) { return [400, 25]; },
+    getConfigMessages: function(paramSpec) {
+      var messages = [
+        ['setispulse', isPulse ? 1 : 0]
+      ];
+      messages.push(['sethelp', paramSpec.help || '']);
+      var btnText = paramSpec.buttonText || paramSpec.label || '';
+      messages.push(['setbuttontext', btnText]);
+      if (!isPulse) {
+        messages.push(['setdefault', paramSpec['default'] ? 1 : 0]);
+        messages.push(['setvalue', paramSpec.value ? 1 : 0]);
+        messages.push(['setoffhelp', paramSpec.offHelp || '']);
+        messages.push(['setbuttonofftext', paramSpec.buttonOffText || btnText]);
+      }
+      return messages;
+    }
+  });
+}
+
 function _NumberTypeHandler(isFloat) {
   return new TypeHandler({
     patchFile: 'tctrl-slider.maxpat',
@@ -156,9 +170,10 @@ function _NumberTypeHandler(isFloat) {
 
 function _addParameter(paramSpec, i, position) {
   var type = paramSpec.type;
+  // post('Handling param ' + paramSpec.key + ' type: ' + type + ' ...\n');
   var handler = typeHandlers[type];
   if (!handler) {
-    post('Unsupported parameter type ' + type + ' (' + paramSpec.key + ')\n');
+    // post('Unsupported parameter type ' + type + ' (' + paramSpec.key + ')\n');
     return;
   }
   var oscOutlet = this.patcher.getnamed('oscmsgout');
@@ -170,6 +185,7 @@ function _addParameter(paramSpec, i, position) {
   }
   this.patcher.hiddenconnect(ctrl, 0, oscOutlet, 0);
   this.patcher.hiddenconnect(oscInlet, 0, ctrl, 0);
+  // post('Done handling param ' + paramSpec.key + '\n');
 }
 
 function createBpatcher(patcher, file, position, size, varname, args)

@@ -1,8 +1,8 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : -724502502,
-	"modificationdate" : 3570972464,
+	"creationdate" : -724502623,
+	"modificationdate" : 3570978141,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -46,12 +46,12 @@
 				"local" : 1
 			}
 ,
-			"tctrl-toggle.maxpat" : 			{
+			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-text.maxpat" : 			{
+			"tctrl-button.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

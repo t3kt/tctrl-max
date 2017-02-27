@@ -105,20 +105,18 @@ var typeHandlers = [
       ];
     }
   }),
-  new TypeHandler({
-    type: 'fvec',
-    patchFile: 'tctrl-fvec.maxpat',
-    getSize: function (paramSpec) {
-      var count = (paramSpec.parts || []).length;
-      return [
-        116 + (count * 54),
-        25
-      ];
-    },
+  _VectorHandler('fvec'),
+  _VectorHandler('ivec')
+];
+
+function _VectorHandler(type) {
+  return new TypeHandler({
+    type: type,
+    patchFile: 'tctrl-multi.maxpat',
+    getSize: function (paramSpec) { return [400, 25]; },
     getConfigMessages: function(paramSpec) {
       var parts = paramSpec.parts || [];
       var messages = [
-        ['setwidth', this.getSize(paramSpec)[0] - 2],
         ['setcount', parts.length]
       ];
       for (var i = 0; i < parts.length; i++) {
@@ -133,8 +131,8 @@ var typeHandlers = [
       }
       return messages;
     }
-  })
-];
+  });
+}
 
 function _ButtonHandler(type, isPulse) {
   return new TypeHandler({

@@ -69,7 +69,7 @@ var typeHandlers = {
   'int': _NumberTypeHandler(false),
   'menu': new TypeHandler({
     patchFile: 'tctrl-menu.maxpat',
-    getSize: function (paramSpec) { return [234, 25]; },
+    getSize: function (paramSpec) { return [400, 25]; },
     getConfigMessages: function(paramSpec) {
       var messages = [
         ['setdefault', paramSpec['default']]

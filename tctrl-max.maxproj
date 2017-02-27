@@ -1,8 +1,8 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : -724502381,
-	"modificationdate" : 3570826998,
+	"creationdate" : -724502502,
+	"modificationdate" : 3570972464,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -21,27 +21,17 @@
 				"local" : 1
 			}
 ,
-			"tctrl-menu.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-slider.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-toggle.maxpat" : 			{
+			"tctrl-menu.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"tctrl-fvec.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -52,6 +42,16 @@
 			}
 ,
 			"tctrl-schema-loader.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-toggle.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

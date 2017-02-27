@@ -1,5 +1,3 @@
-var START_X = 10;
-var START_Y = 40;
 var PADDING_Y = 2;
 var VAR_NAME_PREFIX = 'ctrl__';
 
@@ -7,7 +5,7 @@ outlets = 1;
 
 function loadModuleSpec(modSpecJson) {
   var modSpec = JSON.parse(modSpecJson);
-  var position = [START_X, START_Y];
+  var position = [10, 40];
 
   clearControls();
 
@@ -67,17 +65,8 @@ var typeHandlers = {
       ];
     }
   }),
-  'float': new TypeHandler({
-    patchFile: 'tctrl-slider.maxpat',
-    getSize: function (paramSpec) { return [218, 25]; },
-    getConfigMessages: function (paramSpec) {
-     return [
-       ['setdefault', paramSpec['default']],
-       ['setminmax', paramSpec.minNorm, paramSpec.maxNorm],
-       ['setvalue', paramSpec.value]
-     ];
-    }
-  }),
+  'float': _NumberTypeHandler(true),
+  'int': _NumberTypeHandler(false),
   'menu': new TypeHandler({
     patchFile: 'tctrl-menu.maxpat',
     getSize: function (paramSpec) { return [234, 25]; },
@@ -143,6 +132,28 @@ var typeHandlers = {
   })
 };
 
+function _NumberTypeHandler(isFloat) {
+  return new TypeHandler({
+    patchFile: 'tctrl-slider.maxpat',
+    getSize: function (paramSpec) { return [400, 25]; },
+    getConfigMessages: function (paramSpec) {
+      var messages = [
+        ['setdefault', paramSpec['default']],
+        ['setnormrange', paramSpec.minNorm, paramSpec.maxNorm],
+        ['setvalue', paramSpec.value],
+        ['setisfloat', isFloat ? 1 : 0]
+      ];
+      if (paramSpec.minLimit != null) {
+        messages.push(['setmin', paramSpec.minLimit]);
+      }
+      if (paramSpec.maxLimit != null) {
+        messages.push(['setmax', paramSpec.maxLimit]);
+      }
+      return messages;
+    }
+  });
+}
+
 function _addParameter(paramSpec, i, position) {
   var type = paramSpec.type;
   var handler = typeHandlers[type];
@@ -187,4 +198,3 @@ function clearControls() {
 function sendConfigMessage(data) {
   outlet(0, data);
 }
-

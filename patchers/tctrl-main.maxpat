@@ -43,7 +43,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 406.0, 53.0, 72.0, 22.0 ],
+					"patching_rect" : [ 597.0, 53.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.osc.in"
 				}
@@ -63,7 +63,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 938.0, 46.0, 232.0, 152.0 ],
+					"patching_rect" : [ 1129.0, 46.0, 232.0, 152.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 415.0, 191.0, 232.0, 152.0 ],
 					"viewvisibility" : 1
@@ -84,7 +84,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 518.0, 57.0, 309.0, 130.0 ],
+					"patching_rect" : [ 709.0, 57.0, 309.0, 130.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 398.0, 17.0, 350.0, 130.0 ],
 					"varname" : "tctrl-osc-io",
@@ -99,7 +99,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 437.5, 264.5, 132.0, 22.0 ],
+					"patching_rect" : [ 628.5, 264.5, 132.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -117,7 +117,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 437.5, 212.5, 125.0, 22.0 ],
+					"patching_rect" : [ 628.5, 212.5, 125.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.mod.sel.change"
 				}
@@ -173,7 +173,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 763.0, 655.0, 127.0, 22.0 ],
+					"patching_rect" : [ 954.0, 655.0, 127.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.mod.sel.change"
 				}
@@ -186,7 +186,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 806.0, 583.0, 132.0, 22.0 ],
+					"patching_rect" : [ 997.0, 583.0, 132.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -204,7 +204,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 806.0, 379.0, 83.0, 22.0 ],
+					"patching_rect" : [ 997.0, 379.0, 83.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.mod.sel"
 				}
@@ -216,7 +216,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 399.5, 132.0, 85.0, 22.0 ],
+					"patching_rect" : [ 590.5, 132.0, 85.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.mod.sel"
 				}
@@ -229,7 +229,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 778.0, 472.0, 117.0, 22.0 ],
+					"patching_rect" : [ 969.0, 472.0, 117.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -247,7 +247,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 763.0, 612.0, 24.0, 24.0 ],
+					"patching_rect" : [ 954.0, 612.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -259,7 +259,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 778.0, 420.0, 24.0, 24.0 ],
+					"patching_rect" : [ 969.0, 420.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -271,7 +271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 900.5, 472.0, 52.0, 22.0 ],
+					"patching_rect" : [ 1091.5, 472.0, 52.0, 22.0 ],
 					"style" : "",
 					"text" : "keys $1"
 				}
@@ -284,7 +284,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 806.0, 534.0, 71.0, 22.0 ],
+					"patching_rect" : [ 997.0, 534.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "dict.unpack"
 				}
@@ -296,7 +296,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 437.5, 300.0, 272.5, 419.0 ],
+					"patching_rect" : [ 628.5, 300.0, 272.5, 419.0 ],
 					"style" : ""
 				}
 
@@ -333,7 +333,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.5, 162.0, 360.0, 326.0 ],
+					"patching_rect" : [ 31.5, 162.0, 435.0, 415.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 11.5, 50.0, 360.0, 326.0 ],
 					"varname" : "tctrl-module",
@@ -510,31 +510,19 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-menu.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-slider.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-toggle.maxpat",
+				"name" : "tctrl-menu.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tctrl-fvec.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-text.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

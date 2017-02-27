@@ -16,15 +16,17 @@ function loadModuleSpec(modSpecJson) {
 }
 
 function TypeHandler(opts) {
+  this.type = opts.type;
   this.patchFile = opts.patchFile;
   this.getConfigMessages = opts.getConfigMessages;
   this.getSize = opts.getSize;
-  this.delegateTo = opts.delegateTo;
+  if (opts.checkMatch) {
+    this.checkMatch = opts.checkMatch;
+  }
 }
 TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
-  var delegate = this.delegateTo && this.delegateTo(paramSpec);
-  if (delegate) {
-    return delegate.build(patcher, paramSpec, i, position);
+  if (!this.checkMatch(paramSpec)) {
+    return null;
   }
   var size = this.getSize(paramSpec);
   var ctrl = createBpatcher(patcher, this.patchFile, position, size, VAR_NAME_PREFIX + i, paramSpec.key);
@@ -36,6 +38,9 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
 
   position[1] += size[1] + PADDING_Y;
   return ctrl;
+};
+TypeHandler.prototype.checkMatch = function(paramSpec) {
+  return paramSpec.type === this.type;
 };
 TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
   sendConfigMessage(['setlabel', (paramSpec.label || paramSpec.key)]);
@@ -50,12 +55,13 @@ TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
   }
 };
 
-var typeHandlers = {
-  'bool': _ButtonHandler(false),
-  'pulse': _ButtonHandler(true),
-  'float': _NumberTypeHandler(true),
-  'int': _NumberTypeHandler(false),
-  'menu': new TypeHandler({
+var typeHandlers = [
+  _ButtonHandler('bool', false),
+  _ButtonHandler('pulse', true),
+  _NumberTypeHandler('float', true),
+  _NumberTypeHandler('int', false),
+  new TypeHandler({
+    type: 'menu',
     patchFile: 'tctrl-menu.maxpat',
     getSize: function (paramSpec) { return [400, 25]; },
     getConfigMessages: function(paramSpec) {
@@ -72,9 +78,19 @@ var typeHandlers = {
         messages.push(['appendoption', options[i].key, (options[i].label || options[i].key)]);
       }
       return messages;
+    },
+    checkMatch: function(paramSpec) {
+      if (paramSpec.type === 'menu') {
+        return true;
+      }
+      if (paramSpec.type === 'string' && paramSpec.options && paramSpec.options.length) {
+        return true;
+      }
+      return false;
     }
   }),
-  'string': new TypeHandler({
+  new TypeHandler({
+    type: 'string',
     patchFile: 'tctrl-text.maxpat',
     getSize: function(paramSpec) { return [300, 25]; },
     getConfigMessages: function(paramSpec) {
@@ -82,15 +98,10 @@ var typeHandlers = {
         ['setdefault', paramSpec['default'] || ''],
         ['setvalue', paramSpec.value || '']
       ];
-    },
-    delegateTo: function(paramSpec) {
-      if (paramSpec.options && paramSpec.options.length) {
-        return typeHandlers['menu'];
-      }
-      return null;
     }
   }),
-  'fvec': new TypeHandler({
+  new TypeHandler({
+    type: 'fvec',
     patchFile: 'tctrl-fvec.maxpat',
     getSize: function (paramSpec) {
       var count = (paramSpec.parts || []).length;
@@ -118,10 +129,11 @@ var typeHandlers = {
       return messages;
     }
   })
-};
+];
 
-function _ButtonHandler(isPulse) {
+function _ButtonHandler(type, isPulse) {
   return new TypeHandler({
+    type: type,
     patchFile: 'tctrl-button.maxpat',
     getSize: function(paramSpec) { return [400, 25]; },
     getConfigMessages: function(paramSpec) {
@@ -142,8 +154,9 @@ function _ButtonHandler(isPulse) {
   });
 }
 
-function _NumberTypeHandler(isFloat) {
+function _NumberTypeHandler(type, isFloat) {
   return new TypeHandler({
+    type: type,
     patchFile: 'tctrl-slider.maxpat',
     getSize: function (paramSpec) { return [400, 25]; },
     getConfigMessages: function (paramSpec) {
@@ -167,14 +180,17 @@ function _NumberTypeHandler(isFloat) {
 function _addParameter(paramSpec, i, position) {
   var type = paramSpec.type;
   // post('Handling param ' + paramSpec.key + ' type: ' + type + ' ...\n');
-  var handler = typeHandlers[type];
-  if (!handler) {
-    // post('Unsupported parameter type ' + type + ' (' + paramSpec.key + ')\n');
-    return;
-  }
   var oscOutlet = this.patcher.getnamed('oscmsgout');
   var oscInlet = this.patcher.getnamed('oscmsgin');
-  var ctrl = handler.build(this.patcher, paramSpec, i, position);
+  var ctrl;
+  var handler;
+  for (var handlerI = 0; handlerI < typeHandlers.length; handlerI++) {
+    handler = typeHandlers[handlerI];
+    ctrl = handler.build(this.patcher, paramSpec, i, position);
+    if (ctrl) {
+      break;
+    }
+  }
   if (!ctrl) {
     post('Failed to create parameter of type ' + type + ' (' + paramSpec.key + ')\n');
     return;

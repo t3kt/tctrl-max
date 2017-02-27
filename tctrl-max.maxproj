@@ -1,9 +1,9 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : -724502865,
-	"modificationdate" : 3570993494,
-	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
+	"creationdate" : -724502986,
+	"modificationdate" : 3570993932,
+	"viewrect" : [ 10.0, 80.0, 265.0, 417.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -64,6 +64,11 @@
 					"projectrelativepath" : "./patchers"
 				}
 
+			}
+,
+			"tctrl-multi-part.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}

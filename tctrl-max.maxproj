@@ -1,8 +1,8 @@
 {
 	"name" : "tctrl-max",
 	"version" : 1,
-	"creationdate" : -724502623,
-	"modificationdate" : 3570978141,
+	"creationdate" : -724502744,
+	"modificationdate" : 3570990029,
 	"viewrect" : [ 33.0, 76.0, 265.0, 417.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -17,6 +17,16 @@
 			}
 ,
 			"tctrl-module.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-osc-io.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-schema-loader.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -36,22 +46,17 @@
 				"local" : 1
 			}
 ,
-			"tctrl-osc-io.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-schema-loader.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"tctrl-button.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-core.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

@@ -13,6 +13,7 @@ function loadModuleSpec(modSpecJson) {
   for (var i = 0; i < params.length; i++) {
     _addParameter(params[i], i, position);
   }
+  updateLayout();
 }
 
 function TypeHandler(opts) {
@@ -29,12 +30,16 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
     return null;
   }
   var size = this.getSize(paramSpec);
-  var ctrl = createBpatcher(patcher, this.patchFile, position, size, VAR_NAME_PREFIX + i, paramSpec.key);
+  var name = VAR_NAME_PREFIX + i;
+  var ctrl = createBpatcher(patcher, this.patchFile, position, size, name, paramSpec.key);
   // there has to be a better way to do this
   var modScript = patcher.getnamed('modscript');
   patcher.connect(modScript, 0, ctrl, 1);
   this.sendConfigMessages(paramSpec);
+  sendConfigMessage(['setctrlname', name]);
   patcher.disconnect(modScript, 0, ctrl, 1);
+  var actionTarget = patcher.getnamed('actionsmsgin');
+  patcher.connect(ctrl, 1, actionTarget, 0);
 
   position[1] += size[1] + PADDING_Y;
   return ctrl;
@@ -202,7 +207,7 @@ function _addParameter(paramSpec, i, position) {
 
 function createBpatcher(patcher, file, position, size, varname, args)
 {
-  return patcher.newdefault(position[0],position[1],
+  var obj = patcher.newdefault(position[0],position[1],
     'bpatcher',
     '@name', file,
     '@border', '0',
@@ -211,16 +216,74 @@ function createBpatcher(patcher, file, position, size, varname, args)
     '@presentation', '1',
     '@varname', varname,
     '@args', args);
+  return obj;
 }
 
 function clearControls() {
   var patcher = this.patcher;
+  var controls = _getOrderedControls(patcher);
+  for (var i = 0; i < controls.length; i++) {
+    patcher.remove(controls[i]);
+  }
+}
+
+function _getOrderedControls(patcher) {
+  var controls = [];
   patcher.apply(function(obj) {
-    if (obj.varname && obj.varname.indexOf(VAR_NAME_PREFIX) === 0) {
-      patcher.remove(obj);
+    var name = obj.varname;
+    if (name && name.indexOf(VAR_NAME_PREFIX) === 0) {
+      var i = parseInt(name.substr(VAR_NAME_PREFIX.length));
+      controls[i] = obj;
     }
     return true;
   });
+  return _cleanArray(controls);
+}
+
+function _cleanArray(items) {
+  var results = [];
+  for (var i = 0; i < items.length; i++) {
+    if (items[i] != null) {
+      results.push(items[i]);
+    }
+  }
+  return results;
+}
+
+function _isControl(obj) {
+  return obj.varname && obj.varname.indexOf(VAR_NAME_PREFIX) === 0;
+}
+
+function _setRect(obj, position, size) {
+  obj.rect = [
+    position[0],
+    position[1],
+    position[0] + size[0],
+    position[1] + size[1]
+  ];
+}
+
+function updateLayout() {
+  var patcher = this.patcher;
+  var position = [10, 40];
+  var controls = _getOrderedControls(patcher);
+  for (var i = 0; i < controls.length; i++) {
+    var obj = controls[i];
+    var height = obj.rect[3] - obj.rect[1];
+    var width = obj.rect[2] - obj.rect[0];
+    position[1] += height + PADDING_Y;
+    _setRect(obj, position, [width, height]);
+    //...
+  }
+}
+
+function setControlHeight(ctrlname, height) {
+  var ctrl = this.patcher.getnamed(ctrlname);
+  if (!ctrl) {
+    post('setControlHeight: Control not found: ' + ctrlname);
+    return;
+  }
+  _setRect(ctrl, [ctrl.rect[0], ctrl.rect[1]], [ctrl.rect[2] - ctrl.rect[0], height]);
 }
 
 function sendConfigMessage(data) {

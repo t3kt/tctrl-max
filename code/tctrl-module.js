@@ -17,7 +17,6 @@ function loadModuleSpec(modSpecJson) {
 
 function TypeHandler(opts) {
   this.patchFile = opts.patchFile;
-  this.checkSupport = opts.checkSupport;
   this.getConfigMessages = opts.getConfigMessages;
   this.getSize = opts.getSize;
   this.delegateTo = opts.delegateTo;
@@ -26,9 +25,6 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
   var delegate = this.delegateTo && this.delegateTo(paramSpec);
   if (delegate) {
     return delegate.build(patcher, paramSpec, i, position);
-  }
-  if (this.checkSupport && !this.checkSupport(paramSpec)) {
-    return null;
   }
   var size = this.getSize(paramSpec);
   var ctrl = createBpatcher(patcher, this.patchFile, position, size, VAR_NAME_PREFIX + i, paramSpec.key);

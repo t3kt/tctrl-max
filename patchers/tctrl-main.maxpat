@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1639.0, 111.0, 1572.0, 764.0 ],
+		"rect" : [ -1639.0, 111.0, 1354.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -61,9 +61,10 @@
 					"maxclass" : "bpatcher",
 					"name" : "tctrl-schema-loader.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 1129.0, 46.0, 232.0, 152.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 937.0, 12.0, 232.0, 152.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 415.0, 191.0, 232.0, 152.0 ],
 					"viewvisibility" : 1
@@ -81,10 +82,10 @@
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "tctrl-osc-io.maxpat",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 709.0, 57.0, 309.0, 130.0 ],
+					"patching_rect" : [ 937.0, 212.0, 309.0, 130.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 398.0, 17.0, 350.0, 130.0 ],
 					"varname" : "tctrl-osc-io",
@@ -99,7 +100,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 628.5, 264.5, 132.0, 22.0 ],
+					"patching_rect" : [ 496.75, 247.5, 132.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -117,7 +118,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 628.5, 212.5, 125.0, 22.0 ],
+					"patching_rect" : [ 496.75, 195.5, 125.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.mod.sel.change"
 				}
@@ -173,7 +174,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 954.0, 655.0, 127.0, 22.0 ],
+					"patching_rect" : [ 836.0, 690.0, 127.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.mod.sel.change"
 				}
@@ -186,7 +187,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 997.0, 583.0, 132.0, 22.0 ],
+					"patching_rect" : [ 879.0, 618.0, 132.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -204,7 +205,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 997.0, 379.0, 83.0, 22.0 ],
+					"patching_rect" : [ 879.0, 414.0, 83.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.mod.sel"
 				}
@@ -229,7 +230,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 969.0, 472.0, 117.0, 22.0 ],
+					"patching_rect" : [ 851.0, 507.0, 117.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -247,7 +248,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 954.0, 612.0, 24.0, 24.0 ],
+					"patching_rect" : [ 836.0, 647.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -259,7 +260,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 969.0, 420.0, 24.0, 24.0 ],
+					"patching_rect" : [ 851.0, 455.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -271,7 +272,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1091.5, 472.0, 52.0, 22.0 ],
+					"patching_rect" : [ 973.5, 507.0, 52.0, 22.0 ],
 					"style" : "",
 					"text" : "keys $1"
 				}
@@ -284,7 +285,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 997.0, 534.0, 71.0, 22.0 ],
+					"patching_rect" : [ 879.0, 569.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "dict.unpack"
 				}
@@ -296,7 +297,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 628.5, 300.0, 272.5, 419.0 ],
+					"patching_rect" : [ 496.75, 283.0, 272.5, 419.0 ],
 					"style" : ""
 				}
 
@@ -305,7 +306,7 @@
 				"box" : 				{
 					"fontsize" : 16.0,
 					"id" : "obj-73",
-					"items" : [ "/vjzual3/_/app/chain1", ",", "/vjzual3/_/app/chain1/warp", ",", "/vjzual3/_/app/chain1/delay", ",", "/vjzual3/_/app/chain1/iterate", ",", "/vjzual3/_/app/chain1/coloradj", ",", "/vjzual3/_/app/chain1/edgefbk1", ",", "/vjzual3/_/app/chain1/transform", ",", "/vjzual3/_/app/chain2", ",", "/vjzual3/_/app/chain2/flip", ",", "/vjzual3/_/app/chain2/delay", ",", "/vjzual3/_/app/chain2/warp1", ",", "/vjzual3/_/app/chain2/edge_1", ",", "/vjzual3/_/app/chain2/redux1", ",", "/vjzual3/_/app/chain2/coloradj", ",", "/vjzual3/_/app/chain2/transform", ",", "/vjzual3/_/app/global", ",", "/vjzual3/_/app/global/external_out", ",", "/vjzual3/_/app/master", ",", "/vjzual3/_/app/master/flip", ",", "/vjzual3/_/app/master/delay", ",", "/vjzual3/_/app/master/edge_1", ",", "/vjzual3/_/app/master/edge_2", ",", "/vjzual3/_/app/master/warp_2", ",", "/vjzual3/_/app/master/blend_1", ",", "/vjzual3/_/app/master/blend_2", ",", "/vjzual3/_/app/master/trails_1", ",", "/vjzual3/_/app/master/kaleido_1", ",", "/vjzual3/_/app/master/recolor_1", ",", "/vjzual3/_/app/master/surface_1", ",", "/vjzual3/_/app/master/transform", ",", "/vjzual3/_/app/master/coloradj_4", ",", "/vjzual3/_/app/master/background_1", ",", "/vjzual3/_/app/master/background_2", ",", "/vjzual3/_/app/master/surface_thing", ",", "/vjzual3/_/app/master/time_machine_1", ",", "/vjzual3/_/app/sources", ",", "/vjzual3/_/app/sources/video_1", ",", "/vjzual3/_/app/sources/video_2", ",", "/vjzual3/_/app/sources/video_3", ",", "/vjzual3/_/app/sources/video_4", ",", "/vjzual3/_/app/sources/video_5", ",", "/vjzual3/_/app/sources/external_in_1", ",", "/vjzual3/_/app/sources/external_in_2", ",", "/vjzual3/_/app/generators", ",", "/vjzual3/_/app/generators/noise_gen_1", ",", "/vjzual3/_/app/generators/noise_gen_2", ",", "/vjzual3/_/app/generators/shape_gen_1", ",", "/vjzual3/_/app/generators/voronoi_gen_1", ",", "/vjzual3/_/app/generators/voronoi_gen_2", ",", "/vjzual3/_/app/generators/multi_noise_gen_1" ],
+					"items" : [ "/vjzual3/_/app/chain1", ",", "/vjzual3/_/app/chain1/warp", ",", "/vjzual3/_/app/chain1/delay", ",", "/vjzual3/_/app/chain1/iterate", ",", "/vjzual3/_/app/chain1/coloradj", ",", "/vjzual3/_/app/chain1/edgefbk1", ",", "/vjzual3/_/app/chain1/transform", ",", "/vjzual3/_/app/chain2", ",", "/vjzual3/_/app/chain2/flip", ",", "/vjzual3/_/app/chain2/delay", ",", "/vjzual3/_/app/chain2/warp1", ",", "/vjzual3/_/app/chain2/edge_1", ",", "/vjzual3/_/app/chain2/redux1", ",", "/vjzual3/_/app/chain2/coloradj", ",", "/vjzual3/_/app/chain2/transform", ",", "/vjzual3/_/app/global", ",", "/vjzual3/_/app/global/external_out", ",", "/vjzual3/_/app/master", ",", "/vjzual3/_/app/master/flip", ",", "/vjzual3/_/app/master/delay", ",", "/vjzual3/_/app/master/edge_1", ",", "/vjzual3/_/app/master/edge_2", ",", "/vjzual3/_/app/master/warp_2", ",", "/vjzual3/_/app/master/blend_1", ",", "/vjzual3/_/app/master/blend_2", ",", "/vjzual3/_/app/master/trails_1", ",", "/vjzual3/_/app/master/kaleido_1", ",", "/vjzual3/_/app/master/recolor_1", ",", "/vjzual3/_/app/master/surface_1", ",", "/vjzual3/_/app/master/transform", ",", "/vjzual3/_/app/master/coloradj_4", ",", "/vjzual3/_/app/master/background_1", ",", "/vjzual3/_/app/master/background_2", ",", "/vjzual3/_/app/master/surface_thing", ",", "/vjzual3/_/app/master/time_machine_1", ",", "/vjzual3/_/app/sources", ",", "/vjzual3/_/app/sources/video_1", ",", "/vjzual3/_/app/sources/video_2", ",", "/vjzual3/_/app/sources/video_3", ",", "/vjzual3/_/app/sources/video_4", ",", "/vjzual3/_/app/sources/video_5", ",", "/vjzual3/_/app/sources/external_in_1", ",", "/vjzual3/_/app/sources/external_in_2", ",", "/vjzual3/_/app/generators", ",", "/vjzual3/_/app/generators/ramp_gen_1", ",", "/vjzual3/_/app/generators/noise_gen_1", ",", "/vjzual3/_/app/generators/noise_gen_2", ",", "/vjzual3/_/app/generators/shape_gen_1", ",", "/vjzual3/_/app/generators/voronoi_gen_1", ",", "/vjzual3/_/app/generators/voronoi_gen_2", ",", "/vjzual3/_/app/generators/multi_noise_gen_1" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -419,6 +420,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-90", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -505,6 +515,24 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "tctrl-module.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-button.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-param-core.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-slider.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

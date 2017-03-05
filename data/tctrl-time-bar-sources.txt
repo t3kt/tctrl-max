@@ -1,0 +1,6 @@
+1, tctrl.time.bars.1;
+2, tctrl.time.bars.2;
+4, tctrl.time.bars.4;
+8, tctrl.time.bars.8;
+16, tctrl.time.bars.16;
+32, tctrl.time.bars.32;

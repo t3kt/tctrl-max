@@ -1,5 +1,8 @@
 var PADDING_Y = 2;
 var VAR_NAME_PREFIX = 'ctrl__';
+var common = require('tctrl-common');
+
+post('COMMON KEYS: ' + Object.keys(common).join(',') + '\n');
 
 outlets = 1;
 
@@ -32,6 +35,12 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
   var size = this.getSize(paramSpec);
   var name = VAR_NAME_PREFIX + i;
   var ctrl = createBpatcher(patcher, this.patchFile, position, size, name, paramSpec.key);
+  // var ctrl = common.createBpatcher(patcher, this.patchFile, {
+  //   position: position,
+  //   size: size,
+  //   name: name,
+  //   args: paramSpec.key
+  // });
   // there has to be a better way to do this
   var modScript = patcher.getnamed('modscript');
   patcher.connect(modScript, 0, ctrl, 1);

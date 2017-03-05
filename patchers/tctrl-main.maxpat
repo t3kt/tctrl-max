@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 3,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1639.0, 111.0, 1354.0, 764.0 ],
+		"rect" : [ -1639.0, 111.0, 1305.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,27 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-7",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "tctrl-timing.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 1060.0, 388.0, 186.0, 72.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 398.0, 321.0, 186.0, 72.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
@@ -66,7 +87,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 937.0, 12.0, 232.0, 152.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 415.0, 191.0, 232.0, 152.0 ],
+					"presentation_rect" : [ 398.0, 156.0, 232.0, 152.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -520,24 +541,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-button.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-param-core.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-slider.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-module.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
@@ -559,6 +562,12 @@
 				"name" : "tctrl-flatten.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-timing.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],

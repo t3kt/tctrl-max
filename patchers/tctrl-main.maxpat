@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1639.0, 111.0, 1305.0, 764.0 ],
+		"rect" : [ -1673.0, 77.0, 992.0, 798.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 3,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -37,6 +37,26 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-8",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "tctrl-midi-io.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 738.5, 12.0, 151.0, 148.5 ],
+					"varname" : "tctrl-midi-io",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgmode" : 0,
 					"border" : 0,
@@ -534,6 +554,12 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-8::obj-1::obj-9" : [ "MIDI_out_LED", "MIDI_out_LED", 0 ],
+			"obj-8::obj-1::obj-1" : [ "refresh", "refresh", 0 ],
+			"obj-8::obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "tctrl-module.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
@@ -585,6 +611,24 @@
 , 			{
 				"name" : "tctrl-timing.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-midi-io.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.MIDI In.maxpat",
+				"bootpath" : "C74:/packages/Beap/clippings/BEAP/MIDI",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pastebang.maxpat",
+				"bootpath" : "C74:/packages/Beap/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}

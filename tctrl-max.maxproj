@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -723454869,
+	"modificationdate" : -723400627,
 	"viewrect" : [ 10.0, 80.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -102,6 +102,11 @@
 			}
 ,
 			"tctrl-app-modules.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-app-state.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

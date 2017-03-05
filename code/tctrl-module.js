@@ -2,9 +2,7 @@ var PADDING_Y = 2;
 var VAR_NAME_PREFIX = 'ctrl__';
 var common = require('tctrl-common');
 
-post('COMMON KEYS: ' + Object.keys(common).join(',') + '\n');
-
-outlets = 1;
+outlets = 2;
 
 function loadModuleSpec(modSpecJson) {
   var modSpec = JSON.parse(modSpecJson);
@@ -34,13 +32,12 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
   }
   var size = this.getSize(paramSpec);
   var name = VAR_NAME_PREFIX + i;
-  var ctrl = createBpatcher(patcher, this.patchFile, position, size, name, paramSpec.key);
-  // var ctrl = common.createBpatcher(patcher, this.patchFile, {
-  //   position: position,
-  //   size: size,
-  //   name: name,
-  //   args: paramSpec.key
-  // });
+  var ctrl = common.createBpatcher(patcher, this.patchFile, {
+    position: position,
+    size: size,
+    name: name,
+    args: paramSpec.key
+  });
   // there has to be a better way to do this
   var modScript = patcher.getnamed('modscript');
   patcher.connect(modScript, 0, ctrl, 1);
@@ -158,6 +155,7 @@ function _ButtonHandler(type, isPulse) {
       if (!isPulse) {
         messages.push(['setdefault', paramSpec['default'] ? 1 : 0]);
         messages.push(['setvalue', paramSpec.value ? 1 : 0]);
+        messages.push(['loadvalue']);
         messages.push(['setoffhelp', paramSpec.offHelp || '']);
         messages.push(['setbuttonofftext', paramSpec.buttonOffText || btnText]);
       }
@@ -176,6 +174,7 @@ function _NumberTypeHandler(type, isFloat) {
         ['setdefault', paramSpec['default']],
         ['setnormrange', paramSpec.minNorm, paramSpec.maxNorm],
         ['setvalue', paramSpec.value],
+        ['loadvalue'],
         ['setisfloat', isFloat ? 1 : 0]
       ];
       if (paramSpec.minLimit != null) {
@@ -212,74 +211,20 @@ function _addParameter(paramSpec, i, position) {
   // post('Done handling param ' + paramSpec.key + '\n');
 }
 
-function createBpatcher(patcher, file, position, size, varname, args)
-{
-  var obj = patcher.newdefault(position[0],position[1],
-    'bpatcher',
-    '@name', file,
-    '@border', '0',
-    '@patching_rect', position[0], position[1], size[0], size[1],
-    '@presentation_rect', position[0], position[1], size[0], size[1],
-    '@presentation', '1',
-    '@varname', varname,
-    '@args', args);
-  return obj;
-}
-
 function clearControls() {
-  var patcher = this.patcher;
-  var controls = _getOrderedControls(patcher);
-  for (var i = 0; i < controls.length; i++) {
-    patcher.remove(controls[i]);
-  }
-}
-
-function _getOrderedControls(patcher) {
-  var controls = [];
-  patcher.apply(function(obj) {
-    var name = obj.varname;
-    if (name && name.indexOf(VAR_NAME_PREFIX) === 0) {
-      var i = parseInt(name.substr(VAR_NAME_PREFIX.length));
-      controls[i] = obj;
-    }
-    return true;
-  });
-  return _cleanArray(controls);
-}
-
-function _cleanArray(items) {
-  var results = [];
-  for (var i = 0; i < items.length; i++) {
-    if (items[i] != null) {
-      results.push(items[i]);
-    }
-  }
-  return results;
-}
-
-function _isControl(obj) {
-  return obj.varname && obj.varname.indexOf(VAR_NAME_PREFIX) === 0;
-}
-
-function _setRect(obj, position, size) {
-  obj.rect = [
-    position[0],
-    position[1],
-    position[0] + size[0],
-    position[1] + size[1]
-  ];
+  common.removeObjectsByPrefix(this.patcher, VAR_NAME_PREFIX);
 }
 
 function updateLayout() {
   var patcher = this.patcher;
   var position = [10, 40];
-  var controls = _getOrderedControls(patcher);
+  var controls = common.getOrderedObjects(patcher, VAR_NAME_PREFIX);
   for (var i = 0; i < controls.length; i++) {
     var obj = controls[i];
     var height = obj.rect[3] - obj.rect[1];
     var width = obj.rect[2] - obj.rect[0];
     position[1] += height + PADDING_Y;
-    _setRect(obj, position, [width, height]);
+    common.setRect(obj, position, [width, height]);
     //...
   }
 }
@@ -290,7 +235,7 @@ function setControlHeight(ctrlname, height) {
     post('setControlHeight: Control not found: ' + ctrlname);
     return;
   }
-  _setRect(ctrl, [ctrl.rect[0], ctrl.rect[1]], [ctrl.rect[2] - ctrl.rect[0], height]);
+  common.setRect(ctrl, [ctrl.rect[0], ctrl.rect[1]], [ctrl.rect[2] - ctrl.rect[0], height]);
 }
 
 function sendConfigMessage(data) {

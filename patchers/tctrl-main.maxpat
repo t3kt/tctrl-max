@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1673.0, 77.0, 992.0, 798.0 ],
+		"rect" : [ -1652.0, 161.0, 1339.0, 798.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,30 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 705.0, 224.0, 134.0, 22.0 ],
+					"style" : "",
+					"text" : "print OSCIN @popup 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1096.0, 585.0, 84.0, 22.0 ],
+					"style" : "",
+					"text" : "tctrl-app-state"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
@@ -467,6 +491,17 @@
 					"destination" : [ "obj-2", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 1,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -567,9 +602,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-8::obj-1::obj-9" : [ "MIDI_out_LED", "MIDI_out_LED", 0 ],
+			"obj-8::obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ],
 			"obj-8::obj-1::obj-1" : [ "refresh", "refresh", 0 ],
-			"obj-8::obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ]
+			"obj-8::obj-1::obj-9" : [ "MIDI_out_LED", "MIDI_out_LED", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -588,6 +623,12 @@
 				"name" : "tctrl-param-core.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-param-values.txt",
+				"bootpath" : "~/creations/tctrl/tctrl-max/data",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -658,6 +699,12 @@
 			}
 , 			{
 				"name" : "tctrl-midi-mapping.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-app-state.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

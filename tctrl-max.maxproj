@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -723400627,
+	"modificationdate" : -723390866,
 	"viewrect" : [ 10.0, 80.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -17,6 +17,31 @@
 			}
 ,
 			"tctrl-module.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-button.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-menu.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-slider.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-multi.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -36,22 +61,17 @@
 				"local" : 1
 			}
 ,
-			"tctrl-button.maxpat" : 			{
+			"tctrl-midi-io.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-param-core.maxpat" : 			{
+			"tctrl-midi-mapping.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-slider.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-menu.maxpat" : 			{
+			"tctrl-app-state.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -59,16 +79,6 @@
 			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
-			}
-,
-			"tctrl-multi.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
 			}
 ,
 			"tctrl-multi-part.maxpat" : 			{
@@ -91,24 +101,14 @@
 
 			}
 ,
-			"tctrl-midi-io.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-midi-mapping.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-app-modules.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-app-state.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 
 		}
@@ -132,6 +132,11 @@
 		}
 ,
 		"data" : 		{
+			"tctrl-param-values.txt" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
 			"vjzual3-schema.json" : 			{
 				"kind" : "json",
 				"local" : 1
@@ -140,6 +145,16 @@
 			"example-module.json" : 			{
 				"kind" : "json",
 				"local" : 1
+			}
+,
+			"tctrl-state-params.json" : 			{
+				"kind" : "json",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 
 		}
@@ -155,6 +170,13 @@
 	}
 ,
 	"searchpath" : 	{
+		"0" : 		{
+			"bootpath" : "~/creations/tctrl/tctrl-max/data",
+			"projectrelativepath" : "./data",
+			"label" : "",
+			"recursive" : 1,
+			"enabled" : 1
+		}
 
 	}
 ,
@@ -163,5 +185,5 @@
 	"readonly" : 0,
 	"devpathtype" : 0,
 	"devpath" : ".",
-	"sortmode" : 0
+	"sortmode" : 1
 }

@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -723388457,
+	"modificationdate" : -723294824,
 	"viewrect" : [ 10.0, 80.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -137,29 +137,29 @@
 				"local" : 1
 			}
 ,
-			"vjzual3-schema.json" : 			{
+			"tctrl-state-params.json" : 			{
 				"kind" : "json",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
+				"local" : 1
 			}
 ,
 			"example-module.json" : 			{
 				"kind" : "json",
 				"local" : 1,
 				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
+					"bootpath" : "~/creations/tctrl/tctrl-max/data",
+					"projectrelativepath" : "./data"
 				}
 
 			}
 ,
-			"tctrl-state-params.json" : 			{
+			"vjzual3-schema.json" : 			{
 				"kind" : "json",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 
 		}

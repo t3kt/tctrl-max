@@ -140,7 +140,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 662.0, 157.0, 81.0, 22.0 ],
+					"patching_rect" : [ 671.5, 161.0, 81.0, 22.0 ],
 					"style" : "",
 					"text" : "route setpath"
 				}
@@ -153,7 +153,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 662.0, 116.0, 87.0, 22.0 ],
+					"patching_rect" : [ 671.5, 120.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0.command"
 				}
@@ -179,7 +179,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 946.0, 227.0, 27.0, 22.0 ],
+					"patching_rect" : [ 942.0, 227.0, 27.0, 22.0 ],
 					"style" : "",
 					"text" : "b 1"
 				}
@@ -214,11 +214,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-89",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 975.0, 265.0, 212.0, 22.0 ],
+					"patching_rect" : [ 984.0, 227.0, 116.0, 36.0 ],
 					"style" : "",
 					"text" : "loadmess dictionary tctrl.state.params"
 				}
@@ -348,7 +349,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 884.0, 341.0, 71.0, 22.0 ],
+					"patching_rect" : [ 942.0, 294.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "dict.unpack"
 				}
@@ -361,7 +362,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 884.0, 405.0, 103.0, 22.0 ],
+					"patching_rect" : [ 942.0, 331.0, 103.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend setvalue"
 				}
@@ -373,7 +374,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 884.0, 451.0, 53.0, 22.0 ],
+					"patching_rect" : [ 942.0, 365.0, 53.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0.out"
 				}
@@ -501,7 +502,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 678.5, 338.0, 29.5, 22.0 ],
+					"patching_rect" : [ 671.5, 338.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "0"
 				}
@@ -527,7 +528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 678.5, 289.0, 24.0, 22.0 ],
+					"patching_rect" : [ 671.5, 289.0, 24.0, 22.0 ],
 					"style" : "",
 					"text" : "t b"
 				}
@@ -540,7 +541,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 637.0, 211.0, 29.5, 22.0 ],
+					"patching_rect" : [ 637.0, 211.0, 53.5, 22.0 ],
 					"style" : "",
 					"text" : "sel"
 				}

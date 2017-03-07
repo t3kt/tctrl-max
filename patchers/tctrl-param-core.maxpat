@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 206.0, 113.0, 1276.0, 904.0 ],
+		"rect" : [ -1790.0, 119.0, 1206.0, 904.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,34 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-114",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 209.428558, 414.5, 87.0, 22.0 ],
+					"style" : "",
+					"text" : "r #0.command"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 14.0,
+					"id" : "obj-113",
+					"linecount" : 18,
+					"maxclass" : "comment",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 823.0, 505.5, 352.0, 296.0 ],
+					"style" : "",
+					"suppressinlet" : 1,
+					"text" : "supported messages:\n\nsetpath {s}\nsetlabel {s}\nsetctrlname {s}\nsetdefault {any value}\nsethasdefault {0|1} - enable/disable 'reset' action\nsetcanmap {0|1} - enable/disable 'map' action\nsethasspecialreset {0|1}\n - if false, the reset action dumps the value from setdefault in a 'setvalue' message\n - if true, it just sends a 'reset' message to the outlet\nreset\n - resets to default value (sends 'setvalue' or 'reset' message depending on sethasspecialreset)\nloadvalue\n - attempts to load the value from the global state dict, and outputs 'setvalue' message if found"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-103",
 					"maxclass" : "newobj",
@@ -151,7 +179,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 981.0, 427.0, 27.0, 22.0 ],
+					"patching_rect" : [ 946.0, 227.0, 27.0, 22.0 ],
 					"style" : "",
 					"text" : "b 1"
 				}
@@ -190,7 +218,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1010.0, 465.0, 212.0, 22.0 ],
+					"patching_rect" : [ 975.0, 265.0, 212.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess dictionary tctrl.state.params"
 				}
@@ -229,7 +257,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.916672, 419.5, 111.0, 22.0 ],
+					"patching_rect" : [ 175.916672, 377.5, 111.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0.actionselected"
 				}
@@ -307,7 +335,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 919.0, 427.0, 52.0, 22.0 ],
+					"patching_rect" : [ 884.0, 227.0, 52.0, 22.0 ],
 					"style" : "",
 					"text" : "keys $1"
 				}
@@ -320,7 +348,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 919.0, 541.0, 71.0, 22.0 ],
+					"patching_rect" : [ 884.0, 341.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "dict.unpack"
 				}
@@ -333,7 +361,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 919.0, 605.0, 103.0, 22.0 ],
+					"patching_rect" : [ 884.0, 405.0, 103.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend setvalue"
 				}
@@ -345,7 +373,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 919.0, 651.0, 53.0, 22.0 ],
+					"patching_rect" : [ 884.0, 451.0, 53.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0.out"
 				}
@@ -383,7 +411,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 919.0, 332.0, 135.0, 22.0 ],
+					"patching_rect" : [ 884.0, 132.0, 135.0, 22.0 ],
 					"style" : "",
 					"text" : "route setpath loadvalue"
 				}
@@ -396,7 +424,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 919.0, 271.0, 87.0, 22.0 ],
+					"patching_rect" : [ 884.0, 71.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0.command"
 				}
@@ -654,7 +682,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 175.916672, 452.5, 56.0, 22.0 ],
+					"patching_rect" : [ 175.916672, 477.5, 56.0, 22.0 ],
 					"style" : "",
 					"text" : "sel reset"
 				}
@@ -865,6 +893,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-103", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-114", 0 ]
 				}
 
 			}

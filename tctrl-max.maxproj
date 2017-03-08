@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -723294328,
+	"modificationdate" : -723198318,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -103,6 +103,16 @@
 ,
 			"tctrl-param-multi-core.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-multi-slider.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1
 			}
 
@@ -129,12 +139,22 @@
 		"data" : 		{
 			"tctrl-param-values.txt" : 			{
 				"kind" : "textfile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-state-params.json" : 			{
 				"kind" : "json",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"example-module.json" : 			{

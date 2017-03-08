@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1656.0, 180.0, 1305.0, 794.0 ],
+		"rect" : [ -1646.0, 246.0, 1305.0, 794.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,44 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-309",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 255.0, 770.0, 53.0, 22.0 ],
+					"style" : "",
+					"text" : "s #0.out"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-308",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 255.0, 732.0, 117.0, 22.0 ],
+					"style" : "",
+					"text" : "part $1 setvisible $2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-304",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 255.0, 690.0, 105.0, 22.0 ],
+					"style" : "",
+					"text" : "r #0.setpartvisible"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontsize" : 14.0,
 					"id" : "obj-113",
@@ -184,7 +222,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 334.0, 659.0, 133.0, 20.0 ],
+					"patching_rect" : [ 304.0, 666.0, 133.0, 20.0 ],
 					"style" : "",
 					"suppressinlet" : 1,
 					"text" : "set parts visible/hidden"
@@ -326,7 +364,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 334.0, 878.0, 47.0, 22.0 ],
+					"patching_rect" : [ 378.0, 879.0, 47.0, 22.0 ],
 					"style" : "",
 					"text" : "zl.rot 1"
 				}
@@ -339,7 +377,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.0, 917.0, 137.0, 22.0 ],
+					"patching_rect" : [ 378.0, 918.0, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf script %s part%d"
 				}
@@ -352,7 +390,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.0, 849.0, 51.0, 22.0 ],
+					"patching_rect" : [ 378.0, 850.0, 51.0, 22.0 ],
 					"style" : "",
 					"text" : "pack i s"
 				}
@@ -365,7 +403,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 334.0, 952.0, 69.0, 22.0 ],
+					"patching_rect" : [ 378.0, 953.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
@@ -379,7 +417,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 334.0, 735.0, 61.0, 22.0 ],
+					"patching_rect" : [ 378.0, 736.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "unpack i i"
 				}
@@ -392,7 +430,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 334.0, 689.0, 105.0, 22.0 ],
+					"patching_rect" : [ 378.0, 690.0, 105.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0.setpartvisible"
 				}
@@ -406,7 +444,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 376.0, 773.0, 72.0, 50.0 ],
+					"patching_rect" : [ 420.0, 774.0, 72.0, 50.0 ],
 					"style" : "",
 					"text" : "if $i1 > 0 then show else hide"
 				}
@@ -521,7 +559,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 136.5, 557.0, 150.0, 20.0 ],
+					"patching_rect" : [ 101.0, 564.0, 150.0, 20.0 ],
 					"style" : "",
 					"suppressinlet" : 1,
 					"text" : "on init, hide disabled parts"
@@ -847,7 +885,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 129.5, 622.0, 87.0, 22.0 ],
+					"patching_rect" : [ 129.5, 645.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "route setcount"
 				}
@@ -860,7 +898,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 129.5, 585.0, 87.0, 22.0 ],
+					"patching_rect" : [ 129.5, 608.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0.command"
 				}
@@ -2032,6 +2070,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-301", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-308", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-304", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-309", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-308", 0 ]
 				}
 
 			}

@@ -53,14 +53,13 @@
 				"box" : 				{
 					"fontsize" : 14.0,
 					"id" : "obj-113",
-					"linecount" : 18,
 					"maxclass" : "comment",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 823.0, 505.5, 352.0, 296.0 ],
+					"patching_rect" : [ 333.5, 16.0, 237.0, 23.0 ],
 					"style" : "",
 					"suppressinlet" : 1,
-					"text" : "supported messages:\n\nsetpath {s}\nsetlabel {s}\nsetctrlname {s}\nsetdefault {any value}\nsethasdefault {0|1} - enable/disable 'reset' action\nsetcanmap {0|1} - enable/disable 'map' action\nsethasspecialreset {0|1}\n - if false, the reset action dumps the value from setdefault in a 'setvalue' message\n - if true, it just sends a 'reset' message to the outlet\nreset\n - resets to default value (sends 'setvalue' or 'reset' message depending on sethasspecialreset)\nloadvalue\n - attempts to load the value from the global state dict, and outputs 'setvalue' message if found"
+					"text" : "See docs/components.md for details"
 				}
 
 			}
@@ -219,7 +218,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 984.0, 227.0, 116.0, 36.0 ],
+					"patching_rect" : [ 984.0, 227.0, 118.0, 36.0 ],
 					"style" : "",
 					"text" : "loadmess dictionary tctrl.state.params"
 				}

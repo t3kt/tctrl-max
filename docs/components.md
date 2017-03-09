@@ -8,6 +8,7 @@ loading, and value resetting.
 
 | Message | Description |
 | ------- | ----------- |
+| `initialize dictionary obj123` | Extract values from a dictionary and translate into other input messages (see below).
 | `setpath path` | Sets the parameter path (e.g. `setpath /myapp/stuff/things:Awesomeness`).
 | `setlabel label` | Sets the displayed label text.
 | `setctrlname name` | Specifies the name of the bpatcher within the parent object (currently unused).
@@ -15,8 +16,15 @@ loading, and value resetting.
 | `sethasdefault 0/1` | Specifies whether the parameter supports the `reset` action.
 | `setcanmap 0/1` | Specifies whether the parameter supports MIDI mappings via the `map` action.
 | `sethasspecialreset 0/1` | If 0, the `reset` action dumps the value specified by `setdefault`.<br> If 1, the `reset` action is echoed to the output, allowing the parent to handle it instead
-| `reset` | triggers the `reset` action
-| `loadvalue` | loads the parameter value from the global state dict, if available
+| `reset` | Triggers the `reset` action.
+| `loadvalue` | Loads the parameter value from the global state dict, if available.
+
+#### Initialize dictionary structure
+| Key | Equivalent input message | Notes |
+| --- | ------------------------ | ----------- |
+| `path` | `setpath` |
+| `label` | `setlabel` |
+| `default` | `setdefault` | Also sends `sethasdefault 1` if key is present in dictionary, or `sethasdefault 0` otherwise.
 
 ### Actions
 Actions are selected using the action menu, or by sending messages to the input.

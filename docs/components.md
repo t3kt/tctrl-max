@@ -86,7 +86,7 @@ ParamPart child nodes.
 ## tctrl-slider
 This component is a control for a single float or integer parameter. It shows both a slider and a number input field.
 Depending on the configuration, the number field may be able to accept numbers outside the range of what the slider
-shows. It contains a tctrl-param-core, so it also supports the input message and initialization dictionary fields.
+shows. It contains a tctrl-param-core, so it also supports the same input message and initialization dictionary fields.
 
 ### Input messages
 
@@ -106,13 +106,17 @@ The initialization dictionary passed into tctrl-slider corresponds to a tctrl Pa
 | `maxLimit` | (none) | Sets the maximum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no upper limit.
 | `type` | `setisfloat` | Value can be either `float` or `int`.
 
-## tctrl-toggle
-This component is a control for a bool parameter. It shows a toggle button. It contains a tctrl-param-core, so it also
-supports the input message and initialization dictionary fields.
+## tctrl-button
+This component is a control for a bool or trigger parameter, which shows a button. It contains a tctrl-param-core, so it
+also supports the same input message and initialization dictionary fields.
 
 ### Initialize dictionary structure
-The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `bool`.
+The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `bool` or
+`trigger`.
 
 | Key | Equivalent input message | Notes |
 | --- | ------------------------ | ----------- |
+| `type` | (none) | Value can be either `bool` or `trigger`, which specifies the behavior of the button as either a toggle or a basic button.
+| `buttonText` | (none) | For `trigger` parameters, sets the text of the button. For `bool` parameters, sets the text of the button when it is on. Defaults to the value of `label` when missing.
+| `buttonOffText` | (none) | For `bool` parameters, sets the text of the button when it is off. Defaults to the value of `buttonText` when missing.
 

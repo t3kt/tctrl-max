@@ -30,7 +30,7 @@ TypeHandler.prototype.build = function(patcher, paramSpec, i, position) {
   if (!this.checkMatch(paramSpec)) {
     return null;
   }
-  var size = this.getSize(paramSpec);
+  var size = this.getSize ? this.getSize(paramSpec) : [400, 25];
   var name = VAR_NAME_PREFIX + i;
   var ctrl = common.createBpatcher(patcher, this.patchFile, {
     position: position,
@@ -74,14 +74,13 @@ TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
 };
 
 var typeHandlers = [
-  _ButtonHandler('bool', false),
-  _ButtonHandler('pulse', true),
+  _ButtonHandler('bool'),
+  _ButtonHandler('trigger'),
   _NumberTypeHandler('float', true),
   _NumberTypeHandler('int', false),
   new TypeHandler({
     type: 'menu',
     patchFile: 'tctrl-menu.maxpat',
-    getSize: function (paramSpec) { return [400, 25]; },
     getConfigMessages: function(paramSpec) {
       var messages = [
         ['setdefault', paramSpec['default']]
@@ -110,7 +109,6 @@ var typeHandlers = [
   new TypeHandler({
     type: 'string',
     patchFile: 'tctrl-text.maxpat',
-    getSize: function(paramSpec) { return [300, 25]; },
     getConfigMessages: function(paramSpec) {
       return [
         ['setdefault', paramSpec['default'] || ''],
@@ -126,7 +124,6 @@ function _VectorHandler(type) {
   return new TypeHandler({
     type: type,
     patchFile: 'tctrl-multi.maxpat',
-    getSize: function (paramSpec) { return [400, 25]; },
     getConfigMessages: function(paramSpec) {
       var parts = paramSpec.parts || [];
       var messages = [
@@ -147,34 +144,17 @@ function _VectorHandler(type) {
   });
 }
 
-function _ButtonHandler(type, isPulse) {
+function _ButtonHandler(type) {
   return new TypeHandler({
     type: type,
-    patchFile: 'tctrl-button.maxpat',
-    getSize: function(paramSpec) { return [400, 25]; },
-    getConfigMessages: function(paramSpec) {
-      var messages = [
-        ['setispulse', isPulse ? 1 : 0]
-      ];
-      messages.push(['sethelp', paramSpec.help || '']);
-      var btnText = paramSpec.buttonText || paramSpec.label || '';
-      messages.push(['setbuttontext', btnText]);
-      if (!isPulse) {
-        messages.push(['setdefault', paramSpec['default'] ? 1 : 0]);
-        messages.push(['setvalue', paramSpec.value ? 1 : 0]);
-        messages.push(['setoffhelp', paramSpec.offHelp || '']);
-        messages.push(['setbuttonofftext', paramSpec.buttonOffText || btnText]);
-      }
-      return messages;
-    }
+    patchFile: 'tctrl-button.maxpat'
   });
 }
 
 function _NumberTypeHandler(type, isFloat) {
   return new TypeHandler({
     type: type,
-    patchFile: 'tctrl-slider.maxpat',
-    getSize: function (paramSpec) { return [400, 25]; }
+    patchFile: 'tctrl-slider.maxpat'
   });
 }
 

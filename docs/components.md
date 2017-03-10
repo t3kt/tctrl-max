@@ -4,7 +4,7 @@
 This component provides common infrastructure for various types of parameters, including a label, actions menu, value
 loading, and value resetting.
 
-### Supported messages
+### Input messages
 
 | Message | Description |
 | ------- | ----------- |
@@ -50,7 +50,7 @@ those components.
 The parts of the parameter are referenced by 0-based indices, so the first part is `0`, second is `1`, etc. The
 component currently supports at most 4 parts.
 
-### Supported messages
+### Input messages
 
 | Action | Description |
 | ------ | ----------- |
@@ -80,3 +80,26 @@ ParamPart child nodes.
 | `part N setvalue value` | Indicates that a part should be set to the specified value. See `setvalue` output message in tctrl-param-core for details.
 | `part N reset` | Indicates that a part should be reset using special reset logic. See `reset` output message in tctrl-param-core for details.
 | `part N other message` | A forwarded output message from a particular part. This will also be sent for each part in response to an `allparts` message received.
+
+# tctrl-slider
+This component is a control for a single float or integer parameter. It shows both a slider and a number input field.
+Depending on the configuration, the number field may be able to accept numbers outside the range of what the slider
+shows. It contains a tctrl-param-core, so it also supports the input message and initialization dictionary fields.
+
+### Input messages
+
+| Action | Description |
+| ------ | ----------- |
+| `setisfloat 0/1` | Sets whether the parameter is an integer (`0`) or a float (`1`).
+| `setvalue X` | Sets the current parameter value. If `setminlimit`/`setmaxlimit` have been specified the value is clamped to that range. This message triggers output from the parameter.
+
+#### Initialize dictionary structure
+The initialization dictionary passed into tctrl-param-multi-core corresponds to a tctrl ParamSpec node with one or more
+ParamPart child nodes.
+
+| Key | Equivalent input message | Notes |
+| --- | ------------------------ | ----------- |
+| `minNorm` | (none) | Sets the lower bound shown on the slider. The field may still allow numbers below this bound, depending on whether `minLimit` has been specified.
+| `maxNorm` | (none) | Sets the upper bound shown on the slider. The field may still allow numbers above this bound, depending on whether `maxLimit` has been specified.
+| `minLimit` | (none) | Sets the minimum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no lower limit.
+| `maxLimit` | (none) | Sets the maximum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no upper limit.

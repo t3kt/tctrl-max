@@ -54,8 +54,9 @@ TypeHandler.prototype.checkMatch = function(paramSpec) {
   return paramSpec.type === this.type;
 };
 TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
-  sendConfigMessage(['setlabel', (paramSpec.label || paramSpec.key)]);
-  sendConfigMessage(['setpath',  paramSpec.path ||'<none>']);
+  var specDict = new Dict();
+  specDict.parse(JSON.stringify(paramSpec));
+  sendConfigMessage(['initialize', 'dictionary', specDict.name]);
   if (this.getConfigMessages) {
     var messages = this.getConfigMessages(paramSpec);
     if (messages) {

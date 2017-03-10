@@ -56,6 +56,11 @@ TypeHandler.prototype.checkMatch = function(paramSpec) {
 TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
   var specDict = new Dict();
   specDict.parse(JSON.stringify(paramSpec));
+  var typeName = specDict.get('type');
+  // max treats "float" and "int" specially, so add a prefix
+  if (typeName === 'float' || typeName === 'int') {
+    specDict.set('type', 't_' + typeName);
+  }
   sendConfigMessage(['initialize', 'dictionary', specDict.name]);
   if (this.getConfigMessages) {
     var messages = this.getConfigMessages(paramSpec);
@@ -65,6 +70,7 @@ TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
       }
     }
   }
+  sendConfigMessage(['loadvalue']);
 };
 
 var typeHandlers = [
@@ -156,7 +162,6 @@ function _ButtonHandler(type, isPulse) {
       if (!isPulse) {
         messages.push(['setdefault', paramSpec['default'] ? 1 : 0]);
         messages.push(['setvalue', paramSpec.value ? 1 : 0]);
-        messages.push(['loadvalue']);
         messages.push(['setoffhelp', paramSpec.offHelp || '']);
         messages.push(['setbuttonofftext', paramSpec.buttonOffText || btnText]);
       }
@@ -169,23 +174,7 @@ function _NumberTypeHandler(type, isFloat) {
   return new TypeHandler({
     type: type,
     patchFile: 'tctrl-slider.maxpat',
-    getSize: function (paramSpec) { return [400, 25]; },
-    getConfigMessages: function (paramSpec) {
-      var messages = [
-        ['setdefault', paramSpec['default']],
-        ['setnormrange', paramSpec.minNorm, paramSpec.maxNorm],
-        ['setvalue', paramSpec.value],
-        ['loadvalue'],
-        ['setisfloat', isFloat ? 1 : 0]
-      ];
-      if (paramSpec.minLimit != null) {
-        messages.push(['setmin', paramSpec.minLimit]);
-      }
-      if (paramSpec.maxLimit != null) {
-        messages.push(['setmax', paramSpec.maxLimit]);
-      }
-      return messages;
-    }
+    getSize: function (paramSpec) { return [400, 25]; }
   });
 }
 

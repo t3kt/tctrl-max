@@ -18,6 +18,7 @@ loading, and value resetting.
 | `sethasspecialreset 0/1` | If 0, the `reset` action dumps the value specified by `setdefault`.<br> If 1, the `reset` action is echoed to the output, allowing the parent to handle it instead
 | `reset` | Triggers the `reset` action.
 | `loadvalue` | Loads the parameter value from the global state dict, if available.
+| `setvalue` | Sets the parameter value, triggering output. This message is just echoed to the component's output so the parent component can handle it.
 
 #### Initialize dictionary structure
 The initialization dictionary passed into tctrl-param-core corresponds to either a tctrl ParamSpec or ParamPart node.
@@ -27,6 +28,7 @@ The initialization dictionary passed into tctrl-param-core corresponds to either
 | `path` | `setpath` |
 | `label` | `setlabel` |
 | `default` | `setdefault` | Also sends `sethasdefault 1` if key is present in dictionary, or `sethasdefault 0` otherwise.
+| `value` | `setvalue` |
 
 ### Actions
 Actions are selected using the action menu, or by sending messages to the input.
@@ -81,7 +83,7 @@ ParamPart child nodes.
 | `part N reset` | Indicates that a part should be reset using special reset logic. See `reset` output message in tctrl-param-core for details.
 | `part N other message` | A forwarded output message from a particular part. This will also be sent for each part in response to an `allparts` message received.
 
-# tctrl-slider
+## tctrl-slider
 This component is a control for a single float or integer parameter. It shows both a slider and a number input field.
 Depending on the configuration, the number field may be able to accept numbers outside the range of what the slider
 shows. It contains a tctrl-param-core, so it also supports the input message and initialization dictionary fields.
@@ -93,9 +95,8 @@ shows. It contains a tctrl-param-core, so it also supports the input message and
 | `setisfloat 0/1` | Sets whether the parameter is an integer (`0`) or a float (`1`).
 | `setvalue X` | Sets the current parameter value. If `setminlimit`/`setmaxlimit` have been specified the value is clamped to that range. This message triggers output from the parameter.
 
-#### Initialize dictionary structure
-The initialization dictionary passed into tctrl-param-multi-core corresponds to a tctrl ParamSpec node with one or more
-ParamPart child nodes.
+### Initialize dictionary structure
+The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `float` or `int`.
 
 | Key | Equivalent input message | Notes |
 | --- | ------------------------ | ----------- |
@@ -103,3 +104,15 @@ ParamPart child nodes.
 | `maxNorm` | (none) | Sets the upper bound shown on the slider. The field may still allow numbers above this bound, depending on whether `maxLimit` has been specified.
 | `minLimit` | (none) | Sets the minimum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no lower limit.
 | `maxLimit` | (none) | Sets the maximum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no upper limit.
+| `type` | `setisfloat` | Value can be either `float` or `int`.
+
+## tctrl-toggle
+This component is a control for a bool parameter. It shows a toggle button. It contains a tctrl-param-core, so it also
+supports the input message and initialization dictionary fields.
+
+### Initialize dictionary structure
+The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `bool`.
+
+| Key | Equivalent input message | Notes |
+| --- | ------------------------ | ----------- |
+

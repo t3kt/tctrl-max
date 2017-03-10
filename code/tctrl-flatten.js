@@ -23,7 +23,6 @@ function _flattenModules(modules, output) {
   }
   for (var i = 0; i < modules.length; i++) {
     var module = modules[i];
-    post('found module: ' + module.path + '\n');
     output[module.path] = module;
     _flattenModules(module.children, output);
   }

@@ -20,6 +20,8 @@ loading, and value resetting.
 | `loadvalue` | Loads the parameter value from the global state dict, if available.
 
 #### Initialize dictionary structure
+The initialization dictionary passed into tctrl-param-core corresponds to either a tctrl ParamSpec or ParamPart node.
+
 | Key | Equivalent input message | Notes |
 | --- | ------------------------ | ----------- |
 | `path` | `setpath` |
@@ -60,6 +62,16 @@ component currently supports at most 4 parts.
 | `part N other message` | Sends a message to a specific sub-part (e.g. `part 0 setlabel X` or `part 1 setlabel Y`).
 | `expand 0/1` | Expands or collapses the component, showing / hiding the UIs for the parts.
 | `reset` | Equivalent to `allparts reset`.
+
+#### Initialize dictionary structure
+The initialization dictionary passed into tctrl-param-multi-core corresponds to a tctrl ParamSpec node with one or more
+ParamPart child nodes.
+
+| Key | Equivalent input message | Notes |
+| --- | ------------------------ | ----------- |
+| `path` | `setpath` |
+| `label` | `setlabel` |
+| `parts` | `part N initialize dictionary obj123` | This field is an array of dicts which each generate an `initialize` message for a sub-part.
 
 ### Output messages
 | Message | Description |

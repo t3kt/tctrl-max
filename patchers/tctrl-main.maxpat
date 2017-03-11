@@ -57,18 +57,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 705.0, 224.0, 134.0, 22.0 ],
-					"style" : "",
-					"text" : "print OSCIN @popup 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -105,7 +93,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 738.5, 12.0, 151.0, 148.5 ],
+					"patching_rect" : [ 666.5, 12.0, 239.0, 75.0 ],
 					"varname" : "tctrl-midi-io",
 					"viewvisibility" : 1
 				}
@@ -139,7 +127,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 597.0, 53.0, 72.0, 22.0 ],
+					"patching_rect" : [ 447.5, 65.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.osc.in"
 				}
@@ -313,7 +301,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 590.5, 132.0, 85.0, 22.0 ],
+					"patching_rect" : [ 258.5, 89.0, 85.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.mod.sel"
 				}
@@ -510,17 +498,6 @@
 					"destination" : [ "obj-2", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"order" : 1,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -620,12 +597,6 @@
 
 			}
  ],
-		"parameters" : 		{
-			"obj-8::obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ],
-			"obj-8::obj-1::obj-9" : [ "MIDI_out_LED", "MIDI_out_LED", 0 ],
-			"obj-8::obj-1::obj-1" : [ "refresh", "refresh", 0 ]
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "tctrl-module.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
@@ -645,7 +616,19 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "tctrl-menu.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "tctrl-slider.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-multi.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -683,18 +666,6 @@
 , 			{
 				"name" : "tctrl-midi-io.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.MIDI In.maxpat",
-				"bootpath" : "C74:/packages/Beap/clippings/BEAP/MIDI",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pastebang.maxpat",
-				"bootpath" : "C74:/packages/Beap/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}

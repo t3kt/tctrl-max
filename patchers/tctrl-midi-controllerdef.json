@@ -1,0 +1,42 @@
+{
+	"s1" : 	{
+		"cc" : 1,
+		"label" : "Slider 1"
+	}
+,
+	"s2" : 	{
+		"cc" : 2,
+		"label" : "Slider 2"
+	}
+,
+	"s3" : 	{
+		"cc" : 3,
+		"label" : "Slider 3"
+	}
+,
+	"s4" : 	{
+		"cc" : 4,
+		"label" : "Slider 4"
+	}
+,
+	"s5" : 	{
+		"cc" : 5,
+		"label" : "Slider 5"
+	}
+,
+	"s6" : 	{
+		"cc" : 6,
+		"label" : "Slider 6"
+	}
+,
+	"s7" : 	{
+		"cc" : 7,
+		"label" : "Slider 7"
+	}
+,
+	"s8" : 	{
+		"cc" : 8,
+		"label" : "Slider 8"
+	}
+
+}

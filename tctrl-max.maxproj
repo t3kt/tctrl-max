@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722936467,
+	"modificationdate" : -722933965,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -91,16 +91,6 @@
 
 			}
 ,
-			"tctrl-app-modules.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
 			"tctrl-param-multi-core.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
@@ -135,11 +125,6 @@
 			}
 ,
 			"tctrl-flatten.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"tctrl-app-modules.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

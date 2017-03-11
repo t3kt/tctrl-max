@@ -93,13 +93,7 @@ var typeHandlers = [
   }),
   new TypeHandler({
     type: 'string',
-    patchFile: 'tctrl-text.maxpat',
-    getConfigMessages: function(paramSpec) {
-      return [
-        ['setdefault', paramSpec['default'] || ''],
-        ['setvalue', paramSpec.value || '']
-      ];
-    }
+    patchFile: 'tctrl-text.maxpat'
   }),
   _VectorHandler('fvec'),
   _VectorHandler('ivec')

@@ -132,3 +132,6 @@ The initialization dictionary passed into tctrl-slider corresponds to a tctrl Pa
 | `valueIndex` | The index of the currently selected value, as an optional alternative to the `value` field.
 | `options` | An array of dicts which each have a `key` and `label` field, specifying the available choices. These dicts correspond to tctrl `ParamOption` objects.
 
+## tctrl-text
+This component is a control for string parameters. It contains a tctrl-param-core, so it also supports the same input
+message and initialization dictionary fields.

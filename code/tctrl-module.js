@@ -81,21 +81,6 @@ var typeHandlers = [
   new TypeHandler({
     type: 'menu',
     patchFile: 'tctrl-menu.maxpat',
-    getConfigMessages: function(paramSpec) {
-      var messages = [
-        ['setdefault', paramSpec['default']]
-      ];
-      if (paramSpec.hasOwnProperty('value')) {
-        messages.push(['setvalue', paramSpec.value]);
-      } else if (paramSpec.hasOwnProperty('valueIndex')) {
-        messages.push(['setvalueindex', paramSpec.valueIndex]);
-      }
-      var options = paramSpec.options || [];
-      for (var i = 0; i < options.length; i++) {
-        messages.push(['appendoption', options[i].key, (options[i].label || options[i].key)]);
-      }
-      return messages;
-    },
     checkMatch: function(paramSpec) {
       if (paramSpec.type === 'menu') {
         return true;

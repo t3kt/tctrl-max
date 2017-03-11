@@ -97,13 +97,13 @@ shows. It contains a tctrl-param-core, so it also supports the same input messag
 ### Initialize dictionary structure
 The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `float` or `int`.
 
-| Key | Equivalent input message | Notes |
-| --- | ------------------------ | ----------- |
-| `minNorm` | (none) | Sets the lower bound shown on the slider. The field may still allow numbers below this bound, depending on whether `minLimit` has been specified.
-| `maxNorm` | (none) | Sets the upper bound shown on the slider. The field may still allow numbers above this bound, depending on whether `maxLimit` has been specified.
-| `minLimit` | (none) | Sets the minimum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no lower limit.
-| `maxLimit` | (none) | Sets the maximum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no upper limit.
-| `type` | `setisfloat` | Value can be either `float` or `int`.
+| Key | Description |
+| --- | ----------- |
+| `minNorm` | Sets the lower bound shown on the slider. The field may still allow numbers below this bound, depending on whether `minLimit` has been specified.
+| `maxNorm` | Sets the upper bound shown on the slider. The field may still allow numbers above this bound, depending on whether `maxLimit` has been specified.
+| `minLimit` | Sets the minimum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no lower limit.
+| `maxLimit` | Sets the maximum allowed value. This clamps the values from both the slider and the field. If this message is not received, the field has no upper limit.
+| `type` | Value can be either `float` or `int`.
 
 ## tctrl-button
 This component is a control for a bool or trigger parameter, which shows a button. It contains a tctrl-param-core, so it
@@ -113,9 +113,22 @@ also supports the same input message and initialization dictionary fields.
 The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `bool` or
 `trigger`.
 
-| Key | Equivalent input message | Notes |
-| --- | ------------------------ | ----------- |
-| `type` | (none) | Value can be either `bool` or `trigger`, which specifies the behavior of the button as either a toggle or a basic button.
-| `buttonText` | (none) | For `trigger` parameters, sets the text of the button. For `bool` parameters, sets the text of the button when it is on. Defaults to the value of `label` when missing.
-| `buttonOffText` | (none) | For `bool` parameters, sets the text of the button when it is off. Defaults to the value of `buttonText` when missing.
+| Key | Description |
+| --- | ----------- |
+| `type` | Value can be either `bool` or `trigger`, which specifies the behavior of the button as either a toggle or a basic button.
+| `buttonText` | For `trigger` parameters, sets the text of the button. For `bool` parameters, sets the text of the button when it is on. Defaults to the value of `label` when missing.
+| `buttonOffText` | For `bool` parameters, sets the text of the button when it is off. Defaults to the value of `buttonText` when missing.
+
+## tctrl-menu
+This component is a control for menu parameters or string parameters that have a list of selectable options. It contains
+a tctrl-param-core, so it also supports the same input message and initialization dictionary fields.
+
+### Initialize dictionary structure
+The initialization dictionary passed into tctrl-slider corresponds to a tctrl ParamSpec node with type `menu` or
+`string` (with options specified).
+
+| Key | Description |
+| --- | ----------- |
+| `valueIndex` | The index of the currently selected value, as an optional alternative to the `value` field.
+| `options` | An array of dicts which each have a `key` and `label` field, specifying the available choices. These dicts correspond to tctrl `ParamOption` objects.
 

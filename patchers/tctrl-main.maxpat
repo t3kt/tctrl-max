@@ -621,13 +621,31 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-8::obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ],
 			"obj-8::obj-1::obj-9" : [ "MIDI_out_LED", "MIDI_out_LED", 0 ],
-			"obj-8::obj-1::obj-1" : [ "refresh", "refresh", 0 ],
-			"obj-8::obj-1::obj-12::obj-2" : [ "pastebang", "pastebang", 0 ]
+			"obj-8::obj-1::obj-1" : [ "refresh", "refresh", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "tctrl-module.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-button.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-param-core.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-slider.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -690,12 +708,6 @@
 				"name" : "tctrl-app-state.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-param-values.txt",
-				"bootpath" : "~/creations/tctrl/tctrl-max/data",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

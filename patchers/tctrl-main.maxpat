@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1652.0, 161.0, 1339.0, 798.0 ],
+		"rect" : [ -1690.0, 165.0, 1339.0, 798.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -93,7 +93,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 666.5, 12.0, 239.0, 75.0 ],
+					"patching_rect" : [ 666.5, 12.0, 240.0, 94.0 ],
 					"varname" : "tctrl-midi-io",
 					"viewvisibility" : 1
 				}

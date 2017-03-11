@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722933965,
+	"modificationdate" : -722933117,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -115,6 +115,11 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"tctrl-multi-slider-part.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
@@ -132,16 +137,6 @@
 		}
 ,
 		"data" : 		{
-			"tctrl-param-values.txt" : 			{
-				"kind" : "textfile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
 			"tctrl-state-params.json" : 			{
 				"kind" : "json",
 				"local" : 1,

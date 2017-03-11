@@ -56,11 +56,6 @@ TypeHandler.prototype.checkMatch = function(paramSpec) {
 TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
   var specDict = new Dict();
   specDict.parse(JSON.stringify(paramSpec));
-  var typeName = specDict.get('type');
-  // max treats "float" and "int" specially, so add a prefix
-  if (typeName === 'float' || typeName === 'int') {
-    specDict.set('type', 't_' + typeName);
-  }
   sendConfigMessage(['initialize', 'dictionary', specDict.name]);
   if (this.getConfigMessages) {
     var messages = this.getConfigMessages(paramSpec);

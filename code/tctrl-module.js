@@ -76,8 +76,8 @@ TypeHandler.prototype.sendConfigMessages = function(paramSpec) {
 var typeHandlers = [
   _ButtonHandler('bool'),
   _ButtonHandler('trigger'),
-  _NumberTypeHandler('float', true),
-  _NumberTypeHandler('int', false),
+  _NumberTypeHandler('float'),
+  _NumberTypeHandler('int'),
   new TypeHandler({
     type: 'menu',
     patchFile: 'tctrl-menu.maxpat',
@@ -130,7 +130,7 @@ function _ButtonHandler(type) {
   });
 }
 
-function _NumberTypeHandler(type, isFloat) {
+function _NumberTypeHandler(type) {
   return new TypeHandler({
     type: type,
     patchFile: 'tctrl-slider.maxpat'

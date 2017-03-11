@@ -92,7 +92,6 @@ shows. It contains a tctrl-param-core, so it also supports the same input messag
 
 | Action | Description |
 | ------ | ----------- |
-| `setisfloat 0/1` | Sets whether the parameter is an integer (`0`) or a float (`1`).
 | `setvalue X` | Sets the current parameter value. If `setminlimit`/`setmaxlimit` have been specified the value is clamped to that range. This message triggers output from the parameter.
 
 ### Initialize dictionary structure

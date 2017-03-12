@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1690.0, 165.0, 995.0, 798.0 ],
+		"rect" : [ -1690.0, 165.0, 1382.0, 798.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -51,7 +51,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.5, 69.5, 711.0, 498.5 ],
+					"patching_rect" : [ 32.5, 134.5, 711.0, 498.5 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.5, 11.5, 459.0, 498.5 ],
 					"viewvisibility" : 1
 				}
 
@@ -64,7 +66,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 1096.0, 661.0, 129.0, 36.0 ],
+					"patching_rect" : [ 835.0, 554.0, 129.0, 36.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -81,7 +83,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1096.0, 585.0, 84.0, 22.0 ],
+					"patching_rect" : [ 835.0, 518.0, 84.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-app-state"
 				}
@@ -93,7 +95,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1079.0, 517.0, 148.0, 22.0 ],
+					"patching_rect" : [ 835.0, 479.0, 148.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-midi-mapping.maxpat"
 				}
@@ -113,7 +115,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 666.5, 12.0, 240.0, 94.0 ],
+					"patching_rect" : [ 815.5, 244.0, 240.0, 94.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 498.0, 318.5, 240.0, 94.0 ],
 					"varname" : "tctrl-midi-io",
 					"viewvisibility" : 1
 				}
@@ -133,9 +137,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 1060.0, 388.0, 186.0, 72.0 ],
+					"patching_rect" : [ 823.0, 364.0, 186.0, 72.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 398.0, 321.0, 186.0, 72.0 ],
+					"presentation_rect" : [ 502.0, 419.5, 186.0, 72.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -147,7 +151,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.5, 33.0, 72.0, 22.0 ],
+					"patching_rect" : [ 32.5, 98.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.osc.in"
 				}
@@ -165,12 +169,11 @@
 					"maxclass" : "bpatcher",
 					"name" : "tctrl-schema-loader.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 1,
+					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 937.0, 12.0, 232.0, 152.0 ],
+					"patching_rect" : [ 491.0, 12.0, 233.0, 113.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 398.0, 156.0, 232.0, 152.0 ],
+					"presentation_rect" : [ 502.0, 150.5, 232.0, 152.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -186,12 +189,12 @@
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "tctrl-osc-io.maxpat",
-					"numinlets" : 1,
+					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 937.0, 212.0, 309.0, 130.0 ],
+					"patching_rect" : [ 769.0, 12.0, 309.0, 130.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 398.0, 17.0, 350.0, 130.0 ],
+					"presentation_rect" : [ 502.0, 11.5, 350.0, 130.0 ],
 					"varname" : "tctrl-osc-io",
 					"viewvisibility" : 1
 				}
@@ -203,7 +206,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.5, 584.0, 81.0, 22.0 ],
+					"patching_rect" : [ 32.5, 649.0, 81.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.osc.out"
 				}
@@ -216,15 +219,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-40", 0 ]
 				}
 
 			}

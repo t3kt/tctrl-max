@@ -12,9 +12,9 @@ function parse(appSchemaJson) {
   var appSchema = JSON.parse(appSchemaJson);
   var output = {};
   _flattenModules(appSchema.children, output);
-  var flatModulesDict = new Dict('tctrl.flatmodules');
+  var flatModulesDict = new Dict();
   flatModulesDict.parse(JSON.stringify(output));
-  outlet(0, 1);
+  outlet(0, ['dictionary', flatModulesDict.name]);
 }
 
 function _flattenModules(modules, output) {

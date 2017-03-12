@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722870380,
+	"modificationdate" : -722850142,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -14,36 +14,6 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
-			}
-,
-			"tctrl-module.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-button.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-param-core.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-menu.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-slider.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-multi.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
 			}
 ,
 			"tctrl-osc-io.maxpat" : 			{
@@ -72,6 +42,41 @@
 			}
 ,
 			"tctrl-app-state.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-module-host.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-module.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-button.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-menu.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-slider.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-multi.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -111,6 +116,11 @@
 
 			}
 ,
+			"tctrl-multi-slider-part.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-schema-param-builder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
@@ -121,17 +131,7 @@
 
 			}
 ,
-			"tctrl-multi-slider-part.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
-			"tctrl-module-host.maxpat" : 			{
+			"tctrl-midi-mapping-editor.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -139,12 +139,12 @@
 		}
 ,
 		"code" : 		{
-			"tctrl-module.js" : 			{
+			"tctrl-flatten.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
-			"tctrl-flatten.js" : 			{
+			"tctrl-module.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

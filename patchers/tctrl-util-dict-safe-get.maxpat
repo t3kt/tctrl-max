@@ -177,9 +177,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 154.0, 74.0, 93.0, 22.0 ],
+					"patching_rect" : [ 154.0, 75.0, 118.0, 22.0 ],
 					"style" : "",
-					"text" : "route dictionary"
+					"text" : "routepass dictionary"
 				}
 
 			}

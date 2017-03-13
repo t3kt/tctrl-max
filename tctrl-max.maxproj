@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722781839,
+	"modificationdate" : -722763373,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -142,6 +142,26 @@
 			}
 ,
 			"tctrl-util-dict-safe-get-test.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-menu-handler.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-get-keys.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-get-field-values.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-menu-handler-test.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

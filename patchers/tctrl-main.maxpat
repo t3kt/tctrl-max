@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1690.0, 165.0, 1382.0, 798.0 ],
+		"rect" : [ -1716.0, 112.0, 1382.0, 798.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,18 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 835.0, 479.0, 106.0, 22.0 ],
+					"style" : "",
+					"text" : "tctrl-midi-mapping"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-34",
 					"maxclass" : "newobj",
@@ -99,18 +111,6 @@
 					"patching_rect" : [ 835.0, 518.0, 84.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-app-state"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 835.0, 479.0, 148.0, 22.0 ],
-					"style" : "",
-					"text" : "tctrl-midi-mapping.maxpat"
 				}
 
 			}
@@ -285,12 +285,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-midi-mapping.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-app-state.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
@@ -321,19 +315,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-menu.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-slider.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-multi.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -342,6 +324,24 @@
 				"name" : "tctrl-module.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-midi-mapping.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-midi-mapping-editor.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-util-dict-safe-get.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],

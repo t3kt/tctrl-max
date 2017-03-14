@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722763373,
+	"modificationdate" : -722679208,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -162,6 +162,11 @@
 			}
 ,
 			"tctrl-util-menu-handler-test.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-midi-mapping-editor-range-part.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

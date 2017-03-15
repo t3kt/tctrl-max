@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 inlets = 1;
 outlets = 1;
 
@@ -23,7 +25,14 @@ function _flattenModules(modules, output) {
   }
   for (var i = 0; i < modules.length; i++) {
     var module = modules[i];
+    var children = module.children;
+    if (children) {
+      module.childPaths = children.map(function(child) {
+        return child.path;
+      });
+      delete module.children;
+    }
     output[module.path] = module;
-    _flattenModules(module.children, output);
+    _flattenModules(children, output);
   }
 }

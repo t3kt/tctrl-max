@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722611325,
+	"modificationdate" : -722606166,
 	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -36,11 +36,6 @@
 				"local" : 1
 			}
 ,
-			"tctrl-midi-mapping.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-app-state.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -56,6 +51,11 @@
 				"local" : 1
 			}
 ,
+			"tctrl-module-selector.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-button.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -66,12 +66,42 @@
 				"local" : 1
 			}
 ,
-			"tctrl-menu.maxpat" : 			{
+			"tctrl-slider.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-slider.maxpat" : 			{
+			"tctrl-midi-mapping.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-safe-get.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-midi-mapping-editor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-menu-handler.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-get-keys.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-midi-mapping-editor-range-part.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-menu.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -131,54 +161,44 @@
 
 			}
 ,
-			"tctrl-midi-mapping-editor.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-util-dict-safe-get.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-util-dict-safe-get-test.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-util-menu-handler.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-util-dict-get-keys.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-util-dict-get-field-values.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-util-menu-handler-test.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-midi-mapping-editor-range-part.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-param-selector.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-module-selector.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 
 		}
@@ -192,6 +212,16 @@
 			"tctrl-module.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
+			}
+,
+			"lodash.core.js" : 			{
+				"kind" : "javascript",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/code",
+					"projectrelativepath" : "./code"
+				}
+
 			}
 
 		}

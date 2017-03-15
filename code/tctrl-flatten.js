@@ -57,11 +57,21 @@ function _prepareParams(module) {
           childType = 'int';
           break;
       }
+      var partLabelPrefix = param.label;
+      if (partLabelPrefix) {
+        partLabelPrefix += ' ';
+      }
       _.forEach(param.parts, function(part) {
         part.modPath = module.path;
         part.parentPath = param.path;
         part.parentKey = param.key;
         part.parentLabel = param.label;
+        part.childKey = part.key;
+        part.key = param.key + part.key;
+        if (part.label) {
+          part.childLabel = part.label;
+          part.label = partLabelPrefix + part.label;
+        }
         if (childType) {
           part.type = childType;
         }

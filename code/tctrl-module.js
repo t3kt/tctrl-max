@@ -4,8 +4,9 @@ var common = require('tctrl-common');
 
 outlets = 2;
 
-function loadModuleSpec(modSpecJson) {
-  var modSpec = JSON.parse(modSpecJson);
+function loadModuleSpec(modSpecDictName) {
+  var modSpecDict = new Dict(modSpecDictName);
+  var modSpec = JSON.parse(modSpecDict.stringify());
   var position = [10, 40];
 
   clearControls();

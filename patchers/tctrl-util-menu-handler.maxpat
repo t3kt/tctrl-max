@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 120.0, 137.0, 1141.0, 937.0 ],
+		"rect" : [ 120.0, 105.0, 1141.0, 937.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,7 +50,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "index output to menu",
 					"id" : "obj-43",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -174,7 +174,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "index output from menu",
 					"id" : "obj-25",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -1506,7 +1506,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "selected key",
 					"id" : "obj-9",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -1544,7 +1544,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "key to select, or 'none'",
 					"id" : "obj-100",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -1582,7 +1582,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "initialization output to menu",
 					"id" : "obj-40",
 					"index" : 0,
 					"maxclass" : "outlet",

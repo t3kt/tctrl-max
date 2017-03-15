@@ -2,8 +2,8 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722606166,
-	"viewrect" : [ -7.0, 190.0, 299.0, 537.0 ],
+	"modificationdate" : -722595061,
+	"viewrect" : [ 51.0, 190.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -101,6 +101,11 @@
 				"local" : 1
 			}
 ,
+			"tctrl-param-selector.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-menu.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -190,16 +195,6 @@
 				}
 
 			}
-,
-			"tctrl-param-selector.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
 
 		}
 ,
@@ -214,14 +209,9 @@
 				"local" : 1
 			}
 ,
-			"lodash.core.js" : 			{
+			"lodash.js" : 			{
 				"kind" : "javascript",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/code",
-					"projectrelativepath" : "./code"
-				}
-
+				"local" : 1
 			}
 
 		}

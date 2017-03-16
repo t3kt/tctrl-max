@@ -98,7 +98,10 @@ var typeHandlers = [
 function _VectorHandler(type) {
   return new TypeHandler({
     type: type,
-    patchFile: 'tctrl-multi.maxpat',
+    patchFile: 'tctrl-multi-slider.maxpat',
+    getSize: function(paramSpec) {
+      return [400, 150];
+    },
     getConfigMessages: function(paramSpec) {
       var parts = paramSpec.parts || [];
       var messages = [
@@ -114,6 +117,7 @@ function _VectorHandler(type) {
           messages.push(['setvalue', i, part.value]);
         }
       }
+      messages.push(['expand', 0]);
       return messages;
     }
   });
@@ -168,8 +172,8 @@ function updateLayout() {
     var obj = controls[i];
     var height = obj.rect[3] - obj.rect[1];
     var width = obj.rect[2] - obj.rect[0];
-    position[1] += height + PADDING_Y;
     common.setRect(obj, position, [width, height]);
+    position[1] += height + PADDING_Y;
     //...
   }
 }

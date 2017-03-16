@@ -47,6 +47,7 @@ function _prepareParams(module) {
   _.forEach(module.params, function(param) {
     param.modPath = module.path;
     rawParams.push(param);
+    param.advanced = param.tags != null && param.tags.indexOf('advanced') != -1;
     if (param.parts) {
       var childType;
       switch (param.type) {
@@ -63,6 +64,7 @@ function _prepareParams(module) {
       }
       _.forEach(param.parts, function(part) {
         part.modPath = module.path;
+        part.advanced = param.advanced;
         part.parentPath = param.path;
         part.parentKey = param.key;
         part.parentLabel = param.label;

@@ -47,7 +47,10 @@ function _prepareParams(module) {
   _.forEach(module.params, function(param) {
     param.modPath = module.path;
     rawParams.push(param);
-    param.advanced = param.tags != null && param.tags.indexOf('advanced') != -1;
+    var tags = param.tags || [];
+    _.forEach(['advanced', 'mappable', 'filterable', 'sequenceable'], function(key) {
+      param[key] = tags.indexOf(key) !== -1;
+    });
     if (param.parts) {
       var childType;
       switch (param.type) {

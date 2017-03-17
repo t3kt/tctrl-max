@@ -1,5 +1,7 @@
 var _ = require('lodash');
 
+post("OMG LODASH KEYS: " + Object.keys(_).join('\n'));
+
 inlets = 1;
 outlets = 1;
 
@@ -66,13 +68,15 @@ function _prepareParams(module) {
         partLabelPrefix += ' ';
       }
       _.forEach(param.parts, function(part) {
-        part.modPath = module.path;
-        part.advanced = param.advanced;
-        part.parentPath = param.path;
-        part.parentKey = param.key;
-        part.parentLabel = param.label;
-        part.childKey = part.key;
-        part.key = param.key + part.key;
+        _.extend(part, {
+          modPath: module.path,
+          parentPath: param.path,
+          parentKey: param.key,
+          parentLabel: param.label,
+          childKey: part.key,
+          key: param.key + part.key
+        });
+        _.extend(part, _.pick(param, ['advanced', 'mappable', 'filterable', 'sequenceable']));
         if (part.label) {
           part.childLabel = part.label;
           part.label = partLabelPrefix + part.label;

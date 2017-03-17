@@ -1,7 +1,5 @@
 var _ = require('lodash');
 
-post("OMG LODASH KEYS: " + Object.keys(_).join('\n'));
-
 inlets = 1;
 outlets = 1;
 

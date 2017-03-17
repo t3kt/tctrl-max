@@ -219,9 +219,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 32.5, 649.0, 81.0, 22.0 ],
+					"patching_rect" : [ 32.5, 649.0, 84.0, 22.0 ],
 					"style" : "",
-					"text" : "s tctrl.osc.out"
+					"text" : "s tctrl.vals.out"
 				}
 
 			}

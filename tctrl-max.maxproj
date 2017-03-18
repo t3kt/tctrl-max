@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722419023,
+	"modificationdate" : -722350169,
 	"viewrect" : [ 21.0, 192.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -207,6 +207,11 @@
 			}
 ,
 			"tctrl-filter-channel.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-filter-poly-voice.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

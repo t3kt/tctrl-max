@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722165630,
+	"modificationdate" : -722161711,
 	"viewrect" : [ 21.0, 192.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -217,6 +217,11 @@
 			}
 ,
 			"tctrl-time-ramp-gen.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-sequencer.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

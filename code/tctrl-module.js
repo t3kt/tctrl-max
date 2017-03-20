@@ -11,7 +11,7 @@ function loadModuleSpec(modSpecDictName) {
 
   clearControls();
 
-  var params = (modSpec && modSpec.params) || [];
+  var params = (modSpec && modSpec.flatParams) || [];
   var specialParams = [];
   var nonSpecialParams = [];
   for (var i = 0; i < params.length; i++) {

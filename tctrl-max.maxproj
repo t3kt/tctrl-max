@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722350169,
+	"modificationdate" : -722165630,
 	"viewrect" : [ 21.0, 192.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -56,7 +56,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-button.maxpat" : 			{
+			"tctrl-menu.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -67,6 +67,26 @@
 			}
 ,
 			"tctrl-slider.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-button.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-multi-slider.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-multi-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-multi-slider-part.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -106,11 +126,6 @@
 				"local" : 1
 			}
 ,
-			"tctrl-menu.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-multi.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -129,31 +144,6 @@
 					"projectrelativepath" : "./patchers"
 				}
 
-			}
-,
-			"tctrl-param-multi-core.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
-			"tctrl-multi-slider.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
-			"tctrl-multi-slider-part.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
 			}
 ,
 			"tctrl-schema-param-builder.maxpat" : 			{
@@ -198,10 +188,25 @@
 ,
 			"tctrl-midi-mapping-editor-range-part-test.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-filters.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-filter-poly-voice.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -211,7 +216,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-filter-poly-voice.maxpat" : 			{
+			"tctrl-time-ramp-gen.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

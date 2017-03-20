@@ -25,23 +25,10 @@
 | `tctrl.path_to_map_attrs` | coll | Mapping definitions, keyed by path, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
 | `tctrl.state.param.store` | send/receive | ...
 | `tctrl.state.params` | dict | The current value of each parameter in the app schema.
-| `tctrl.time.bars` | send/receive | 
-| `tctrl.time.bars.1` | ? | 
-| `tctrl.time.bars.2` | ? | 
-| `tctrl.time.bars.4` | ? | 
-| `tctrl.time.bars.8` | ? | 
-| `tctrl.time.bars.16` | ? | 
-| `tctrl.time.bars.32` | ? | 
-| `tctrl.time.bbu` | send/receive | 
-| `tctrl.time.beats` | send/receive | 
-| `tctrl.time.play.in` | send/receive | 
-| `tctrl.time.play.state` | send/receive | 
-| `tctrl.time.ramp.one` | send/receive | 
-| `tctrl.time.ramp.two` | send/receive | 
-| `tctrl.time.ramp.four` | send/receive | 
-| `tctrl.time.ramp.eight` | send/receive | 
-| `tctrl.time.ticks` | send/receive | 
-| `tctrl.time.units` | send/receive | 
-| `tctrl.time.update` | send/receive | 
+| `tctrl.time.bbu` | send/receive | The current time in bars/beats/units, sent out at a regular interval (while the transport is active).
+| `tctrl.time.intervals` | dict + send/receive | Dictionary of named time intervals.
+| `tctrl.time.play.state` | send/receive | Broadcasts the current play/pause state when it changes.
+| `tctrl.time.ticks` | send/receive | The current time in ticks, sent out at a regular interval (while the transport is active).
+| `tctrl.time.update` | send/receive | Bang at a regular interval (while the transport is active) which indicates that things using timing should update. The `tctrl.time.ticks` value is also sent out in response to this, so it can also be used to detect updates.
 | `tctrl.vals.in` | send/receive | Input values that parameters should be set to. This includes input from both `tctrl.mapped.in` and `tctrl.osc.in`. Messages are lists of (param path, value).
 | `tctrl.vals.out` | send/receive | Output values that parameters have been set to. These messages are forwarded to various outputs including `tctrl.mapped.out` and `tctrl.osc.out`.

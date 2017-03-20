@@ -542,7 +542,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 500.75, 716.0, 104.0, 22.0 ],
+					"patching_rect" : [ 500.75, 597.0, 104.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.flatmodules"
 				}
@@ -784,7 +784,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 500.75, 671.0, 117.0, 22.0 ],
+					"patching_rect" : [ 500.75, 552.0, 117.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0

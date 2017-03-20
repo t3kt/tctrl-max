@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722161711,
+	"modificationdate" : -722156404,
 	"viewrect" : [ 21.0, 192.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -221,9 +221,14 @@
 				"local" : 1
 			}
 ,
-			"tctrl-param-sequencer.maxpat" : 			{
+			"tctrl-value-sequencer.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 
 		}

@@ -12,10 +12,24 @@ function loadModuleSpec(modSpecDictName) {
   clearControls();
 
   var params = (modSpec && modSpec.params) || [];
+  var specialParams = [];
+  var nonSpecialParams = [];
   for (var i = 0; i < params.length; i++) {
-    _addParameter(params[i], i, position);
+    if (params[i].inSpecialGroup) {
+      specialParams.push(params[i]);
+    } else {
+      nonSpecialParams.push(params[i]);
+    }
   }
+  _addParameterList(specialParams, position, 0);
+  _addParameterList(nonSpecialParams, position, specialParams.length);
   updateLayout();
+}
+
+function _addParameterList(params, position, indexOffset) {
+  for (var i = 0; i < params.length; i++) {
+    _addParameter(params[i], i + indexOffset, position);
+  }
 }
 
 function TypeHandler(opts) {

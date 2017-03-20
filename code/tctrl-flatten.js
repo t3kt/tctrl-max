@@ -46,6 +46,14 @@ function _prepareParams(module) {
   }
   var rawParams = [];
   var flatParams = [];
+  var specialGroups = {};
+  if (module.paramGroups) {
+    _.forEach(module.paramGroups, function(group) {
+      if (group.tags && group.tags.indexOf('special') != -1) {
+        specialGroups[group.key] = true;
+      }
+    });
+  }
 
   _.forEach(module.params, function(param) {
     param.modPath = module.path;
@@ -85,9 +93,11 @@ function _prepareParams(module) {
         if (childType) {
           part.type = childType;
         }
+        part.inSpecialGroup = !!(part.group && specialGroups[part.group]);
         flatParams.push(part);
       });
     } else {
+      param.inSpecialGroup = !!(param.group && specialGroups[param.group]);
       flatParams.push(param);
     }
   });

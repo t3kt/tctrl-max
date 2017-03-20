@@ -19,7 +19,7 @@ function parse(appSchemaJson) {
   outlet(0, ['dictionary', flatModulesDict.name]);
 }
 
-function _flattenModules(modules, output) {
+function _flattenModules(modules, output, parentPath) {
   if (!modules) {
     return;
   }
@@ -32,8 +32,11 @@ function _flattenModules(modules, output) {
       delete module.children;
     }
     _prepareParams(module);
+    if (parentPath) {
+      module.parentPath = parentPath;
+    }
     output[module.path] = module;
-    _flattenModules(children, output);
+    _flattenModules(children, output, module.path);
   });
 }
 

@@ -23,6 +23,7 @@
 | `tctrl.osc.out` | send/receive | Raw OSC output messages.
 | `tctrl.paramfilters` | dict + send/receive | ...
 | `tctrl.path_to_map_attrs` | coll | Mapping definitions, keyed by path, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
+| `tctrl.seq.out` | send/receive | Sequenced parameter outputs. Messages are lists of (param path, value).
 | `tctrl.state.param.store` | send/receive | ...
 | `tctrl.state.params` | dict | The current value of each parameter in the app schema.
 | `tctrl.time.bbu` | send/receive | The current time in bars/beats/units, sent out at a regular interval (while the transport is active).

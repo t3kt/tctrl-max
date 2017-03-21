@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722156404,
+	"modificationdate" : -722074185,
 	"viewrect" : [ 21.0, 192.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -27,6 +27,26 @@
 			}
 ,
 			"tctrl-timing.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-time-ramp-gen.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-menu-handler.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-get-keys.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-safe-get.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -96,22 +116,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-util-dict-safe-get.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-mapping-editor.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-util-menu-handler.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-util-dict-get-keys.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -216,11 +221,6 @@
 				"local" : 1
 			}
 ,
-			"tctrl-time-ramp-gen.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-value-sequencer.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
@@ -229,6 +229,11 @@
 					"projectrelativepath" : "./patchers"
 				}
 
+			}
+,
+			"tctrl-controls.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}
@@ -278,6 +283,16 @@
 				"singleton" : 				{
 					"bootpath" : "~/creations/tctrl/tctrl-max/data",
 					"projectrelativepath" : "./data"
+				}
+
+			}
+,
+			"tctrl-controls.json" : 			{
+				"kind" : "json",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
 				}
 
 			}

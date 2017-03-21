@@ -1,17 +1,16 @@
 # Parameter Mapping
 
-## Data nodes
-A data node is a value source and/or destination, which can be mapped to parameters. There are several types of data
-nodes, including MIDI controls and sequencers. Each data node has defined in a dictionary, and is identified by a unique
-key.
+## Controls
+A control is a value source and/or destination, which can be mapped to parameters. There are several types of controls,
+including MIDI controls and sequencers. Each control has defined in a dictionary, and is identified by a unique key.
 
-### Data node fields
+### Control definition fields
 
 | Field | Description |
 | ----- | ----------- |
-| `type` | The type of data node (`midicc`, `sequencer`).
+| `type` | The type of control ("midicc" or "sequencer").
 | `label` | User-friendly label, shown in menus.
-| `device` | Device name, used for MIDI nodes.
+| `device` | Device name, used for MIDI controls.
 
 ## Mapping definition
 A mapping is a configuration that connects a MIDI input to a parameter. Each mapping is

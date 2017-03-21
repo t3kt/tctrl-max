@@ -315,7 +315,7 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "tctrl-midi-mapping-editor-range-part.maxpat",
+					"name" : "tctrl-mapping-editor-range-part.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -473,7 +473,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "tctrl-midi-mapping-editor-range-part.maxpat",
+				"name" : "tctrl-mapping-editor-range-part.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

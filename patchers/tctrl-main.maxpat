@@ -106,7 +106,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 792.0, 404.0, 106.0, 22.0 ],
 					"style" : "",
-					"text" : "tctrl-midi-mapping"
+					"text" : "tctrl-mapping"
 				}
 
 			}
@@ -448,7 +448,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-midi-mapping.maxpat",
+				"name" : "tctrl-mapping.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -460,7 +460,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-midi-mapping-editor.maxpat",
+				"name" : "tctrl-mapping-editor.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -478,7 +478,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-midi-mapping-editor-range-part.maxpat",
+				"name" : "tctrl-mapping-editor-range-part.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

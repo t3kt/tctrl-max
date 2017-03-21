@@ -91,7 +91,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-midi-mapping.maxpat" : 			{
+			"tctrl-mapping.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -101,7 +101,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-midi-mapping-editor.maxpat" : 			{
+			"tctrl-mapping-editor.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -116,7 +116,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-midi-mapping-editor-range-part.maxpat" : 			{
+			"tctrl-mapping-editor-range-part.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -186,7 +186,7 @@
 
 			}
 ,
-			"tctrl-midi-mapping-editor-range-part-test.maxpat" : 			{
+			"tctrl-mapping-editor-range-part-test.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
 				"singleton" : 				{

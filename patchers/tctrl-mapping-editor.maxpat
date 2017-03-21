@@ -795,7 +795,7 @@
 					"id" : "obj-181",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "tctrl-midi-mapping-editor-range-part.maxpat",
+					"name" : "tctrl-mapping-editor-range-part.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -831,7 +831,7 @@
 					"id" : "obj-176",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "tctrl-midi-mapping-editor-range-part.maxpat",
+					"name" : "tctrl-mapping-editor-range-part.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -3469,7 +3469,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-midi-mapping-editor-range-part.maxpat",
+				"name" : "tctrl-mapping-editor-range-part.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

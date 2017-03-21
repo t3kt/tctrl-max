@@ -1,8 +1,8 @@
 {
-	"whatever" : 99,
-	"/vjzual3/_/app/chain1/warp:Level" : 0.909091,
+	"/vjzual3/_/app/chain1/warp:Level" : 0.358852,
 	"/vjzual3/_/app/chain1/delay:Level" : 0.157888,
 	"/vjzual3/_/app/chain1/delay:Length" : 0.352332,
 	"/vjzual3/_/app/chain1/coloradj:Level" : 0.455594,
-	"/vjzual3/_/app/master/transform:Level" : 0.822967
+	"/vjzual3/_/app/master/transform:Level" : 0.822967,
+	"/vjzual3/_/app/chain1/warp:Bypass" : 0
 }

@@ -2,8 +2,8 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -722074185,
-	"viewrect" : [ 21.0, 192.0, 299.0, 537.0 ],
+	"modificationdate" : -721743680,
+	"viewrect" : [ 13.0, 112.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -96,21 +96,6 @@
 				"local" : 1
 			}
 ,
-			"tctrl-multi-slider.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-param-multi-core.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-multi-slider-part.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-mapping.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -127,6 +112,26 @@
 			}
 ,
 			"tctrl-param-selector.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-controls.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-multi-slider.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-multi-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-multi-slider-part.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -231,7 +236,12 @@
 
 			}
 ,
-			"tctrl-controls.maxpat" : 			{
+			"tctrl-sequencers.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-value-shaper.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

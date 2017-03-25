@@ -1,0 +1,18 @@
+{
+	"ramp" : 	{
+		"label" : "Ramp"
+	}
+,
+	"reverse" : 	{
+		"label" : "Reverse"
+	}
+,
+	"sine" : 	{
+		"label" : "Sine"
+	}
+,
+	"function" : 	{
+		"label" : "Function"
+	}
+
+}

@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721660772,
+	"modificationdate" : -721655377,
 	"viewrect" : [ 13.0, 112.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -277,16 +277,6 @@
 		}
 ,
 		"data" : 		{
-			"tctrl-state-params.json" : 			{
-				"kind" : "json",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
 			"example-module.json" : 			{
 				"kind" : "json",
 				"local" : 1,

@@ -38,6 +38,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 868.0, 295.0, 60.0, 20.0 ],
+					"style" : "",
+					"text" : "app state"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -270,7 +282,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1047.0, 265.0, 57.0, 22.0 ],
+					"patching_rect" : [ 1080.0, 455.0, 57.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -362,7 +374,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1090.0, 514.0, 80.0, 22.0 ],
+					"patching_rect" : [ 1080.0, 515.0, 80.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-mapping"
 				}
@@ -387,25 +399,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 84.5, 459.0, 498.5 ],
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 1090.0, 649.0, 129.0, 36.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 0,
-						"parameter_enable" : 0
-					}
-,
-					"style" : "",
-					"text" : "dict tctrl.state.params tctrl-state-params.json"
 				}
 
 			}

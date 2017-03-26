@@ -2,6 +2,7 @@
 
 | Symbol | Type | Description |
 | ------ | ---- | ----------- |
+| `tctrl.appstate` | dict + send/receive | The full application state, unprocessed. See [App State](app-state.md) for details.
 | `tctrl.appschema` | dict + send/receive | The full app schema, unprocessed.
 | `tctrl.cc_to_map_attrs` | coll | Mapping definitions, keyed by CC number, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
 | `tctrl.ctrl_to_map_attrs` | coll | Mapping definitions, keyed by control name, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).

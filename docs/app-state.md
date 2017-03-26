@@ -1,0 +1,34 @@
+# Application State
+
+:warning: NOTE: this functionality has not yet been implemented!
+
+The application state stores a complete configuration of tctrl-max for use with a particular target application.
+It is stored as a structured dictionary with the global symbol `tctrl.appstate`. The state can be loaded from and saved
+to a JSON file.
+
+## Contents
+
+| Field | Description |
+| ----- | ----------- |
+| `schemaSource` | File path or URL for retrieving the current app schema. If this field is missing, or if the schema cannot be found, the cached `schema` field is used.
+| `schema` | Cached copy of the full app schema. If the `schemaSource` field is specified and points to a retrievable schema, this field is overridden.
+| `midi` | MIDI I/O settings.
+| `osc` | OSC I/O settings.
+| `controls` | MIDI control definitions. See [Mapping](mapping.md) for details.
+| `sequencers` | Sequencer definitions. See [Mapping](mapping.md) for details.
+| `paramStates` | One or more named structures that specify values for each parameter of each module in the app. For now, only a single state with the key `default` is supported.
+| `settings` | Various settings.
+
+## Loading process
+When loading an app state, the following steps are performed:
+1. Store the raw app state in the `tctrl.appstate` dictionary and broadcast the `tctrl.appstate` event.
+2. If `schemaSource` is specified, attempt to retrieve the updated schema.
+    1. If schema can be retrieved, replace the `schema` in the app state with the new version.
+2. Extract the `schema` from app state, store it in the `tctrl.appschema` dictionary and broadcast the `tctrl.appschema` event.
+    1. Process the schema to rebuild dictionaries and lookup tables including `tctrl.flatmodules` and `tctrl.flatparams`.
+3. Extract the `osc` settings from app state and initialize the OSC I/O components, or disable them if `osc` is not specified.
+4. Extract the `midi` settings from app state and initialize the MIDI I/O components, or disable them if `midi` is not specified.
+5. Extract the `controls`...
+6. Extract the `sequencers`...
+7. Extract the `paramStates`...
+8. Extract the `settings`...

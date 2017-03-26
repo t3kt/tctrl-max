@@ -10,6 +10,7 @@ to a JSON file.
 
 | Field | Description |
 | ----- | ----------- |
+| `label` | User-friendly text describing the app state.
 | `schemaSource` | File path or URL for retrieving the current app schema. If this field is missing, or if the schema cannot be found, the cached `schema` field is used.
 | `schema` | Cached copy of the full app schema. If the `schemaSource` field is specified and points to a retrievable schema, this field is overridden.
 | `midi` | MIDI I/O settings.

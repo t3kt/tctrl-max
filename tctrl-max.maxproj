@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721743680,
+	"modificationdate" : -721660772,
 	"viewrect" : [ 13.0, 112.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -243,6 +243,16 @@
 ,
 			"tctrl-value-shaper.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-reverse-join.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-reverse-join.maxhelp" : 			{
+				"kind" : "helpfile",
 				"local" : 1
 			}
 

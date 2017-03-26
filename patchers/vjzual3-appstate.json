@@ -1,12 +1,13 @@
 {
-	"label" : "vjzual 3zzz",
+	"label" : "vjzual 3",
 	"schemaSource" : "",
 	"midi" : 	{
 
 	}
 ,
 	"osc" : 	{
-
+		"inport" : 7000,
+		"enablein" : 1
 	}
 ,
 	"controls" : 	{

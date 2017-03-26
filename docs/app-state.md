@@ -20,16 +20,35 @@ to a JSON file.
 | `paramStates` | One or more named structures that specify values for each parameter of each module in the app. For now, only a single state with the key `default` is supported.
 | `settings` | Various settings.
 
+### `osc` contents
+
+| Field | Description |
+| ----- | ----------- |
+| `enablein` | Enable/disable OSC input.
+| `inport` | OSC input port number.
+| `outhost` | OSC output hostname.
+| `enableout` | Enable/disable OSC output.
+| `outport` | OSC output port number.
+
+### `settings` contents
+
+| Field | Description |
+| ----- | ----------- |
+| `logoscin` | Enable/disable OSC input logging (for debugging).
+| `logoscout` | Enable/disable OSC output logging (for debugging).
+
 ## Loading process
 When loading an app state, the following steps are performed:
-1. Store the raw app state in the `tctrl.appstate` dictionary and broadcast the `tctrl.appstate` event.
-2. If `schemaSource` is specified, attempt to retrieve the updated schema.
+
+1. Merge raw app state with the `tctrl.appstate.default` dictionary to fill in missing fields with default values.
+1. Store the app state in the `tctrl.appstate` dictionary and broadcast the `tctrl.appstate` event.
+1. If `schemaSource` is specified, attempt to retrieve the updated schema.
     1. If schema can be retrieved, replace the `schema` in the app state with the new version.
-2. Extract the `schema` from app state, store it in the `tctrl.appschema` dictionary and broadcast the `tctrl.appschema` event.
+1. Extract the `schema` from app state, store it in the `tctrl.appschema` dictionary and broadcast the `tctrl.appschema` event.
     1. Process the schema to rebuild dictionaries and lookup tables including `tctrl.flatmodules` and `tctrl.flatparams`.
-3. Extract the `osc` settings from app state and initialize the OSC I/O components, or disable them if `osc` is not specified.
-4. Extract the `midi` settings from app state and initialize the MIDI I/O components, or disable them if `midi` is not specified.
-5. Extract the `controls`...
-6. Extract the `sequencers`...
-7. Extract the `paramStates`...
-8. Extract the `settings`...
+1. Extract the `osc` settings from app state and initialize the OSC I/O components, or disable them if `osc` is not specified.
+1. Extract the `midi` settings from app state and initialize the MIDI I/O components, or disable them if `midi` is not specified.
+1. Extract the `controls`...
+1. Extract the `sequencers`...
+1. Extract the `paramStates`...
+1. Extract the `settings`...

@@ -300,7 +300,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 769.0, 320.0, 256.0, 336.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 7.0, 256.0, 71.5 ],
+					"presentation_rect" : [ 10.0, 7.0, 256.0, 69.5 ],
 					"viewvisibility" : 1
 				}
 

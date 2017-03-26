@@ -1,3 +1,36 @@
 {
-	"label" : "vjzual 3"
+	"label" : "vjzual 3",
+	"schemaSource" : "",
+	"midi" : 	{
+
+	}
+,
+	"osc" : 	{
+		"enablein" : 0,
+		"inport" : 7001,
+		"enableout" : 1,
+		"outport" : 7000,
+		"outhost" : "localhost"
+	}
+,
+	"controls" : 	{
+
+	}
+,
+	"sequencers" : 	{
+
+	}
+,
+	"paramStates" : 	{
+		"default" : 		{
+
+		}
+
+	}
+,
+	"settings" : 	{
+		"logoscin" : 0,
+		"logoscout" : 1
+	}
+
 }

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 67.0, 110.0, 601.0, 501.0 ],
+		"rect" : [ 67.0, 110.0, 933.0, 676.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +43,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 442.0, 340.0, 101.0, 22.0 ],
+					"patching_rect" : [ 444.0, 340.0, 101.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -61,7 +61,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 442.0, 291.0, 119.0, 22.0 ],
+					"patching_rect" : [ 444.0, 291.0, 119.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend set controls"
 				}
@@ -107,19 +107,6 @@
 					"patching_rect" : [ 168.0, 291.0, 134.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.midi.controllerdef"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-84",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 168.0, 171.0, 109.0, 22.0 ],
-					"style" : "",
-					"text" : "prepend dictionary"
 				}
 
 			}
@@ -1165,7 +1152,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-84", 0 ],
+					"destination" : [ "obj-83", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-82", 0 ]
@@ -1178,15 +1165,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-83", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-83", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-84", 0 ]
 				}
 
 			}

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1737.0, 96.0, 1310.0, 941.0 ],
+		"rect" : [ -1522.0, 90.0, 1310.0, 894.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -310,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 773.0, 434.0, 256.0, 336.0 ],
+					"patching_rect" : [ 773.0, 435.0, 256.0, 336.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 7.0, 256.0, 69.5 ],
 					"viewvisibility" : 1
@@ -416,7 +416,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 787.0, 142.0, 256.0, 160.0 ],
+					"patching_rect" : [ 787.0, 141.0, 256.0, 160.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 473.0, 370.5, 267.0, 164.0 ],
 					"varname" : "tctrl-midi-io",

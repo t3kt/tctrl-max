@@ -17,6 +17,7 @@ to a JSON file.
 | `osc` | OSC I/O settings.
 | `controls` | MIDI control definitions. See [Mapping](mapping.md) for details.
 | `sequencers` | Sequencer definitions. See [Mapping](mapping.md) for details.
+| `mappings` | Control mappings. See [Mapping](mapping.md) for details.
 | `paramStates` | One or more named structures that specify values for each parameter of each module in the app. For now, only a single state with the key `default` is supported.
 | `settings` | Various settings.
 

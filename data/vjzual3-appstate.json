@@ -427,10 +427,45 @@
 	}
 ,
 	"midi" : 	{
-		"enablein" : 0,
-		"enableout" : 0,
+		"enablein" : 1,
+		"enableout" : 1,
 		"indevice" : "BCR2000 port 1",
 		"outdevice" : "BCR2000 port 1"
+	}
+,
+	"mappings" : 	{
+		"ctrlmap1" : 		{
+			"path" : "/vjzual3/_/app/chain1/warp:Level",
+			"ctrl" : "s07",
+			"enable" : 1,
+			"maxNorm" : 0.9,
+			"reverse" : 0
+		}
+,
+		"ctrlmap2" : 		{
+			"path" : "/vjzual3/_/app/generators/ramp_gen_1:Period",
+			"ctrl" : "s12",
+			"enable" : 1,
+			"maxNorm" : 0.9,
+			"reverse" : 1
+		}
+,
+		"ctrlmap3" : 		{
+			"path" : "/vjzual3/_/app/master/transform:Level",
+			"ctrl" : "s03",
+			"enable" : 1,
+			"maxNorm" : 0.9,
+			"reverse" : 0
+		}
+,
+		"ctrlmap4" : 		{
+			"path" : "/vjzual3/_/app/chain1/warp:QQ",
+			"ctrl" : "s31",
+			"enable" : 1,
+			"maxNorm" : 0.9,
+			"reverse" : 0
+		}
+
 	}
 
 }

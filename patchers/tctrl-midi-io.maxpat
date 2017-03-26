@@ -44,7 +44,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 232.5, 144.0, 82.0, 22.0 ],
-					"restore" : [ "BCR2000 port 2" ],
+					"restore" : [ "BCR2000 port 1" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -63,7 +63,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 449.0, 184.0, 89.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ "BCR2000 port 1" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -215,7 +215,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-4",
@@ -529,9 +528,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 484.5, 27.0, 103.0, 22.0 ],
+					"patching_rect" : [ 484.5, 27.0, 87.0, 22.0 ],
 					"style" : "",
-					"text" : "r tctrl.appschema"
+					"text" : "r tctrl.appstate"
 				}
 
 			}

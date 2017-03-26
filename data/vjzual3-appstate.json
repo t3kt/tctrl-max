@@ -38,8 +38,8 @@
 	"midi" : 	{
 		"enablein" : 0,
 		"enableout" : 0,
-		"indevice" : "BCR2000 port 2",
-		"outdevice" : 0
+		"indevice" : "BCR2000 port 1",
+		"outdevice" : "BCR2000 port 1"
 	}
 
 }

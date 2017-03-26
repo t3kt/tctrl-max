@@ -10,6 +10,397 @@
 	}
 ,
 	"controls" : 	{
+		"b17" : 		{
+			"label" : "Button 17",
+			"cc" : 73,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b18" : 		{
+			"label" : "Button 18",
+			"cc" : 74,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b19" : 		{
+			"label" : "Button 19",
+			"cc" : 75,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b20" : 		{
+			"label" : "Button 20",
+			"cc" : 76,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b21" : 		{
+			"label" : "Button 21",
+			"cc" : 77,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b22" : 		{
+			"label" : "Button 22",
+			"cc" : 78,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b23" : 		{
+			"label" : "Button 23",
+			"cc" : 79,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b24" : 		{
+			"label" : "Button 24",
+			"cc" : 80,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b09" : 		{
+			"label" : "Button 9",
+			"cc" : 65,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b10" : 		{
+			"label" : "Button 10",
+			"cc" : 66,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b11" : 		{
+			"label" : "Button 11",
+			"cc" : 67,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b12" : 		{
+			"label" : "Button 12",
+			"cc" : 68,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b13" : 		{
+			"label" : "Button 13",
+			"cc" : 69,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b14" : 		{
+			"label" : "Button 14",
+			"cc" : 70,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b15" : 		{
+			"label" : "Button 15",
+			"cc" : 71,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b16" : 		{
+			"label" : "Button 16",
+			"cc" : 72,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b01" : 		{
+			"label" : "Button 1",
+			"cc" : 33,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b02" : 		{
+			"label" : "Button 2",
+			"cc" : 34,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b03" : 		{
+			"label" : "Button 3",
+			"cc" : 35,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b04" : 		{
+			"label" : "Button 4",
+			"cc" : 36,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b05" : 		{
+			"label" : "Button 5",
+			"cc" : 37,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b06" : 		{
+			"label" : "Button 6",
+			"cc" : 38,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b07" : 		{
+			"label" : "Button 7",
+			"cc" : 39,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"b08" : 		{
+			"label" : "Button 8",
+			"cc" : 40,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s25" : 		{
+			"label" : "Slider 25",
+			"cc" : 97,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s26" : 		{
+			"label" : "Slider 26",
+			"cc" : 98,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s27" : 		{
+			"label" : "Slider 27",
+			"cc" : 99,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s28" : 		{
+			"label" : "Slider 28",
+			"cc" : 100,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s29" : 		{
+			"label" : "Slider 29",
+			"cc" : 101,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s30" : 		{
+			"label" : "Slider 30",
+			"cc" : 102,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s31" : 		{
+			"label" : "Slider 31",
+			"cc" : 103,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s32" : 		{
+			"label" : "Slider 32",
+			"cc" : 104,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s17" : 		{
+			"label" : "Slider 17",
+			"cc" : 89,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s18" : 		{
+			"label" : "Slider 18",
+			"cc" : 90,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s19" : 		{
+			"label" : "Slider 19",
+			"cc" : 91,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s20" : 		{
+			"label" : "Slider 20",
+			"cc" : 92,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s21" : 		{
+			"label" : "Slider 21",
+			"cc" : 93,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s22" : 		{
+			"label" : "Slider 22",
+			"cc" : 94,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s23" : 		{
+			"label" : "Slider 23",
+			"cc" : 95,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s24" : 		{
+			"label" : "Slider 24",
+			"cc" : 96,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s09" : 		{
+			"label" : "Slider 9",
+			"cc" : 81,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s10" : 		{
+			"label" : "Slider 10",
+			"cc" : 82,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s11" : 		{
+			"label" : "Slider 11",
+			"cc" : 83,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s12" : 		{
+			"label" : "Slider 12",
+			"cc" : 84,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s13" : 		{
+			"label" : "Slider 13",
+			"cc" : 85,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s14" : 		{
+			"label" : "Slider 14",
+			"cc" : 86,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s15" : 		{
+			"label" : "Slider 15",
+			"cc" : 87,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s16" : 		{
+			"label" : "Slider 16",
+			"cc" : 88,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s01" : 		{
+			"label" : "Slider 1",
+			"cc" : 1,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s02" : 		{
+			"label" : "Slider 2",
+			"cc" : 2,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s03" : 		{
+			"label" : "Slider 3",
+			"cc" : 3,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s04" : 		{
+			"label" : "Slider 4",
+			"cc" : 4,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s05" : 		{
+			"label" : "Slider 5",
+			"cc" : 5,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s06" : 		{
+			"label" : "Slider 6",
+			"cc" : 6,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s07" : 		{
+			"label" : "Slider 7",
+			"cc" : 7,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
+,
+		"s08" : 		{
+			"label" : "Slider 8",
+			"cc" : 8,
+			"device" : "bcr",
+			"type" : "midicc"
+		}
 
 	}
 ,

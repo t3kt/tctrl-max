@@ -433,6 +433,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 582.5, 377.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 14.5, 75.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "MIDI output",
 					"texton" : "MIDI output",
@@ -469,6 +471,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 66.5, 451.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 14.5, 45.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "MIDI input",
 					"texton" : "MIDI input",
@@ -774,7 +778,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 331.5, 306.0, 153.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 165.0, 12.0, 153.0, 22.0 ],
+					"presentation_rect" : [ 92.0, 75.0, 153.0, 22.0 ],
 					"style" : "",
 					"varname" : "umenu[1]"
 				}
@@ -1341,7 +1345,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 628.5, 717.0, 38.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 81.0, 64.0, 39.0, 22.0 ],
+					"presentation_rect" : [ 92.0, 128.0, 39.0, 22.0 ],
 					"style" : "",
 					"triangle" : 0
 				}
@@ -1383,7 +1387,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 582.5, 717.0, 41.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 39.0, 64.0, 31.0, 22.0 ],
+					"presentation_rect" : [ 50.0, 128.0, 31.0, 22.0 ],
 					"readonly" : 1,
 					"style" : "",
 					"text" : "s14"
@@ -1531,7 +1535,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 328.0, 31.0, 57.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 323.0, 12.0, 57.0, 25.0 ],
+					"presentation_rect" : [ 14.5, 13.0, 57.0, 25.0 ],
 					"style" : "",
 					"text" : "refresh"
 				}
@@ -1617,7 +1621,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 121.0, 287.0, 153.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 12.0, 153.0, 22.0 ],
+					"presentation_rect" : [ 92.0, 45.0, 153.0, 22.0 ],
 					"style" : "",
 					"varname" : "umenu"
 				}
@@ -1684,7 +1688,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 109.0, 765.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 38.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 19.0, 102.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -1699,7 +1703,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 182.0, 765.0, 31.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 81.0, 38.0, 39.0, 22.0 ],
+					"presentation_rect" : [ 92.0, 102.0, 39.0, 22.0 ],
 					"style" : "",
 					"triangle" : 0
 				}
@@ -1715,7 +1719,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 140.0, 765.0, 31.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 39.0, 38.0, 31.0, 22.0 ],
+					"presentation_rect" : [ 50.0, 102.0, 31.0, 22.0 ],
 					"style" : "",
 					"triangle" : 0
 				}

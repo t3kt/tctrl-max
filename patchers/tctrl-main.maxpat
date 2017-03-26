@@ -42,7 +42,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 868.0, 295.0, 60.0, 20.0 ],
+					"patching_rect" : [ 872.0, 409.0, 60.0, 20.0 ],
 					"style" : "",
 					"text" : "app state"
 				}
@@ -310,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 769.0, 320.0, 256.0, 336.0 ],
+					"patching_rect" : [ 773.0, 434.0, 256.0, 336.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 7.0, 256.0, 69.5 ],
 					"viewvisibility" : 1
@@ -325,7 +325,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 769.0, 272.0, 60.0, 22.0 ],
+					"patching_rect" : [ 773.0, 386.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -416,9 +416,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 769.0, 156.0, 386.0, 90.0 ],
+					"patching_rect" : [ 787.0, 142.0, 256.0, 160.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 469.0, 370.5, 389.0, 94.0 ],
+					"presentation_rect" : [ 473.0, 370.5, 267.0, 164.0 ],
 					"varname" : "tctrl-midi-io",
 					"viewvisibility" : 1
 				}
@@ -440,7 +440,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 1165.0, 12.0, 186.0, 72.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 473.0, 471.5, 186.0, 72.0 ],
+					"presentation_rect" : [ 473.0, 551.5, 186.0, 72.0 ],
 					"viewvisibility" : 1
 				}
 

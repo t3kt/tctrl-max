@@ -1,15 +1,11 @@
 {
 	"label" : "vjzual 3",
 	"schemaSource" : "",
-	"midi" : 	{
-
-	}
-,
 	"osc" : 	{
 		"enablein" : 0,
 		"inport" : 0,
 		"enableout" : 1,
-		"outport" : 239,
+		"outport" : 7878,
 		"outhost" : "localhost"
 	}
 ,
@@ -35,8 +31,15 @@
 	}
 ,
 	"settings" : 	{
-		"logoscin" : 1,
-		"logoscout" : 1
+		"logoscin" : 0,
+		"logoscout" : 0
+	}
+,
+	"midi" : 	{
+		"enablein" : 0,
+		"enableout" : 0,
+		"indevice" : "BCR2000 port 1",
+		"outdevice" : 0
 	}
 
 }

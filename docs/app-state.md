@@ -30,6 +30,15 @@ to a JSON file.
 | `enableout` | Enable/disable OSC output.
 | `outport` | OSC output port number.
 
+### `midi` contents
+
+| Field | Description |
+| ----- | ----------- |
+| `enablein` | Enable/disable MIDI input.
+| `enableout` | Enable/disable MIDI output.
+| `indevice` | MIDI input device name.
+| `outdevice` | MIDI output device name.
+
 ### `settings` contents
 
 | Field | Description |

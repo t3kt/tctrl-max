@@ -1,10 +1,6 @@
 {
 	"label" : "vjzual 3",
 	"schemaSource" : "",
-	"midi" : 	{
-
-	}
-,
 	"osc" : 	{
 		"enablein" : 0,
 		"inport" : 0,
@@ -37,6 +33,13 @@
 	"settings" : 	{
 		"logoscin" : 0,
 		"logoscout" : 0
+	}
+,
+	"midi" : 	{
+		"enablein" : 0,
+		"enableout" : 0,
+		"indevice" : "BCR2000 port 2",
+		"outdevice" : 0
 	}
 
 }

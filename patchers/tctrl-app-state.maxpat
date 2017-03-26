@@ -492,7 +492,10 @@
 						"label" : "app",
 						"schemaSource" : "",
 						"midi" : 						{
-
+							"enablein" : 1,
+							"enableout" : 1,
+							"indevice" : "",
+							"outdevice" : ""
 						}
 ,
 						"osc" : 						{

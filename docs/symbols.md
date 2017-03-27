@@ -3,6 +3,7 @@
 | Symbol | Type | Description |
 | ------ | ---- | ----------- |
 | `tctrl.appstate` | dict + send/receive | The full application state, unprocessed. See [App State](app-state.md) for details.
+| `tctrl.appstate.action` | send/receive | Actions to update app state.
 | `tctrl.appstate.default` | dict | The default application state. See [App State](app-state.md) for details.
 | `tctrl.appstate.save` | send/receive | Bang broadcast before saving the app state, indicating that components should update the `tctrl.appstate` dict with their current values.
 | `tctrl.appschema` | dict + send/receive | The full app schema, unprocessed.

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1790.0, 164.0, 1430.0, 894.0 ],
+		"rect" : [ -1814.0, 117.0, 1431.0, 894.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,11 +39,59 @@
 		"globalpatchername" : "tc.root",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-38",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "tctrl-app-state-ui.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 768.5, 309.0, 353.0, 332.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 768.5, 309.0, 353.0, 332.0 ],
+					"varname" : "tctrl-app-state-ui",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1281.0, 445.0, 20.0, 22.0 ],
+					"style" : "",
+					"text" : "t l"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1118.0, 839.0, 84.0, 22.0 ],
+					"style" : "",
+					"text" : "tctrl-app-state",
+					"varname" : "tctrl-app-state[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1132.0, 796.0, 80.0, 22.0 ],
+					"patching_rect" : [ 1218.0, 804.0, 80.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-mapping"
 				}
@@ -55,7 +103,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1228.0, 796.0, 76.0, 22.0 ],
+					"patching_rect" : [ 1314.0, 804.0, 76.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-controls",
 					"varname" : "tctrl-controls"
@@ -68,7 +116,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1229.5, 707.0, 96.0, 22.0 ],
+					"patching_rect" : [ 1315.5, 715.0, 96.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-sequencers",
 					"varname" : "tctrl-osc-io[1]"
@@ -81,7 +129,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1229.5, 740.0, 66.0, 22.0 ],
+					"patching_rect" : [ 1315.5, 748.0, 66.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-osc-io",
 					"varname" : "tctrl-osc-io"
@@ -117,7 +165,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "reload", "bang" ],
-					"patching_rect" : [ 1193.0, 326.0, 61.0, 22.0 ],
+					"patching_rect" : [ 1281.0, 309.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "t reload b"
 				}
@@ -130,7 +178,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1205.0, 279.0, 44.0, 22.0 ],
+					"patching_rect" : [ 1293.0, 262.0, 44.0, 22.0 ],
 					"style" : "",
 					"text" : "reload"
 				}
@@ -143,7 +191,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 1082.0, 288.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1170.0, 271.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "b 2"
 				}
@@ -157,7 +205,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1077.0, 624.0, 128.0, 22.0 ],
+					"patching_rect" : [ 1163.0, 632.0, 128.0, 22.0 ],
 					"style" : "",
 					"text" : "loadunique tctrl-osc-io"
 				}
@@ -231,7 +279,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 6,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang" ],
-					"patching_rect" : [ 1096.5, 372.75, 71.5, 22.0 ],
+					"patching_rect" : [ 1184.5, 355.75, 71.5, 22.0 ],
 					"style" : "",
 					"text" : "b 6"
 				}
@@ -245,7 +293,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1077.0, 592.0, 158.0, 22.0 ],
+					"patching_rect" : [ 1163.0, 600.0, 158.0, 22.0 ],
 					"style" : "",
 					"text" : "loadunique tctrl-sequencers"
 				}
@@ -259,7 +307,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1077.0, 653.0, 142.0, 22.0 ],
+					"patching_rect" : [ 1163.0, 661.0, 142.0, 22.0 ],
 					"style" : "",
 					"text" : "loadunique tctrl-mapping"
 				}
@@ -273,7 +321,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1077.0, 566.0, 138.0, 22.0 ],
+					"patching_rect" : [ 1163.0, 574.0, 138.0, 22.0 ],
 					"style" : "",
 					"text" : "loadunique tctrl-controls"
 				}
@@ -287,21 +335,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1111.0, 724.0, 53.0, 22.0 ],
+					"patching_rect" : [ 1197.0, 732.0, 53.0, 22.0 ],
 					"style" : "",
 					"text" : "pcontrol"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-42",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 872.0, 409.0, 60.0, 20.0 ],
-					"style" : "",
-					"text" : "app state"
 				}
 
 			}
@@ -537,34 +573,13 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 1,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-33",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "tctrl-app-state.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 773.0, 435.0, 256.0, 336.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 7.0, 256.0, 69.5 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-32",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1090.5, 244.0, 60.0, 22.0 ],
+					"patching_rect" : [ 1178.5, 227.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -641,7 +656,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 777.0, 28.0, 208.0, 61.0 ],
+					"patching_rect" : [ 773.0, 15.0, 208.0, 61.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 473.0, 551.5, 186.0, 72.0 ],
 					"viewvisibility" : 1
@@ -792,7 +807,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
+					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-25", 0 ]
@@ -810,7 +825,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
+					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-26", 0 ]
@@ -823,6 +838,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-37", 0 ]
 				}
 
 			}
@@ -936,18 +960,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-app-state.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-util-dict-reverse-join.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-timing.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
@@ -1015,6 +1027,24 @@
 			}
 , 			{
 				"name" : "tctrl-param-selector.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-app-state.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-util-dict-reverse-join.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-app-state-ui.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

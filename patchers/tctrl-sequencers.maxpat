@@ -36,7 +36,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "tc.sequencers[1]",
+		"globalpatchername" : "tc.sequencers",
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "loadbang",

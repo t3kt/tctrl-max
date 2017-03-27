@@ -36,7 +36,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "tc.timing[1]",
+		"globalpatchername" : "tc.timing",
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "loadbang",

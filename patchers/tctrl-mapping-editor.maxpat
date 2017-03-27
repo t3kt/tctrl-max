@@ -36,7 +36,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "tc.mapping.editor[1][1]",
+		"globalpatchername" : "tc.mapping.editor",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-23",

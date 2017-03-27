@@ -20,6 +20,7 @@
 | `tctrl.midi.cc_to_ctrl` | coll | Lookup table based on `tctrl.midi.controllerdef` that maps CC numbers to control names.
 | `tctrl.midi.controllerdef` | dict + send/receive | Definitions of named controller inputs/outputs.
 | `tctrl.midi.ctrl_to_cc` | coll | Lookup table based on `tctrl.midi.controllerdef` that maps control names to CC numbers.
+| `tctrl.midi.ctrl_to_cc.update` | send/receive | Bang when `tctrl.midi.ctrl_to_cc` is updated.
 | `tctrl.midi.in.cc` | send/receive | Raw MIDI CC input messages in lists of (CC: 0-127, value: 0-127).
 | `tctrl.midi.in.ctrl` | send/receive | MIDI input messages mapped to named controls in lists of (control name, value: 0.0-1.0).
 | `tctrl.midi.out.cc` | send/receive | Raw MIDI CC output messages in lists of (CC: 0-127, value: 0-127), coming from the mapping system.

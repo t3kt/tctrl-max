@@ -23,7 +23,8 @@ function _flattenModules(modules, output, parentPath) {
   if (!modules) {
     return;
   }
-  _.forEach(modules, function(module) {
+  _.forEach(modules, function(module, i) {
+
     var children = module.children;
     if (children) {
       module.childPaths = _.map(children, function(child) {
@@ -34,6 +35,12 @@ function _flattenModules(modules, output, parentPath) {
     _prepareParams(module);
     if (parentPath) {
       module.parentPath = parentPath;
+    }
+    if (i > 0) {
+      module.prevPath = modules[i - 1].path;
+    }
+    if (i < modules.length - 1) {
+      module.nextPath = modules[i + 1].path;
     }
     output[module.path] = module;
     _flattenModules(children, output, module.path);

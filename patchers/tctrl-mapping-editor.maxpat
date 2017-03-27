@@ -36,7 +36,23 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"globalpatchername" : "tc.mapping.editor",
 		"boxes" : [ 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-30",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 18.0, 10.0, 112.0, 36.0 ],
+					"style" : "exposed",
+					"text" : "pattrmarker tc.mapping.editor"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "message",
@@ -2005,7 +2021,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
-					"items" : [ "load...", ",", "ctrlmap1", ",", "ctrlmap2", ",", "ctrlmap3", ",", "ctrlmap4" ],
+					"items" : "load...",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3488,6 +3504,20 @@
 			}
  ],
 		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "exposed",
+				"default" : 				{
+					"fontface" : [ 1 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
+					"fontsize" : [ 12.0 ],
+					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ],
+					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ],
 		"toolbarexclusions" : [ "calendar", "lessonbrowser" ]
 	}
 

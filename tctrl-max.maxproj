@@ -2,8 +2,8 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721655377,
-	"viewrect" : [ 13.0, 112.0, 299.0, 537.0 ],
+	"modificationdate" : -721577913,
+	"viewrect" : [ 72.0, 62.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -52,11 +52,6 @@
 			}
 ,
 			"tctrl-midi-io.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-app-state.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -121,6 +116,21 @@
 				"local" : 1
 			}
 ,
+			"tctrl-sequencers.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-app-state.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-util-dict-reverse-join.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-multi-slider.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -144,16 +154,6 @@
 			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
-			}
-,
-			"tctrl-oscillator.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
 			}
 ,
 			"tctrl-schema-param-builder.maxpat" : 			{
@@ -236,23 +236,28 @@
 
 			}
 ,
-			"tctrl-sequencers.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-value-shaper.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-util-dict-reverse-join.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"tctrl-util-dict-reverse-join.maxhelp" : 			{
 				"kind" : "helpfile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-timing-ui.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-osc-io-ui.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1
 			}
 

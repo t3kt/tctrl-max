@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 179.0, 103.0, 1161.0, 873.0 ],
+		"rect" : [ 179.0, 81.0, 1161.0, 903.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,23 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"globalpatchername" : "tc.midi.io",
 		"boxes" : [ 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-30",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 17.0, 80.0, 36.0 ],
+					"style" : "exposed",
+					"text" : "pattrmarker tc.midi.io"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-70",
 					"maxclass" : "newobj",
@@ -129,7 +145,7 @@
 ,
 					"style" : "",
 					"text" : "pattrstorage",
-					"varname" : "u503003039"
+					"varname" : "u575006693"
 				}
 
 			}
@@ -679,7 +695,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"items" : "<empty>",
+					"items" : [ "b01", ",", "b02", ",", "b03", ",", "b04", ",", "b05", ",", "b06", ",", "b07", ",", "b08", ",", "b09", ",", "b10", ",", "b11", ",", "b12", ",", "b13", ",", "b14", ",", "b15", ",", "b16", ",", "b17", ",", "b18", ",", "b19", ",", "b20", ",", "b21", ",", "b22", ",", "b23", ",", "b24", ",", "s01", ",", "s02", ",", "s03", ",", "s04", ",", "s05", ",", "s06", ",", "s07", ",", "s08", ",", "s09", ",", "s10", ",", "s11", ",", "s12", ",", "s13", ",", "s14", ",", "s15", ",", "s16", ",", "s17", ",", "s18", ",", "s19", ",", "s20", ",", "s21", ",", "s22", ",", "s23", ",", "s24", ",", "s25", ",", "s26", ",", "s27", ",", "s28", ",", "s29", ",", "s30", ",", "s31", ",", "s32" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1892,7 +1908,7 @@
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 1
+					"watchpoint_id" : 3
 				}
 
 			}
@@ -2088,7 +2104,7 @@
 					"hidden" : 0,
 					"source" : [ "obj-38", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 2
+					"watchpoint_id" : 4
 				}
 
 			}
@@ -2502,6 +2518,20 @@
  ],
 		"dependency_cache" : [  ],
 		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "exposed",
+				"default" : 				{
+					"fontface" : [ 1 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
+					"fontsize" : [ 12.0 ],
+					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ],
+					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ],
 		"toolbaradditions" : [ "transport", "audiosolo", "audiomute" ],
 		"toolbarexclusions" : [ "transport", "audiosolo", "audiomute", "calendar", "lessonbrowser" ]
 	}

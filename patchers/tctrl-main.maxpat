@@ -645,7 +645,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 390.0, 3.5, 75.0, 22.0 ],
+					"patching_rect" : [ 366.0, 9.0, 75.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.vals.in"
 				}
@@ -666,9 +666,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 390.0, 42.0, 711.0, 498.5 ],
+					"patching_rect" : [ 366.0, 42.0, 738.0, 479.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 368.0, 5.0, 711.0, 498.5 ],
+					"presentation_rect" : [ 368.0, 5.0, 445.0, 482.5 ],
 					"viewvisibility" : 1
 				}
 
@@ -721,7 +721,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 390.0, 556.5, 84.0, 22.0 ],
+					"patching_rect" : [ 366.0, 556.5, 84.0, 22.0 ],
 					"style" : "",
 					"text" : "s tctrl.vals.out"
 				}
@@ -960,30 +960,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-menu.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-param-core.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-slider.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-button.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-module.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
@@ -1108,9 +1084,9 @@
 		"styles" : [ 			{
 				"name" : "exposed",
 				"default" : 				{
-					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
 					"fontface" : [ 1 ],
 					"fontsize" : [ 12.0 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
 					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
 				}

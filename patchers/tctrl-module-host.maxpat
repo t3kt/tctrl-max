@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 463.0, 114.0, 1052.0, 889.0 ],
+		"rect" : [ 463.0, 114.0, 740.0, 889.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,20 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 11.0, 6.0, 70.0, 28.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 4.0, 70.0, 28.0 ],
+					"style" : "tc.header",
+					"text" : "Module"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "message",
@@ -66,7 +80,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 689.0, 527.0, 116.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 290.0, 56.0, 116.0, 26.0 ],
+					"presentation_rect" : [ 282.5, 39.0, 116.0, 26.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -88,7 +102,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 64.0, 368.0, 282.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.5, 20.0, 282.0, 26.0 ],
+					"presentation_rect" : [ 78.0, 7.0, 282.0, 26.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -168,7 +182,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 546.0, 631.0, 100.0, 100.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 460.0, 50.0, 291.0, 445.0 ],
+					"presentation_rect" : [ 445.0, 33.0, 291.0, 440.0 ],
 					"style" : ""
 				}
 
@@ -288,7 +302,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 68.0, 625.0, 297.0, 92.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.5, 50.0, 432.0, 440.0 ],
+					"presentation_rect" : [ 4.0, 33.0, 432.0, 440.0 ],
 					"varname" : "tctrl-module",
 					"viewvisibility" : 1
 				}
@@ -317,6 +331,21 @@
 					"patching_rect" : [ 413.0, 61.0, 102.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.flatmodules"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"border" : 2,
+					"id" : "obj-12",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 91.0, 6.0, 28.0, 26.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 441.0, 478.0 ],
+					"style" : "tc.panel"
 				}
 
 			}
@@ -521,24 +550,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-text.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-param-core.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-button.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-module.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
@@ -558,6 +569,80 @@
 			}
  ],
 		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "Audiomix",
+				"default" : 				{
+					"bgfillcolor" : 					{
+						"type" : "gradient",
+						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
+						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39
+					}
+
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "exposed",
+				"default" : 				{
+					"fontface" : [ 1 ],
+					"fontsize" : [ 12.0 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
+					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
+					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.header",
+				"default" : 				{
+					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ],
+					"fontname" : [ "Consolas" ],
+					"textjustification" : [ 0 ],
+					"fontface" : [ 1 ],
+					"fontsize" : [ 18.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.panel",
+				"default" : 				{
+					"bgfillcolor" : 					{
+						"type" : "color",
+						"color" : [ 0.741176, 0.847059, 0.847059, 1.0 ],
+						"color1" : [ 0.741176, 0.847059, 0.847059, 1.0 ],
+						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+,
+					"color" : [ 0.082353, 0.25098, 0.431373, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.ui",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.ui2",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ],
 		"toolbarexclusions" : [ "calendar" ]
 	}
 

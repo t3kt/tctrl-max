@@ -2,8 +2,8 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721300000,
-	"viewrect" : [ 72.0, 62.0, 299.0, 537.0 ],
+	"modificationdate" : -721295237,
+	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -310,6 +310,11 @@
 			}
 ,
 			"lodash.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"tctrl-filter-bank.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

@@ -19,10 +19,20 @@ parameters refer to.
 | `label` | User-friendly text shown in menus for selecting filter definitions.
 | `length` | The length of time, in milliseconds, over which the values are linearly smoothed.
 
+## Parameter filter settings
+Each parameter may have filter settings, which associate it with a filter definition.
+
+| Field | Description |
+| ----- | ----------- |
+| `enable` | If true, the parameter uses filtering. If false, it is ignored by the filter system.
+
+> Note that both the filter definitions and the parameter filter settings have `enable` fields. This allows the filters to
+be enabled/disabled either at the level of the filter definitions, or for individual parameters. In order for a
+parameter to be filtered, it must have parameter settings with `enable` true, and point to a filter definition which
+also has `enable` true.
+
 ## Filter system behavior
-At any given time, the only parameters that need to have a filter channel are those that:
-* Are assigned to a filter definition, and
-* That filter definition is enabled, and
-* Either:
-  * The parameter is shown in the UI (and therefore might generate values in response to user interaction), or
-  * The parameter has an enabled MIDI mapping (and therefore might generate values in response to MIDI input)
+Filtering is applied at several points in the control flow:
+* Mapped MIDI input values.
+* Value output from interacting with GUI controls. This will need to make sure not to apply to values that are the
+result of a sequencer which updates the GUI controls (but should not cause the GUI to output values for those changes).

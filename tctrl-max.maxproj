@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721558390,
+	"modificationdate" : -721300000,
 	"viewrect" : [ 72.0, 62.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -36,7 +36,37 @@
 				"local" : 1
 			}
 ,
+			"tctrl-text.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-button.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-module-selector.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-module-navigator.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-menu.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-slider.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -47,11 +77,6 @@
 			}
 ,
 			"tctrl-osc-io-ui.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-osc-io.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -126,27 +151,12 @@
 				"local" : 1
 			}
 ,
+			"tctrl-osc-io.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-time-ramp-gen.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-menu.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-param-core.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-slider.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-button.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -167,11 +177,6 @@
 			}
 ,
 			"tctrl-multi.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-text.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -197,26 +202,6 @@
 			}
 ,
 			"tctrl-util-dict-get-field-values.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
-			"tctrl-util-menu-handler-test.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
-			"tctrl-mapping-editor-range-part-test.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
 				"singleton" : 				{
@@ -271,14 +256,44 @@
 
 			}
 ,
-			"tctrl-module-navigator.maxpat" : 			{
+			"tctrl-module-navigator.maxhelp" : 			{
+				"kind" : "helpfile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-filter-bank.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-module-navigator.maxhelp" : 			{
+			"tctrl-filter-bank.maxhelp" : 			{
 				"kind" : "helpfile",
 				"local" : 1
+			}
+,
+			"tctrl-util-menu-handler.maxhelp" : 			{
+				"kind" : "helpfile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-mapping-editor-range-part.maxhelp" : 			{
+				"kind" : "helpfile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 
 		}

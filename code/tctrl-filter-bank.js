@@ -74,16 +74,17 @@ function _add(objName, paramPath, patcher) {
     post('param filter settings not found for param path: ' + paramPath + ', in dict ' + paramFiltersDict.name + '\n');
     return;
   }
-  var settings = paramFiltersDict.get(paramPath);
-  var filterName = settings.filter;
+  var settingsDict = paramFiltersDict.get(paramPath);
+  post('.. param filter settings for ' + paramPath + ' ' + settingsDict.stringify() + '\n');
+  var filterName = settingsDict.get('filter');
   var enable = false;
   var length = 0;
-  if (settings.enable && filterName && filterDefsDict.contains(filterName)) {
+  if (settingsDict.get('enable') && filterName && filterDefsDict.contains(filterName)) {
     var filterDef = filterDefsDict.get(filterName);
-    if (filterDef.enable) {
+    if (filterDef.get('enable')) {
       enable = true;
     }
-    length = filterDef.length;
+    length = filterDef.get('length');
   }
   var position = [START_X, START_Y];
   var size = [FILTER_WIDTH, FILTER_HEIGHT];
@@ -124,4 +125,12 @@ function _updateLayout(patcher) {
     patcher.connect(inObj, 0, obj, 0);
     patcher.connect(obj, 0, outObj, 0);
   });
+}
+
+function TEST_dumpParamFilter(paramPath) {
+  post('DUMPING param filter ' + paramPath + ' ');
+  post(', allkeys: ' + paramFiltersDict.getkeys().join(' '));
+  post(', getsize: ' + paramFiltersDict.getsize(paramPath));
+  post(', gettype: ' + paramFiltersDict.gettype(paramPath));
+  post('\n');
 }

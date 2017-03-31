@@ -38,6 +38,20 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 47.0, 364.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 30.0, 1.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -109,7 +123,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 295.0, 438.0, 109.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 51.0, 1.0, 137.0, 20.0 ],
+					"presentation_rect" : [ 85.0, 1.0, 137.0, 20.0 ],
 					"style" : "",
 					"text" : "path"
 				}
@@ -125,7 +139,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 82.0, 645.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 26.0, 1.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 60.0, 1.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -602,6 +616,17 @@
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 0,
+					"source" : [ "obj-36", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"order" : 1,
 					"source" : [ "obj-36", 0 ]
 				}
 

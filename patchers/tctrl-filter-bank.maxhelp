@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1620.0, 166.0, 1004.0, 786.0 ],
+		"rect" : [ -1427.0, 203.0, 1004.0, 786.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,88 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-66",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 867.0, 548.0, 101.0, 36.0 ],
+					"style" : "",
+					"text" : "print OMGKEYS @popup 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-64",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 4,
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 810.0, 421.0, 115.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 0,
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "dict TEST_filterdefs"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-63",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 372.0, 26.0, 24.0, 22.0 ],
+					"style" : "",
+					"text" : "t b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 18.0,
+					"id" : "obj-62",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 420.0, 7.0, 101.0, 29.0 ],
+					"style" : "",
+					"text" : "INITIALIZE"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-60",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 531.5, 51.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-58",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 304.0, 34.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-54",
 					"maxclass" : "newobj",
@@ -225,9 +307,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 478.0, 161.0, 90.0, 22.0 ],
+					"patching_rect" : [ 478.0, 161.0, 111.0, 22.0 ],
 					"style" : "",
-					"text" : "paramfilters $2"
+					"text" : "setParamFilters $2"
 				}
 
 			}
@@ -238,9 +320,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 161.0, 73.0, 22.0 ],
+					"patching_rect" : [ 350.0, 161.0, 95.0, 22.0 ],
 					"style" : "",
-					"text" : "filterdefs $2"
+					"text" : "setFilterDefs $2"
 				}
 
 			}
@@ -254,19 +336,6 @@
 					"patching_rect" : [ 420.0, 43.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "comment",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 478.0, 92.0, 96.0, 20.0 ],
-					"style" : "",
-					"suppressinlet" : 1,
-					"text" : "test paramfilters"
 				}
 
 			}
@@ -296,31 +365,19 @@
 					}
 ,
 					"id" : "obj-53",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 478.0, 118.0, 91.0, 22.0 ],
+					"patching_rect" : [ 478.0, 100.0, 131.0, 36.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
-					"text" : "dict @embed 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "comment",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 368.0, 92.0, 79.0, 20.0 ],
-					"style" : "",
-					"suppressinlet" : 1,
-					"text" : "test filterdefs"
+					"text" : "dict TEST_paramfilters @embed 1"
 				}
 
 			}
@@ -348,18 +405,19 @@
 					}
 ,
 					"id" : "obj-48",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 350.0, 118.0, 91.0, 22.0 ],
+					"patching_rect" : [ 280.0, 92.0, 116.0, 36.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
-					"text" : "dict @embed 1"
+					"text" : "dict TEST_filterdefs @embed 1"
 				}
 
 			}
@@ -370,10 +428,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 625.0, 43.0, 337.0, 255.0 ],
+					"patching_rect" : [ 625.0, 43.0, 366.0, 255.0 ],
 					"style" : "",
 					"suppressinlet" : 1,
-					"text" : "config messages:\n\nparamfilters <dict-name>\n - set the paramfilters dictionary (should be set to tctrl.paramfilters except when testing)\n\nfilterdefs <dict-name>\n - set the filterdefs dictionary (should be set to tctrl.filterdefs except when testing)\n\nclear\n- clear the set of filters\n\nadd <param-path>\n- adds a filter for a parameter\n\nremove <param-path>\n- removes the filter for a parameter"
+					"text" : "config messages:\n\nsetParamFilters <dict-name>\n - set the paramfilters dictionary (should be set to tctrl.paramfilters except when testing)\n\nfilterdefs <dict-name>\n - set the filterdefs dictionary (should be set to tctrl.filterdefs except when testing)\n\nclear\n- clear the set of filters\n\nadd <param-path-1> <param-path-2> <etc>\n- adds a filters for one or more parameters\n\nremove <param-path-1> <param-path-2> <etc>\n- removes the filters for one or more parameters"
 				}
 
 			}
@@ -646,6 +704,19 @@
 					"patching_rect" : [ 294.0, 375.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "tctrl-filter-bank"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-65",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 810.0, 391.0, 52.0, 22.0 ],
+					"style" : "",
+					"text" : "getkeys"
 				}
 
 			}
@@ -978,11 +1049,77 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-58", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-63", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-62", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-63", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-66", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-64", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-65", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "tctrl-filter-bank.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-filter-channel.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tctrl-filter-bank.js",
+				"bootpath" : "~/creations/tctrl/tctrl-max/code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

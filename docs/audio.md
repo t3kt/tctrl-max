@@ -17,7 +17,7 @@ sources that it exposes.
 ## Input settings
 | Field | Default value | Description |
 | ----- | ------------- | ----------- |
-| `type` | `device` | Audio source type (`device` or `file`).
+| `source` | `device` | Audio source type (`none`, `device` or `file`).
 | `inputchannel` | `1` | Audio input device channel number.
 | `file` | | Audio file path.
 | `gain` | `70` | Audio input gain.
@@ -28,11 +28,10 @@ sources that it exposes.
 | `loud` | ... | Settings for the loudness stream (see below).
 | `bright` | ... | Settings for the brightness stream (see below).
 | `noise` | ... | Settings for the noisiness stream (see below).
-| `amp` | ... | Settings for the amplitude stream (see below).
 | `attack` | ... | Settings for the attack detection stream (see below).
 
 ### Value stream settings
-These settings are used for each of the numeric analysis value sources (`loud`, `bright`, `noise`, `amp`). The outputs of these
+These settings are used for each of the numeric analysis value sources (`loud`, `bright`, `noise`). The outputs of these
 sources are normalized values from 0.0-1.0. Depending on their settings, the values may extend beyond that range.
 
 | Field | Description |
@@ -62,6 +61,5 @@ The system exposes a number of control sources based on the audio analysis.
 | `loud` | Loudness | ...
 | `bright` | Brightness | ...
 | `noise` | Noisiness | ...
-| `amp` | Amplitude | Overall amplitude in dB.
 | `attack` | Attack | Pulse when the audio has a sudden loud sound.
 

@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721218896,
+	"modificationdate" : -721122398,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -36,37 +36,12 @@
 				"local" : 1
 			}
 ,
-			"tctrl-text.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-param-core.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-button.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"tctrl-module-selector.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"tctrl-module-navigator.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-menu.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-slider.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -152,6 +127,31 @@
 			}
 ,
 			"tctrl-osc-io.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-text.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-button.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-menu.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-slider.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -268,12 +268,22 @@
 ,
 			"tctrl-filter-bank.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-filter-bank.maxhelp" : 			{
 				"kind" : "helpfile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"tctrl-util-menu-handler.maxhelp" : 			{
@@ -295,6 +305,26 @@
 				}
 
 			}
+,
+			"tctrl-audio.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-audio-analysis.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-audio-analysis-stream.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
@@ -309,12 +339,12 @@
 				"local" : 1
 			}
 ,
-			"lodash.js" : 			{
+			"tctrl-filter-bank.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
-			"tctrl-filter-bank.js" : 			{
+			"lodash.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

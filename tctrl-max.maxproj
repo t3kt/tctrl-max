@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -721122398,
+	"modificationdate" : -721054300,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -322,6 +322,11 @@
 			}
 ,
 			"tctrl-audio-analysis-stream.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-audio-input.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

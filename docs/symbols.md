@@ -8,6 +8,7 @@
 | `tctrl.appstate.save` | send/receive | Bang broadcast before saving the app state, indicating that components should update the `tctrl.appstate` dict with their current values.
 | `tctrl.appschema` | dict + send/receive | The full app schema, unprocessed.
 | `tctrl.audio.in~` | signal | Audio input signal, with gain applied.
+| `tctr.audio.state` | dict + send/receive | Audio settings, extracted from `tctrl.appstate`, and saved back into it.
 | `tctrl.cc_to_map_attrs` | coll | Mapping definitions, keyed by CC number, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
 | `tctrl.ctrl_to_map_attrs` | coll | Mapping definitions, keyed by control name, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
 | `tctrl.filterdefs` | dict + send/receive | ...

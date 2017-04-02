@@ -18,7 +18,7 @@ sources that it exposes.
 | Field | Default value | Description |
 | ----- | ------------- | ----------- |
 | `source` | `device` | Audio source type (`none`, `device` or `file`).
-| `inputchannel` | `1` | Audio input device channel number.
+| `channel` | `1` | Audio input device channel number.
 | `file` | | Audio file path.
 | `gain` | `70` | Audio input gain.
 
@@ -45,13 +45,13 @@ sources are normalized values from 0.0-1.0. Depending on their settings, the val
 ### Attack detection settings
 These settings are used for each of the numeric analysis value sources (`loud`, `bright`, `noise`).
 
-| Field | Description |
-| ----- | ----------- |
+| Field | Default | Description |
+| ----- | ------- | ----------- |
 | `triggerlength` | `100` | Period in milliseconds over which a re-attack is reported if the amplitude rises more than the threshold.
 | `triggerthresh` | `10` | Threshold in dB which triggers an attack.
 | `attacklength` | `1` | Number of milliseconds over which the output is 1.0 after an attack is detected.
-| `filteron` | If true, output values are smoothed.
-| `filterlength` | Number of milliseconds over which output values are smoothed (if `filteron` is true).
+| `filteron` | `0` | If true, output values are smoothed.
+| `filterlength` | `500` | Number of milliseconds over which output values are smoothed (if `filteron` is true).
 
 # Analysis control sources
 The system exposes a number of control sources based on the audio analysis.

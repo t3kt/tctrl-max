@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 64.0, 108.0, 1772.0, 934.0 ],
+		"rect" : [ 37.0, 108.0, 1772.0, 934.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "tc.mapping.editor",
+		"globalpatchername" : "tc.mapping.editor[1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-23",
@@ -1013,14 +1013,14 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 724.5, 148.0, 147.0, 22.0 ],
+					"patching_rect" : [ 726.5, 148.0, 97.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
-					"text" : "dict tctrl.midi.controllerdef"
+					"text" : "dict tctrl.controls"
 				}
 
 			}
@@ -2045,7 +2045,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
-					"items" : "load...",
+					"items" : [ "load...", ",", "ctrlmap1", ",", "ctrlmap2", ",", "ctrlmap3", ",", "ctrlmap4" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -2239,14 +2239,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 500.0, 50.0, 59.0, 64.0 ],
+					"patching_rect" : [ 500.0, 50.0, 83.0, 22.0 ],
 					"style" : "",
-					"text" : "r tctrl.midi.controllerdef"
+					"text" : "r tctrl.controls"
 				}
 
 			}
@@ -2680,7 +2679,7 @@
 					"destination" : [ "obj-127", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 734.0, 236.0, 509.5, 236.0 ],
+					"midpoints" : [ 736.0, 236.0, 509.5, 236.0 ],
 					"source" : [ "obj-133", 0 ]
 				}
 
@@ -2709,7 +2708,7 @@
 					"destination" : [ "obj-133", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 837.0, 131.0, 734.0, 131.0 ],
+					"midpoints" : [ 837.0, 131.0, 736.0, 131.0 ],
 					"source" : [ "obj-136", 0 ]
 				}
 
@@ -3603,9 +3602,9 @@
 				"default" : 				{
 					"fontface" : [ 1 ],
 					"fontsize" : [ 12.0 ],
-					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
 					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
-					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3616,10 +3615,10 @@
 				"default" : 				{
 					"fontface" : [ 1 ],
 					"fontsize" : [ 18.0 ],
-					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
-					"textjustification" : [ 0 ],
 					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ],
-					"fontname" : [ "Consolas" ]
+					"textjustification" : [ 0 ],
+					"fontname" : [ "Consolas" ],
+					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

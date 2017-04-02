@@ -7,6 +7,7 @@
 | `tctrl.appstate.default` | dict | The default application state. See [App State](app-state.md) for details.
 | `tctrl.appstate.save` | send/receive | Bang broadcast before saving the app state, indicating that components should update the `tctrl.appstate` dict with their current values.
 | `tctrl.appschema` | dict + send/receive | The full app schema, unprocessed.
+| `tctrl.audio.analysis` | send/receive | Audio analysis messages.
 | `tctrl.audio.in~` | signal | Audio input signal, with gain applied.
 | `tctrl.audio.state` | dict + send/receive | Audio settings, extracted from `tctrl.appstate`, and saved back into it.
 | `tctrl.audio.controldef` | dict + send/receive | Audio analysis control source definitions. See [audio.md](Audio) for details.

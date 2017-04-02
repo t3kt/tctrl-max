@@ -464,6 +464,22 @@
 			"enable" : 1,
 			"maxNorm" : 0.9,
 			"reverse" : 0
+		},
+		"ctrlmap5": {
+			"path": "/vjzual3/_/app/chain1/warp:Displaceweightx",
+			"ctrl": "audioloud",
+			"enable": 1,
+			"maxNorm": 0.5,
+			"minNorm": 0,
+			"reverse": 0
+		},
+		"ctrlmap6": {
+			"path": "/vjzual3/_/app/chain1/warp:Displaceweighty",
+			"ctrl": "audioloud",
+			"enable": 1,
+			"maxNorm": 0.5,
+			"minNorm": 0,
+			"reverse": 1
 		}
 
 	}

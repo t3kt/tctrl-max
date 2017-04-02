@@ -11,7 +11,7 @@
 ,
 		"rect" : [ 112.0, 139.0, 1241.0, 883.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -39,12 +39,88 @@
 		"globalpatchername" : "tc.audio",
 		"boxes" : [ 			{
 				"box" : 				{
+					"data" : 					{
+						"audioloud" : 						{
+							"enable" : 1,
+							"type" : "analysis",
+							"label" : "Audio loudness",
+							"stream" : "loud"
+						}
+,
+						"audiobright" : 						{
+							"enable" : 1,
+							"type" : "analysis",
+							"label" : "Audio brightness",
+							"stream" : "bright"
+						}
+,
+						"audionoise" : 						{
+							"enable" : 1,
+							"type" : "analysis",
+							"label" : "Audio noisiness",
+							"stream" : "noise"
+						}
+,
+						"audioattack" : 						{
+							"enable" : 1,
+							"type" : "analysis",
+							"label" : "Audio attack",
+							"stream" : "attack"
+						}
+
+					}
+,
+					"id" : "obj-55",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 4,
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 849.0, 165.0, 203.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 1,
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "dict tctrl.audio.controldef @embed 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 137.0, 10.0, 70.0, 28.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 4.0, 60.0, 28.0 ],
+					"style" : "tc.header",
+					"text" : "Audio"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 324.5, 601.0, 113.0, 22.0 ],
+					"style" : "",
+					"text" : "prepend set enable"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-50",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 555.0, 595.0, 114.0, 22.0 ],
+					"patching_rect" : [ 850.0, 401.0, 114.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -62,21 +138,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 379.0, 568.0, 121.0, 22.0 ],
+					"patching_rect" : [ 458.5, 601.0, 121.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend set analysis"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-48",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 270.0, 691.0, 24.0, 24.0 ],
-					"style" : ""
 				}
 
 			}
@@ -95,35 +159,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-42",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 261.0, 477.0, 24.0, 24.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-38",
-					"maxclass" : "dict.view",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 810.0, 427.0, 206.0, 412.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 233.0, 601.0, 103.0, 22.0 ],
+					"patching_rect" : [ 219.5, 601.0, 103.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend set input"
 				}
@@ -136,7 +177,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 233.0, 739.0, 114.0, 22.0 ],
+					"patching_rect" : [ 324.5, 676.0, 114.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -172,7 +213,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 219.5, 534.0, 132.0, 22.0 ],
+					"patching_rect" : [ 219.5, 545.0, 132.0, 22.0 ],
 					"style" : "",
 					"text" : "route dictionary enable"
 				}
@@ -194,6 +235,8 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "" ],
 					"patching_rect" : [ 68.5, 294.0, 170.0, 101.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 36.0, 170.0, 105.0 ],
 					"varname" : "tctrl-audio-input",
 					"viewvisibility" : 1
 				}
@@ -206,7 +249,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 555.0, 703.0, 101.0, 22.0 ],
+					"patching_rect" : [ 850.0, 509.0, 101.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -224,7 +267,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 555.0, 648.0, 107.0, 22.0 ],
+					"patching_rect" : [ 850.0, 454.0, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend set audio"
 				}
@@ -237,7 +280,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 555.0, 541.0, 115.0, 22.0 ],
+					"patching_rect" : [ 850.0, 347.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "r tctrl.appstate.save"
 				}
@@ -322,6 +365,8 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "dictionary" ],
 					"patching_rect" : [ 369.0, 339.0, 410.0, 113.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 178.0, 36.0, 410.0, 105.0 ],
 					"varname" : "tctrl-audio-analysis",
 					"viewvisibility" : 1
 				}
@@ -364,6 +409,21 @@
 					"patching_rect" : [ 18.0, 10.0, 79.0, 36.0 ],
 					"style" : "exposed",
 					"text" : "pattrmarker tc.audio"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"border" : 2,
+					"id" : "obj-3",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 217.0, 10.0, 28.0, 26.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 592.0, 155.0 ],
+					"style" : "tc.panel"
 				}
 
 			}
@@ -463,17 +523,6 @@
 					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"order" : 1,
-					"source" : [ "obj-32", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"order" : 0,
 					"source" : [ "obj-32", 1 ]
 				}
 
@@ -489,19 +538,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
+					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-34", 0 ]
+					"source" : [ "obj-33", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-38", 0 ],
+					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-35", 0 ]
+					"source" : [ "obj-34", 0 ]
 				}
 
 			}
@@ -528,15 +577,6 @@
 					"destination" : [ "obj-35", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-48", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-35", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"source" : [ "obj-49", 0 ]
 				}
 
@@ -547,6 +587,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-51", 0 ]
 				}
 
 			}
@@ -620,6 +669,49 @@
 					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
 				}
 ,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.header",
+				"default" : 				{
+					"fontface" : [ 1 ],
+					"fontsize" : [ 18.0 ],
+					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ],
+					"textjustification" : [ 0 ],
+					"fontname" : [ "Consolas" ],
+					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.panel",
+				"default" : 				{
+					"bgfillcolor" : 					{
+						"type" : "color",
+						"color" : [ 0.741176, 0.847059, 0.847059, 1.0 ],
+						"color1" : [ 0.741176, 0.847059, 0.847059, 1.0 ],
+						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+,
+					"color" : [ 0.082353, 0.25098, 0.431373, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.ui",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tc.ui2",
 				"parentstyle" : "",
 				"multi" : 0
 			}

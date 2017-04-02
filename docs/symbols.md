@@ -8,8 +8,10 @@
 | `tctrl.appstate.save` | send/receive | Bang broadcast before saving the app state, indicating that components should update the `tctrl.appstate` dict with their current values.
 | `tctrl.appschema` | dict + send/receive | The full app schema, unprocessed.
 | `tctrl.audio.in~` | signal | Audio input signal, with gain applied.
-| `tctr.audio.state` | dict + send/receive | Audio settings, extracted from `tctrl.appstate`, and saved back into it.
+| `tctrl.audio.state` | dict + send/receive | Audio settings, extracted from `tctrl.appstate`, and saved back into it.
+| `tctrl.audio.controldef` | dict + send/receive | Audio analysis control source definitions. See [audio.md](Audio) for details.
 | `tctrl.cc_to_map_attrs` | coll | Mapping definitions, keyed by CC number, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
+| `tctrl.controls` | dict + send/receive | All available control source definitions. Built from the combination of `tctrl.midi.controllerdef` and `tctrl.audio.controldef`.
 | `tctrl.ctrl_to_map_attrs` | coll | Mapping definitions, keyed by control name, split out into lists for improved performance in input/output handling. Each entry's value is a list of (CC, control name, minNorm, maxNorm).
 | `tctrl.filterdefs` | dict + send/receive | ...
 | `tctrl.flatmodules` | dict + send/receive | Processed schema for each module, keyed by module path. All sub-modules are flattened out into a single lookup dictionary.

@@ -9,12 +9,13 @@ including MIDI controls and sequencers. Each control has defined in a dictionary
 | Field | Description |
 | ----- | ----------- |
 | `enable` | If false, the control does not send or receive values.
-| `type` | The type of control ("midicc" or "sequencer").
+| `type` | The type of control (`midicc`, `sequencer`, or `analysis`).
 | `label` | User-friendly label, shown in menus.
 | `device` | Device name, used for MIDI controls.
-| `interval` | Time interval for sequencers ("onebar", "twobar", etc).
+| `interval` | Time interval for sequencers (`onebar`, `twobar`, etc).
 | `shape` | Sequence shape (`ramp`, `sine`, `reverse`, `function`).
 | `funcpoints` | Series of x/y coordinates of points in the shape function (for sequencers).
+| `stream` | Name of the source stream (for analysis sources).
 
 ## Mapping definition
 A mapping is a configuration that connects a MIDI input to a parameter. Each mapping is

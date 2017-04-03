@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1744.0, 95.0, 1337.0, 911.0 ],
+		"rect" : [ -1691.0, 87.0, 1472.0, 911.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -780,7 +780,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -817,7 +817,7 @@
 					"destination" : [ "obj-27", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -1166,10 +1166,10 @@
 				"name" : "exposed",
 				"default" : 				{
 					"fontface" : [ 1 ],
+					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ],
 					"fontsize" : [ 12.0 ],
-					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
 					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
-					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 67.0, 110.0, 640.0, 480.0 ],
+		"rect" : [ -1252.0, 347.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -153,7 +153,7 @@
 				"box" : 				{
 					"data" : 					{
 						"stuff" : "hi",
-						"things" : 123
+						"things" : [ 123, "anotherthing" ]
 					}
 ,
 					"id" : "obj-1",

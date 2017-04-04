@@ -121,7 +121,7 @@
 				"local" : 1
 			}
 ,
-			"tctrl-mapping-editor.maxpat" : 			{
+			"tctrl-mapping-ui.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

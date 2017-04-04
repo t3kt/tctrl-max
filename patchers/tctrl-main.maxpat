@@ -94,7 +94,7 @@
 					"id" : "obj-18",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "tctrl-mapping-editor.maxpat",
+					"name" : "tctrl-mapping-ui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1097,7 +1097,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-mapping-editor.maxpat",
+				"name" : "tctrl-mapping-ui.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1

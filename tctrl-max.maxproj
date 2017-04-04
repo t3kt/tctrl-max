@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -720968095,
+	"modificationdate" : -720863350,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -324,6 +324,11 @@
 					"projectrelativepath" : "./patchers"
 				}
 
+			}
+,
+			"tctrl-mapping-editor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}

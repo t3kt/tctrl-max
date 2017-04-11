@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -720863350,
+	"modificationdate" : -720260181,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -126,6 +126,11 @@
 				"local" : 1
 			}
 ,
+			"tctrl-mapping-editor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"tctrl-util-menu-handler.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -136,12 +141,12 @@
 				"local" : 1
 			}
 ,
-			"tctrl-mapping-editor-range-part.maxpat" : 			{
+			"tctrl-param-selector.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"tctrl-param-selector.maxpat" : 			{
+			"tctrl-mapping-editor-range-part.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -326,8 +331,8 @@
 
 			}
 ,
-			"tctrl-mapping-editor.maxpat" : 			{
-				"kind" : "patcher",
+			"tctrl-mapping-editor.maxhelp" : 			{
+				"kind" : "helpfile",
 				"local" : 1
 			}
 

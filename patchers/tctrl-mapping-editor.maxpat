@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 77.0, 1310.0, 969.0 ],
+		"rect" : [ 425.0, 85.0, 1310.0, 960.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,18 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1093.0, 858.5, 97.0, 22.0 ],
+					"style" : "",
+					"text" : "s #0.currentpath"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "newobj",
@@ -2065,6 +2077,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-73", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-74", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2258,10 +2279,10 @@
 , 			{
 				"name" : "exposed",
 				"default" : 				{
-					"fontface" : [ 1 ],
-					"fontsize" : [ 12.0 ],
 					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
+					"fontface" : [ 1 ],
 					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
+					"fontsize" : [ 12.0 ],
 					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
 				}
 ,
@@ -2271,12 +2292,12 @@
 , 			{
 				"name" : "tc.header",
 				"default" : 				{
+					"textjustification" : [ 0 ],
 					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"fontname" : [ "Consolas" ],
 					"fontface" : [ 1 ],
 					"fontsize" : [ 18.0 ],
-					"textjustification" : [ 0 ],
-					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ],
-					"fontname" : [ "Consolas" ]
+					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

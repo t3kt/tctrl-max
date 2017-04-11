@@ -36,7 +36,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "tc.mapping.editor[1]",
+		"globalpatchername" : "tc.mapping.editor[1][1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-20",
@@ -66,6 +66,8 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 517.0, 441.0, 358.0, 80.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 122.0, 358.0, 80.0 ],
 					"varname" : "tctrl-mapping-editor[1]",
 					"viewvisibility" : 1
 				}
@@ -228,6 +230,8 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 513.0, 341.0, 358.0, 80.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 38.0, 358.0, 80.0 ],
 					"varname" : "tctrl-mapping-editor",
 					"viewvisibility" : 1
 				}
@@ -308,7 +312,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 110.0, 21.0, 28.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 358.0, 114.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 371.0, 210.0 ],
 					"style" : "tc.panel"
 				}
 
@@ -496,10 +500,10 @@
 , 			{
 				"name" : "exposed",
 				"default" : 				{
-					"fontface" : [ 1 ],
-					"fontsize" : [ 12.0 ],
 					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
+					"fontface" : [ 1 ],
 					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
+					"fontsize" : [ 12.0 ],
 					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
 				}
 ,
@@ -509,12 +513,12 @@
 , 			{
 				"name" : "tc.header",
 				"default" : 				{
+					"textjustification" : [ 0 ],
 					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"fontname" : [ "Consolas" ],
 					"fontface" : [ 1 ],
 					"fontsize" : [ 18.0 ],
-					"textjustification" : [ 0 ],
-					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ],
-					"fontname" : [ "Consolas" ]
+					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -1691.0, 87.0, 1472.0, 911.0 ],
+		"rect" : [ -1700.0, 98.0, 1472.0, 911.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -90,7 +90,7 @@
 					"border" : 0,
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
-					"enablevscroll" : 0,
+					"enablevscroll" : 1,
 					"id" : "obj-18",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
@@ -99,7 +99,8 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2.0, 644.0, 360.0, 115.0 ],
+					"patching_rect" : [ 2.0, 640.0, 387.0, 117.0 ],
+					"varname" : "tctrl-mapping-ui",
 					"viewvisibility" : 1
 				}
 
@@ -989,30 +990,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-menu.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-param-core.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-slider.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tctrl-button.maxpat",
-				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tctrl-module.js",
 				"bootpath" : "~/creations/tctrl/tctrl-max/code",
 				"type" : "TEXT",
@@ -1103,6 +1080,12 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "tctrl-mapping-editor.maxpat",
+				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "tctrl-util-menu-handler.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
@@ -1115,13 +1098,13 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-mapping-editor-range-part.maxpat",
+				"name" : "tctrl-param-selector.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tctrl-param-selector.maxpat",
+				"name" : "tctrl-mapping-editor-range-part.maxpat",
 				"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1165,11 +1148,11 @@
 		"styles" : [ 			{
 				"name" : "exposed",
 				"default" : 				{
-					"fontface" : [ 1 ],
-					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ],
-					"fontsize" : [ 12.0 ],
 					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
-					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ]
+					"fontface" : [ 1 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
+					"fontsize" : [ 12.0 ],
+					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

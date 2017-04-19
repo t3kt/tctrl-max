@@ -192,29 +192,18 @@ function updateLayout() {
   var position = [10, 40];
   var hiddenPosition = [-450, 40];
   var controls = common.getOrderedObjects(patcher, VAR_NAME_PREFIX);
-  // var modScript = patcher.getnamed('modscript');
   for (var i = 0; i < controls.length; i++) {
     var obj = controls[i];
     var height = obj.rect[3] - obj.rect[1];
     var width = obj.rect[2] - obj.rect[0];
     if (!showAdvanced && varNameToAdvanced[obj.varname]) {
-      // post('UPDATING layout of ' + obj.varname + ' HIDDEN - [' + hiddenPosition[0], hiddenPosition[1] + ']\n');
       common.setRect(obj, hiddenPosition, [width, height]);
-      //sendScriptingMessage(['script', 'send', obj.varname, 'presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height]);
-      // obj.message('presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height);
-      // patcher.connect(modScript, 0, obj, 1);
-      // sendConfigMessage(['presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height]);
-      // patcher.disconnect(modScript, 0, obj, 1);
+      sendScriptingMessage(['script', 'sendbox', obj.varname, 'presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height]);
       sendScriptingMessage(['script', 'hide', obj.varname]);
       hiddenPosition[1] += height + PADDING_Y;
     } else {
-      // post('UPDATING layout of ' + obj.varname + ' VISIBLE - [' + position[0], position[1] + ']\n');
       common.setRect(obj, position, [width, height]);
-      // sendScriptingMessage(['script', 'send', obj.varname, 'presentation_rect', position[0], position[1], width, height]);
-      // obj.message('presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height);
-      // patcher.connect(modScript, 0, obj, 1);
-      // sendConfigMessage(['presentation_rect', position[0], position[1], width, height]);
-      // patcher.disconnect(modScript, 0, obj, 1);
+      sendScriptingMessage(['script', 'sendbox', obj.varname, 'presentation_rect', position[0], position[1], width, height]);
       sendScriptingMessage(['script', 'show', obj.varname]);
       position[1] += height + PADDING_Y;
     }

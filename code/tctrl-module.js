@@ -1,8 +1,15 @@
 var PADDING_Y = 2;
 var VAR_NAME_PREFIX = 'ctrl__';
 var common = require('tctrl-common');
+var showAdvanced = false;
+var varNameToAdvanced = {};
 
 outlets = 2;
+
+function setShowAdvanced(show) {
+  showAdvanced = show;
+  updateLayout();
+}
 
 function loadModuleSpec(modSpecDictName) {
   var modSpecDict = new Dict(modSpecDictName);
@@ -169,6 +176,7 @@ function _addParameter(paramSpec, i, position) {
     post('Failed to create parameter of type ' + type + ' (' + paramSpec.key + ')\n');
     return;
   }
+  varNameToAdvanced[ctrl.varname] = paramSpec.advanced == 1;
   this.patcher.hiddenconnect(ctrl, 0, oscOutlet, 0);
   this.patcher.hiddenconnect(oscInlet, 0, ctrl, 0);
   // post('Done handling param ' + paramSpec.key + '\n');
@@ -176,19 +184,40 @@ function _addParameter(paramSpec, i, position) {
 
 function clearControls() {
   common.removeObjectsByPrefix(this.patcher, VAR_NAME_PREFIX);
+  varNameToAdvanced = {};
 }
 
 function updateLayout() {
   var patcher = this.patcher;
   var position = [10, 40];
+  var hiddenPosition = [-450, 40];
   var controls = common.getOrderedObjects(patcher, VAR_NAME_PREFIX);
+  // var modScript = patcher.getnamed('modscript');
   for (var i = 0; i < controls.length; i++) {
     var obj = controls[i];
     var height = obj.rect[3] - obj.rect[1];
     var width = obj.rect[2] - obj.rect[0];
-    common.setRect(obj, position, [width, height]);
-    position[1] += height + PADDING_Y;
-    //...
+    if (!showAdvanced && varNameToAdvanced[obj.varname]) {
+      // post('UPDATING layout of ' + obj.varname + ' HIDDEN - [' + hiddenPosition[0], hiddenPosition[1] + ']\n');
+      common.setRect(obj, hiddenPosition, [width, height]);
+      //sendScriptingMessage(['script', 'send', obj.varname, 'presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height]);
+      // obj.message('presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height);
+      // patcher.connect(modScript, 0, obj, 1);
+      // sendConfigMessage(['presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height]);
+      // patcher.disconnect(modScript, 0, obj, 1);
+      sendScriptingMessage(['script', 'hide', obj.varname]);
+      hiddenPosition[1] += height + PADDING_Y;
+    } else {
+      // post('UPDATING layout of ' + obj.varname + ' VISIBLE - [' + position[0], position[1] + ']\n');
+      common.setRect(obj, position, [width, height]);
+      // sendScriptingMessage(['script', 'send', obj.varname, 'presentation_rect', position[0], position[1], width, height]);
+      // obj.message('presentation_rect', hiddenPosition[0], hiddenPosition[1], width, height);
+      // patcher.connect(modScript, 0, obj, 1);
+      // sendConfigMessage(['presentation_rect', position[0], position[1], width, height]);
+      // patcher.disconnect(modScript, 0, obj, 1);
+      sendScriptingMessage(['script', 'show', obj.varname]);
+      position[1] += height + PADDING_Y;
+    }
   }
 }
 
@@ -203,4 +232,8 @@ function setControlHeight(ctrlname, height) {
 
 function sendConfigMessage(data) {
   outlet(0, data);
+}
+
+function sendScriptingMessage(data) {
+  outlet(1, data);
 }

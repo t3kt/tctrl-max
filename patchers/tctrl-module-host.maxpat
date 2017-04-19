@@ -80,7 +80,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 689.0, 527.0, 116.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 282.5, 39.0, 123.0, 35.0 ],
+					"presentation_rect" : [ 311.0, 35.0, 123.0, 35.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -419,7 +419,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -429,7 +429,7 @@
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -589,11 +589,11 @@
 , 			{
 				"name" : "exposed",
 				"default" : 				{
+					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
+					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ],
 					"fontface" : [ 1 ],
 					"textcolor_inverse" : [ 0.0, 0.078431, 0.321569, 1.0 ],
-					"fontsize" : [ 12.0 ],
-					"bgcolor" : [ 0.121569, 0.92549, 0.92549, 1.0 ],
-					"accentcolor" : [ 0.003922, 0.505882, 0.576471, 1.0 ]
+					"fontsize" : [ 12.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -603,11 +603,11 @@
 				"name" : "tc.header",
 				"default" : 				{
 					"textcolor" : [ 0.580392, 0.796078, 1.0, 1.0 ],
+					"fontname" : [ "Consolas" ],
 					"fontface" : [ 1 ],
 					"fontsize" : [ 18.0 ],
-					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
-					"fontname" : [ "Consolas" ],
-					"textjustification" : [ 0 ]
+					"textjustification" : [ 0 ],
+					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

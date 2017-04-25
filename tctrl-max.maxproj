@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -720260181,
+	"modificationdate" : -719049174,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -42,26 +42,6 @@
 			}
 ,
 			"tctrl-module-navigator.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-menu.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-param-core.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-slider.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"tctrl-button.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -172,6 +152,26 @@
 			}
 ,
 			"tctrl-audio-input.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-menu.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-param-core.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-slider.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-button.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -333,6 +333,16 @@
 ,
 			"tctrl-mapping-editor.maxhelp" : 			{
 				"kind" : "helpfile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"tctrl-module-header.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1
 			}
 

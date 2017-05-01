@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -719049174,
+	"modificationdate" : -718542156,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -37,6 +37,11 @@
 			}
 ,
 			"tctrl-module-selector.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"tctrl-module-header.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -341,7 +346,7 @@
 
 			}
 ,
-			"tctrl-module-header.maxpat" : 			{
+			"tctrl-m4l-prototype-module.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}

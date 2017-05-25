@@ -2,7 +2,7 @@
 	"name" : "tctrl-max",
 	"version" : 1,
 	"creationdate" : -724503107,
-	"modificationdate" : -718542156,
+	"modificationdate" : -716458520,
 	"viewrect" : [ 40.0, 63.0, 299.0, 537.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -348,7 +348,12 @@
 ,
 			"tctrl-m4l-prototype-module.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/creations/tctrl/tctrl-max/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 
 		}

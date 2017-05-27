@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 366.0, 154.0, 855.0, 521.0 ],
+		"rect" : [ 177.0, 116.0, 803.0, 584.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,58 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 612.0, 149.0, 87.0, 22.0 ],
+					"restore" : [ "/" ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 1,
+							"parameter_longname" : "basepath",
+							"parameter_shortname" : "basepath",
+							"parameter_type" : 3
+						}
+
+					}
+,
+					"saved_object_attributes" : 					{
+						"annotation_name" : "",
+						"parameter_enable" : 1
+					}
+,
+					"style" : "",
+					"text" : "pattr basepath",
+					"varname" : "basepath"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hint" : "Base path",
+					"id" : "obj-21",
+					"keymode" : 1,
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 548.5, 230.0, 137.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 62.5, 47.0, 98.0, 22.0 ],
+					"rounded" : 0.0,
+					"style" : "",
+					"text" : "/",
+					"varname" : "textedit",
+					"wordwrap" : 0
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-19",
 					"maxclass" : "newobj",
@@ -203,10 +255,11 @@
 					"id" : "obj-2",
 					"linecount" : 2,
 					"maxclass" : "comment",
-					"numinlets" : 1,
+					"numinlets" : 0,
 					"numoutlets" : 0,
 					"patching_rect" : [ 377.0, 20.0, 208.0, 33.0 ],
 					"style" : "",
+					"suppressinlet" : 1,
 					"text" : "this is the shared core component used by control block devices (amxd)"
 				}
 
@@ -285,6 +338,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-23", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -321,6 +383,7 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-23" : [ "basepath", "basepath", 0 ],
 			"obj-22" : [ "oscouton", "oscouton", 0 ]
 		}
 ,
